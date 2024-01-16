@@ -8,11 +8,13 @@ public class BossHp : MonoBehaviour
     private float maxHP = 1000;
     private float currentHP;
     private SpriteRenderer spriterenderer;
+    private Boss boss;
 
     public float MaxHP => maxHP;
     public float CurrentHP => currentHP;
     private void Awake()
     {
+        boss = GetComponent<Boss>();
         currentHP = maxHP;
         spriterenderer = GetComponent<SpriteRenderer>();
     }
@@ -26,13 +28,13 @@ public class BossHp : MonoBehaviour
 
         if(currentHP <=0)
         {
-            Destroy(gameObject);
+           boss.OnDie();
         }
     }
 
     private IEnumerator HitColor()
     {
-        spriterenderer.color = Color.yellow;
+        spriterenderer.color = Color.red;
         yield return new WaitForSeconds(0.05f);
         spriterenderer.color = Color.white;
     }

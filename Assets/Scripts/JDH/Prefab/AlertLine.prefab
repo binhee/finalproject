@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4237027237940668152}
   - component: {fileID: 5784071126813709307}
+  - component: {fileID: 3818379745293393115}
   m_Layer: 0
   m_Name: AlertLine
   m_TagString: Untagged
@@ -84,3 +85,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3818379745293393115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5122939358223537548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42dceab6c6cbe4d41869b6c90568e47a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
