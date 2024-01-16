@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using static UnityEditor.Progress;
 
-public enum SlotType { PotionSlot, WeaponSlot, ArmorSlot, ArtifactSlot, AllSlot}
+public enum SlotType { PotionSlot, WeaponSlot, ArmorSlot, HelmetSlot, BootsSlot, ArtifactSlot, AllSlot}
 public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerExitHandler
 {
     [Header("ItemInformation")]
@@ -30,14 +30,16 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerE
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (eventData.pointerDrag != null&&gameObject.transform.childCount==0&& CheckType(eventData))
+        if (eventData.pointerDrag != null && gameObject.transform.childCount==0 && CheckType(eventData))
         {
             eventData.pointerDrag.transform.SetParent(transform);
+            eventData.pointerDrag.GetComponent<DraggableUI>().EquipItem();
             eventData.pointerDrag.GetComponent<RectTransform>().position = rect.position;
         }
     }
     bool CheckType(PointerEventData item)
     {
+        
         Item checkItemType = item.pointerDrag.GetComponent<Item>();
         if (slotType == SlotType.AllSlot)
         {
@@ -47,7 +49,15 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerE
         {
             return true;
         }
+        if (checkItemType.itemType == ItemType.Helmet && slotType == SlotType.HelmetSlot)
+        {
+            return true;
+        }
         if (checkItemType.itemType == ItemType.Armor && slotType == SlotType.ArmorSlot)
+        {
+            return true;
+        }
+        if (checkItemType.itemType == ItemType.Boots && slotType == SlotType.BootsSlot)
         {
             return true;
         }

@@ -5,7 +5,7 @@ using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum ItemType { HpPotion, Weapon, Armor, JumpPotion }
+public enum ItemType { HpPotion, Weapon, Helmet, Armor, Boots, JumpPotion }
 public class Item : MonoBehaviour
 {
     [Header("ItemInformation")]
@@ -37,8 +37,15 @@ public class Item : MonoBehaviour
     {
         switch (itemtype)
         {
-            case ItemType.HpPotion: // 플레이어의 회복할때
-
+            case ItemType.HpPotion:
+                for (int i = 0; i < Inventory.instance.itemSlotList.Count; i++)
+                {
+                    if (Inventory.instance.itemSlotList[i].transform.childCount == 0)
+                    {
+                        Instantiate(itemImage, Inventory.instance.itemSlotList[i].transform).GetComponent<DraggableUI>();
+                        break;
+                    }
+                }
                 break;
             case ItemType.Armor:
                 for (int i = 0; i < Inventory.instance.itemSlotList.Count; i++)

@@ -21,43 +21,39 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     private void Update()
     {
-        EquipItem();
     }
     public void EquipItem()
     {
-        if (descriptionPanel.activeSelf && Input.GetKeyDown(KeyCode.E))
+        if (transform.parent.GetComponent<Slot>().slotType != SlotType.AllSlot)
         {
             if (gameObject.GetComponent<Item>().itemType == ItemType.Weapon)
             {
-                if (!equipUI.activeSelf&&Inventory.instance.equipWeaponCount==0)
-                {
                     equipUI.SetActive(true);
                     Inventory.instance.equipWeaponCount++;
                     //무기 장착 할때
-                   
-                }
-                else if (equipUI.activeSelf && Inventory.instance.equipWeaponCount == 1)
-                {
-                    equipUI.SetActive(false);
-                    Inventory.instance.equipWeaponCount--;
-                    //무기 장착해제 할때
-                }
+
             }
-            else if(gameObject.GetComponent<Item>().itemType == ItemType.Armor)
+            else if (gameObject.GetComponent<Item>().itemType == ItemType.Armor)
             {
-                if (!equipUI.activeSelf&& Inventory.instance.equipArmorCount == 0)
-                {
                     equipUI.SetActive(true);
                     Inventory.instance.equipArmorCount++;
                     //방어구 장착 할때
-         
-                }
-                else if (equipUI.activeSelf && Inventory.instance.equipArmorCount ==1)
-                {
-                    equipUI.SetActive(false);
-                    Inventory.instance.equipArmorCount--;
-                    //방어구 장착해제 할때
-                }
+
+            }
+        }
+        else
+        {
+            if (gameObject.GetComponent<Item>().itemType == ItemType.Weapon)
+            {
+                equipUI.SetActive(false);
+                Inventory.instance.equipWeaponCount--;
+                //무기 장착해제 할때
+            }
+            if (gameObject.GetComponent<Item>().itemType == ItemType.Armor)
+            {
+                equipUI.SetActive(false);
+                Inventory.instance.equipArmorCount--;
+                //방어구 장착해제 할때
             }
         }
     }
@@ -84,7 +80,6 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             transform.SetParent(previousParent);
             rect.position = previousParent.GetComponent<RectTransform>().position;
         }
-
         canvasGroup.alpha = 1.0f;
         canvasGroup.blocksRaycasts = true;
     }

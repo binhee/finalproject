@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa0f6b5637fe2748b6544ee16a3b59f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 3
+  itemType: 5
   itemPotionRecoveryAmount: 0
   itemImage: {fileID: 0}
 --- !u!61 &3960701058208497992

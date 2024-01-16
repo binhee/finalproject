@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8506726731445692839
 SpriteRenderer:
@@ -99,21 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa0f6b5637fe2748b6544ee16a3b59f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  itemType: 0
   itemPotionRecoveryAmount: 50
-  statsModifier: []
-  itemsStats:
-    statusChangeType: 0
-    maxHealth: 0
-    hp: 0
-    atk: 0
-    def: 0
-    moveSpeed: 0
-    attackSpeed: 0
-    jumpPower: 0
-    jumpCooldown: 0
-    commonStatus: {fileID: 11400000, guid: 8afd45b5fbb0d894a95460bb3df57c6a, type: 2}
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 1472158750361724533, guid: e4bff696be19c53408d469cd8e9ea872, type: 3}
 --- !u!61 &3960701058208497992
 BoxCollider2D:
   m_ObjectHideFlags: 0
