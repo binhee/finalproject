@@ -773,7 +773,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpawnPosition: {fileID: 1594218025}
-  test: {fileID: 2684997869078701334, guid: 1be0dd3ef6be8a64aa5ff2116a9f8eb0, type: 3}
+  projectilePrefab: {fileID: 2684997869078701334, guid: 1be0dd3ef6be8a64aa5ff2116a9f8eb0, type: 3}
+  projectilePoolSize: 20
 --- !u!1 &396335224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,7 +1554,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594218024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

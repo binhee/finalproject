@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
-public class PlayerInputController : CharacterController
+public class PlayerInputController : PlayerController
 {
     private Camera _camera;
 

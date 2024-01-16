@@ -8,11 +8,11 @@ public class AimRotation : MonoBehaviour
     [SerializeField] private SpriteRenderer armRenderer;
     [SerializeField] private Transform armPivot;    
 
-    private CharacterController _controller;
+    private PlayerController _controller;
 
     private void Awake()
     {
-        _controller = GetComponent<CharacterController>();
+        _controller = GetComponent<PlayerController>();
     }
     
     void Start()

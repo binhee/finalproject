@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnLookEvent;
@@ -17,13 +17,14 @@ public class CharacterController : MonoBehaviour
         HandleAttackDelay();
     }
 
+    // 공격 딜레이를 처리하는 메서드
     private void HandleAttackDelay()
     {
-        if (_timeSinceLastAttack <= 0.2f)
+        if (_timeSinceLastAttack <= 0.4f)
         {
             _timeSinceLastAttack += Time.deltaTime;
         }
-        if (IsAttacking && _timeSinceLastAttack > 0.2f)
+        if (IsAttacking && _timeSinceLastAttack > 0.4f)
         {
             _timeSinceLastAttack = 0;
             CallAttackEvent();
