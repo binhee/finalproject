@@ -47,7 +47,11 @@ public class Shooting : MonoBehaviour
 
     private void CreateProjectile(RangedAttackData rangedAttackData, float angle)
     {
-        _projectileManager.ShootBullet(projectileSpawnPosition.position, RotateVector2(_aimDirection, angle), rangedAttackData);
+        _projectileManager.ShootBullet(
+            projectileSpawnPosition.position, 
+            RotateVector2(_aimDirection, angle), 
+            rangedAttackData
+            );
     }
 
     private static Vector2 RotateVector2(Vector2 v, float degree)
