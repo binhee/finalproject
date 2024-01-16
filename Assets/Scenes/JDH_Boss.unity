@@ -1103,6 +1103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd248a41709c9c5448ba2ae678530422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stageData: {fileID: 11400000, guid: 9375b436290b8f744b6b3594a32035f2, type: 2}
+  explosionPrefab: {fileID: 685903047616860845, guid: b7f4d6aa5ebc7c44cb452bfe05bafada, type: 3}
   bossAppearPoint: 1
 --- !u!114 &1933548054
 MonoBehaviour:

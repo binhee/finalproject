@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum AttackType { CircleFire =0, }
+public enum AttackType { CircleFire =0, SingleFireToCenterPosition }
 
 public class BossWeapon : MonoBehaviour
 {
@@ -21,7 +21,7 @@ public class BossWeapon : MonoBehaviour
 
     private IEnumerator CircleFire()
     {
-        float attackRate = 0.5f;
+        float attackRate = 1f;
         int count = 30;
         float intervalAngle = 360 / count;
         float weightAngle = 0;
@@ -40,6 +40,21 @@ public class BossWeapon : MonoBehaviour
             }
             weightAngle += 1;
 
+            yield return new WaitForSeconds(attackRate);
+        }
+    }
+
+    private IEnumerator SingleFireToCenterPosition()
+    {
+        Vector3 targetPosition = Vector3.zero;
+        float attackRate = 0.5f;
+
+        while(true)
+        {
+            GameObject clone = Instantiate(enemyProjectile,transform.position, Quaternion.identity); 
+            Vector3 direction = (targetPosition -clone.transform.position).normalized;
+            clone.GetComponent<Movement2D>().MoveTo(direction);
+            
             yield return new WaitForSeconds(attackRate);
         }
     }
