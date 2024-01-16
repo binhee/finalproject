@@ -17,6 +17,11 @@ public class SceneChange : MonoBehaviour
         Instantiate(go);
     }
 
+    public void MainSceneLoad()    // 메인화면 입장
+    {
+        SceneManager.LoadScene("YSJ_UI");    // "" 스테이지 씬 삽입
+    }
+
     public void Stage1Load()    // 스테이지1 입장
     {
         SceneManager.LoadScene("JBH_Stage");    // "" 스테이지 씬 삽입
