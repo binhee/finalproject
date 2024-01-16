@@ -1,9 +1,14 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using static UnityEditor.Progress;
 
+public enum SlotType { PotionSlot, WeaponSlot, ArmorSlot, ArtifactSlot, AllSlot}
 public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerExitHandler
 {
+    [Header("ItemInformation")]
+    public SlotType slotType;
+
     private Image image;
     private RectTransform rect;
 
@@ -25,11 +30,35 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerE
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (eventData.pointerDrag != null&&gameObject.transform.childCount==0)
+        if (eventData.pointerDrag != null&&gameObject.transform.childCount==0&& CheckType(eventData))
         {
             eventData.pointerDrag.transform.SetParent(transform);
             eventData.pointerDrag.GetComponent<RectTransform>().position = rect.position;
         }
+    }
+    bool CheckType(PointerEventData item)
+    {
+        Item checkItemType = item.pointerDrag.GetComponent<Item>();
+        if (slotType == SlotType.AllSlot)
+        {
+            return true;
+        }
+        if(checkItemType.itemType == ItemType.Weapon&& slotType==SlotType.WeaponSlot)
+        {
+            return true;
+        }
+        if (checkItemType.itemType == ItemType.Armor && slotType == SlotType.ArmorSlot)
+        {
+            return true;
+        }
+        if (checkItemType.itemType == ItemType.HpPotion || checkItemType.itemType == ItemType.JumpPotion)
+        {
+            if(slotType == SlotType.PotionSlot)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }
 

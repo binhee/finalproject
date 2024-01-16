@@ -9,7 +9,7 @@ public enum ItemType { HpPotion, Weapon, Armor, JumpPotion }
 public class Item : MonoBehaviour
 {
     [Header("ItemInformation")]
-    public ItemType type;
+    public ItemType itemType;
     public int itemPotionRecoveryAmount;
 
     public GameObject itemImage;
@@ -29,7 +29,7 @@ public class Item : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            ClassifyItem(type , collision);// collision은 부딫힌놈 즉 플레이어의 정보
+            ClassifyItem(itemType, collision);// collision은 부딫힌놈 즉 플레이어의 정보
             Destroy(gameObject);
         }
     }

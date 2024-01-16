@@ -1293,7 +1293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5305801413485860702, guid: 6d4d07b9e54ea6448995e8ad18996c99, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7813783021317989367, guid: 6d4d07b9e54ea6448995e8ad18996c99, type: 3}
       propertyPath: m_Pivot.x
@@ -1423,7 +1423,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8338959332959725455, guid: 6d4d07b9e54ea6448995e8ad18996c99, type: 3}
-      insertIndex: -1
+      insertIndex: 2
       addedObject: {fileID: 2107719555}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d4d07b9e54ea6448995e8ad18996c99, type: 3}
@@ -1726,6 +1726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e54bad1c1c4cd340b582129d9f6abb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slotType: 2
 --- !u!114 &5191909768609554364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1738,6 +1739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e54bad1c1c4cd340b582129d9f6abb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slotType: 1
 --- !u!114 &5191909769441639263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1750,6 +1752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e54bad1c1c4cd340b582129d9f6abb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slotType: 1
 --- !u!114 &5191909769512314040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1762,6 +1765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e54bad1c1c4cd340b582129d9f6abb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slotType: 2
 --- !u!114 &5191909769724113332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1774,6 +1778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e54bad1c1c4cd340b582129d9f6abb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slotType: 2
 --- !u!114 &5191909769764376328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1786,6 +1791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e54bad1c1c4cd340b582129d9f6abb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slotType: 2
 --- !u!114 &7709998119174978234
 MonoBehaviour:
   m_ObjectHideFlags: 0

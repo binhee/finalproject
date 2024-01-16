@@ -27,7 +27,7 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         if (descriptionPanel.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
-            if (gameObject.GetComponent<Item>().type == ItemType.Weapon)
+            if (gameObject.GetComponent<Item>().itemType == ItemType.Weapon)
             {
                 if (!equipUI.activeSelf&&Inventory.instance.equipWeaponCount==0)
                 {
@@ -43,7 +43,7 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                     //무기 장착해제 할때
                 }
             }
-            else if(gameObject.GetComponent<Item>().type == ItemType.Armor)
+            else if(gameObject.GetComponent<Item>().itemType == ItemType.Armor)
             {
                 if (!equipUI.activeSelf&& Inventory.instance.equipArmorCount == 0)
                 {

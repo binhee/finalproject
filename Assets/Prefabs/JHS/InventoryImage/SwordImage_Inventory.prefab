@@ -409,17 +409,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descriptionPanel: {fileID: 2268712210228695827}
   equipUI: {fileID: 916848981499017254}
-  statsModifier:
-  - statusChangeType: 0
-    maxHealth: 0
-    hp: 0
-    atk: 0
-    def: 0
-    moveSpeed: 0
-    attackSpeed: 0
-    jumpPower: 0
-    jumpCooldown: 0
-    commonStatus: {fileID: 11400000, guid: 2fd6a3bd816c3ff41825f6dddc8b9e87, type: 2}
 --- !u!225 &-4753028969205175434
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -444,6 +433,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa0f6b5637fe2748b6544ee16a3b59f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
-  characterStatusHandler: {fileID: 0}
+  itemType: 1
+  itemPotionRecoveryAmount: 0
   itemImage: {fileID: 0}

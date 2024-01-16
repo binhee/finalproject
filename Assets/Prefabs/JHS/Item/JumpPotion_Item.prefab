@@ -99,20 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa0f6b5637fe2748b6544ee16a3b59f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
+  itemType: 3
   itemPotionRecoveryAmount: 0
-  statsModifier: []
-  itemsStats:
-    statusChangeType: 0
-    maxHealth: 0
-    hp: 0
-    atk: 0
-    def: 0
-    moveSpeed: 0
-    attackSpeed: 0
-    jumpPower: 0
-    jumpCooldown: 0
-    commonStatus: {fileID: 11400000, guid: cf661144feb7a91439847e8cdabdc887, type: 2}
   itemImage: {fileID: 0}
 --- !u!61 &3960701058208497992
 BoxCollider2D:
