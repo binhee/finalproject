@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     protected virtual void Awake()
     {
         Stats = GetComponent<CharacterStatsHandler>();
-    }
+    }   
 
     protected virtual void Update()
     {
