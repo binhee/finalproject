@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
+    public GameObject OptionPanel;
+    public GameObject StagePanel;
     public void InventoryLoad()     // 인벤토리 로드 함수
     {
         GameObject go = Resources.Load<GameObject>("YSJ/Inventory");
@@ -15,6 +17,28 @@ public class SceneChange : MonoBehaviour
     {
         GameObject go = Resources.Load<GameObject>("YSJ/Store");
         Instantiate(go);
+    }
+
+    public void SetStagePanel()
+    {
+        bool IsSetOptionPanel = StagePanel.activeSelf;
+        StagePanel.SetActive(!IsSetOptionPanel);
+    }
+    public void SetOptionPanel() //옵션창 생성 삭제
+    {
+        bool IsSetOptionPanel = OptionPanel.activeSelf;
+        OptionPanel.SetActive(!IsSetOptionPanel);
+        if (!IsSetOptionPanel)
+        {
+            // 판넬이 나타날 때 일시정지
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            // 판넬이 사라질 때 일시정지 해제
+            Time.timeScale = 1f;
+        }
+        Time.fixedDeltaTime = 0.02f*Time.timeScale;
     }
 
     public void MainSceneLoad()    // 메인화면 입장
