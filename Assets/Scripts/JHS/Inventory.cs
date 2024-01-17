@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
@@ -11,6 +14,8 @@ public class Inventory : MonoBehaviour
 
     public int equipWeaponCount;
     public int equipArmorCount;
+
+    public Text[] infoTexts;
 
     private void Awake()
     {
