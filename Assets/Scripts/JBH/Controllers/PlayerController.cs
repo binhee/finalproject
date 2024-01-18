@@ -27,17 +27,17 @@ public class PlayerController : MonoBehaviour
     // 공격 딜레이를 처리하는 메서드
     private void HandleAttackDelay()
     {
-        if (Stats.CurrentStates.attackSO == null)
+        if (Stats.CurrentStats.attackSO == null)
             return;
         
-        if (_timeSinceLastAttack <= Stats.CurrentStates.attackSO.delay)
+        if (_timeSinceLastAttack <= Stats.CurrentStats.attackSO.delay)
         {
             _timeSinceLastAttack += Time.deltaTime;
         }
-        if (IsAttacking && _timeSinceLastAttack > Stats.CurrentStates.attackSO.delay)
+        if (IsAttacking && _timeSinceLastAttack > Stats.CurrentStats.attackSO.delay)
         {
             _timeSinceLastAttack = 0;
-            CallAttackEvent(Stats.CurrentStates.attackSO);
+            CallAttackEvent(Stats.CurrentStats.attackSO);
         }
     }
 

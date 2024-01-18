@@ -45,9 +45,21 @@ public class RangedAttackController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // º®ÀÌ¶û ¹ß»çÃ¼°¡ ºÎµúÇûÀ» ¶§
         if(levelCollisionLayer.value == (levelCollisionLayer.value | (1<< collision.gameObject.layer)))
         {
             DestroyProjectile(collision.ClosestPoint(transform.position) - _direction * .2f, fxOnDestory);
+        }
+        else if (_attackData.target.value == (_attackData.target.value | (1 << collision.gameObject.layer)))
+        {
+            HealthSystem healthSystem = collision.GetComponent<HealthSystem>();
+            if(healthSystem != null)
+            {
+                healthSystem.ChangeHealth(-_attackData.power);                
+            }
+
+            DestroyProjectile(collision.ClosestPoint(transform.position), fxOnDestory);
+
         }
     }
 
@@ -75,7 +87,7 @@ public class RangedAttackController : MonoBehaviour
     {
         if (createFx)
         {
-
+            _projectManager.CreateImpactParticlesAtPostion(position, _attackData);
         }
         gameObject.SetActive(false);
     }

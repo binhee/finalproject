@@ -12,7 +12,7 @@ public class PlayerInputController : PlayerController
     private Camera _camera;
     private Rigidbody2D _rigidbody;
 
-    public float jumpForce = 10f;
+    public float jumpForce = 20f;
 
     protected bool IsGrounded { get; set; } = true;
 
@@ -47,16 +47,8 @@ public class PlayerInputController : PlayerController
     {
         IsAttacking = value.isPressed;
     }
-    public void OnJump(InputValue value)
-    {
-        if (value.isPressed && IsGrounded)
-        {
-            Jump(jumpForce);
-        }
-    }
 
-    // 여기서부터 추가된 코드
-    public void Jump(float jumpForce)
+    public void OnJump(InputValue value)
     {
         Debug.Log("점프!!");
         GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpForce);
@@ -67,7 +59,7 @@ public class PlayerInputController : PlayerController
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            Debug.Log("점프 중~");
+            Debug.Log("공중");
             IsGrounded = true;
         }
     }
