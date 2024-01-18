@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioSource audioSource;
-    public AudioSource btnSource;
+    [Header("---------- Audio Source -----------")]
+    [SerializeField] AudioSource BGMSource;
+    [SerializeField] AudioSource SFXSource;
 
-    public void SetBGMVolume(float volume)
+    [Header("---------- Audio Clip -----------")]
+    public AudioClip BGM;
+    public AudioClip BTNSound;
+
+    private void Start()
     {
-        audioSource.volume = volume;
+        // 게임이 시작될 때 BGM 실행
+        BGMSource.clip = BGM;
+        BGMSource.Play();
     }
 
-    public void SetBtnVolume(float volume)
+    public void PlatSFX(AudioClip clip)     // 원하는 사운드 효과 재생(SFX)
     {
-        btnSource.volume = volume;
-    }
-
-    public void OnButtonSound()
-    {
-        btnSource.Play();
+        SFXSource.PlayOneShot(clip);
     }
 }

@@ -7,25 +7,37 @@ public class SceneChange : MonoBehaviour
 {
     public GameObject OptionPanel;
     public GameObject StagePanel;
+
+    SoundManager soundManager;      // SoundManager 스크립트에 액세스.
+
+    private void Awake()
+    {
+        //태그가 Sound인 SoundManager에 접근.
+        soundManager = GameObject.FindGameObjectWithTag("Sound").GetComponent<SoundManager>();
+    }
     public void InventoryLoad()     // 인벤토리 로드 함수
     {
+        soundManager.PlatSFX(soundManager.BTNSound);    // BTNSound 재생
         GameObject go = Resources.Load<GameObject>("YSJ/Inventory");
         Instantiate(go);
     }
 
     public void StoreLoad()     // 상점 로드 함수
     {
+        soundManager.PlatSFX(soundManager.BTNSound);    // BTNSound 재생
         GameObject go = Resources.Load<GameObject>("YSJ/Store");
         Instantiate(go);
     }
 
     public void SetStagePanel()
     {
+        soundManager.PlatSFX(soundManager.BTNSound);    // BTNSound 재생
         bool IsSetOptionPanel = StagePanel.activeSelf;
         StagePanel.SetActive(!IsSetOptionPanel);
     }
     public void SetOptionPanel() //옵션창 생성 삭제
     {
+        soundManager.PlatSFX(soundManager.BTNSound);    // BTNSound 재생
         bool IsSetOptionPanel = OptionPanel.activeSelf;
         OptionPanel.SetActive(!IsSetOptionPanel);
         if (!IsSetOptionPanel)

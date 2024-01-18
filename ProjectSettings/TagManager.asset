@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - BossProjectile
   - Boss
+  - Sound
   layers:
   - Default
   - TransparentFX
