@@ -1,17 +1,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    private Transform canvas;             
-    private Transform previousParent;     
-    private RectTransform rect;          
+    private Transform canvas;
+    private Transform previousParent;
+    private RectTransform rect;
     private CanvasGroup canvasGroup;
 
     public GameObject descriptionPanel;
+    public Text descriptionTxt;
     public GameObject equipUI;
-
     private void Awake()
     {
         canvas = FindObjectOfType<Canvas>().transform;
@@ -28,16 +29,34 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         {
             if (gameObject.GetComponent<Item>().itemType == ItemType.Weapon)
             {
-                    equipUI.SetActive(true);
-                    Inventory.instance.equipWeaponCount++;
-                    //무기 장착 할때
+                equipUI.SetActive(true);
+                Inventory.instance.equipWeaponCount++;
+                Inventory.instance.infoTexts[0].text = descriptionTxt.text;
+                //무기 장착 할때
 
             }
             else if (gameObject.GetComponent<Item>().itemType == ItemType.Armor)
             {
-                    equipUI.SetActive(true);
-                    Inventory.instance.equipArmorCount++;
-                    //방어구 장착 할때
+                equipUI.SetActive(true);
+                Inventory.instance.equipArmorCount++;
+                Inventory.instance.infoTexts[1].text = descriptionTxt.text;
+                //방어구 장착 할때
+
+            }
+            else if (gameObject.GetComponent<Item>().itemType == ItemType.Helmet)
+            {
+                equipUI.SetActive(true);
+                //Inventory.instance.equipArmorCount++;
+                Inventory.instance.infoTexts[2].text = descriptionTxt.text;
+                //방어구 장착 할때
+
+            }
+            else if (gameObject.GetComponent<Item>().itemType == ItemType.Boots)
+            {
+                equipUI.SetActive(true);
+                //Inventory.instance.equipArmorCount++;
+                Inventory.instance.infoTexts[3].text = descriptionTxt.text;
+                //방어구 장착 할때
 
             }
         }
@@ -47,12 +66,28 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             {
                 equipUI.SetActive(false);
                 Inventory.instance.equipWeaponCount--;
+                Inventory.instance.infoTexts[0].text = " ";
                 //무기 장착해제 할때
             }
             if (gameObject.GetComponent<Item>().itemType == ItemType.Armor)
             {
                 equipUI.SetActive(false);
                 Inventory.instance.equipArmorCount--;
+                Inventory.instance.infoTexts[1].text = " ";
+                //방어구 장착해제 할때
+            }
+            if (gameObject.GetComponent<Item>().itemType == ItemType.Helmet)
+            {
+                equipUI.SetActive(false);
+                // Inventory.instance.equipArmorCount--;
+                Inventory.instance.infoTexts[2].text = " ";
+                //방어구 장착해제 할때
+            }
+            if (gameObject.GetComponent<Item>().itemType == ItemType.Boots)
+            {
+                equipUI.SetActive(false);
+                //Inventory.instance.equipArmorCount--;
+                Inventory.instance.infoTexts[3].text = " ";
                 //방어구 장착해제 할때
             }
         }
@@ -61,8 +96,8 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         previousParent = transform.parent;
 
-        transform.SetParent(canvas);        
-        transform.SetAsLastSibling();    
+        transform.SetParent(canvas);
+        transform.SetAsLastSibling();
 
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;

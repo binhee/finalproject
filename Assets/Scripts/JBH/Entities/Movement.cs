@@ -34,8 +34,10 @@ public class Movement : MonoBehaviour
 
     private void ApplyMovment(Vector2 direction)
     {
-        direction = direction * _stats.CurrentStates.speed;
+        // 이동 방향에 플레이어 속도를 곱함
+        direction = direction * _stats.CurrentStats.speed;
 
-        _rigidbody.velocity = direction;
+        // 수평 이동 속도 업데이트
+        _rigidbody.velocity = new Vector2(direction.x, _rigidbody.velocity.y);
     }
 }
