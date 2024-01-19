@@ -573,7 +573,7 @@ MonoBehaviour:
   - key: 49
     skillImage: {fileID: 764863967}
     cooldownText: {fileID: 1999558851}
-    cooldownTime: 10
+    cooldownTime: 5
     isOnCooldown: 0
     cooldownTimer: 0
   - key: 50
