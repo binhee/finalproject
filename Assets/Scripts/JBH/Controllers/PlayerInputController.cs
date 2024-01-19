@@ -10,9 +10,11 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class PlayerInputController : PlayerController
 {
     private Camera _camera;
-    private Rigidbody2D _rigidbody;    
+    private Rigidbody2D _rigidbody;
 
-    [SerializeField] private float jumpForce = 20f;    
+    private bool isJumping = false;
+
+    [SerializeField] private float jumpForce ;
 
     protected bool IsGrounded { get; set; } = true;
 
@@ -50,20 +52,24 @@ public class PlayerInputController : PlayerController
 
     public void OnJump(InputValue value)
     {
-        Debug.Log("점프!!");
-        _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        //GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpForce);
-        //_rigidbody.velocity = new Vector2(_rigidbody.velocity.x, jumpForce);
-        IsGrounded = false;
-        Debug.Log(_rigidbody);
+        if (IsGrounded && !isJumping)
+        {
+            _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            IsGrounded = false;
+            isJumping = true;
+        }
+        else if (!IsGrounded && isJumping)
+        {
+            
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            Debug.Log("공중");
             IsGrounded = true;
+            isJumping = false;
         }
     }
 }
