@@ -1,17 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.DualShock;
+using static UnityEditor.Timeline.TimelinePlaybackControls;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class PlayerInputController : PlayerController
 {
     private Camera _camera;
-        
+    private Rigidbody2D _rigidbody;
+
+    private bool isJumping = false;
+
+    [SerializeField] private float jumpForce ;
+
+    protected bool IsGrounded { get; set; } = true;
+
     protected override void Awake()
     {
         base.Awake();
         _camera = Camera.main;
+        _rigidbody = GetComponent<Rigidbody2D>();
     }
 
     public void OnMove(InputValue value)
@@ -37,5 +48,28 @@ public class PlayerInputController : PlayerController
     public void OnFire(InputValue value)
     {
         IsAttacking = value.isPressed;
+    }
+
+    public void OnJump(InputValue value)
+    {
+        if (IsGrounded && !isJumping)
+        {
+            _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            IsGrounded = false;
+            isJumping = true;
+        }
+        else if (!IsGrounded && isJumping)
+        {
+            
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            IsGrounded = true;
+            isJumping = false;
+        }
     }
 }
