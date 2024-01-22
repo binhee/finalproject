@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EnemyAttackType { Laser, Boom }
+public enum EnemyAttackType { Laser=0, Boom }
 public class Boss2Weapon : MonoBehaviour
 {
     [SerializeField]
@@ -11,10 +11,14 @@ public class Boss2Weapon : MonoBehaviour
     private GameObject Enemylaser;
     [SerializeField]
     private float attackRate;
-    private void Awake()
-    {
-        StartCoroutine("Laser");
-    }
+
+    [SerializeField]
+    private GameObject BoomAttack;
+
+    //private void Start()
+    //{
+    //    StartCoroutine("Laser");
+    //}
     public void StartAttack(EnemyAttackType enemyAttackType)
     {
         StartCoroutine(enemyAttackType.ToString());
@@ -27,21 +31,37 @@ public class Boss2Weapon : MonoBehaviour
 
     private IEnumerator Laser()
     {
-       
+        GameObject cloneLine = null;
+        GameObject cloneLaser = null;
+      
         while (true)
         {
-            Debug.Log("테스트");
-            GameObject Line = Instantiate(LaserLine, transform.position, Quaternion.identity);
+
+            GameObject Line = Instantiate(LaserLine, new Vector3(0, -4, 0), Quaternion.identity);
+            //cloneLine = Instantiate(LaserLine, transform.position, Quaternion.identity);
+            //cloneLine.GetComponent<Movement2D>().MoveTo(new Vector3(-0.7f, -1, 0));
+
+            //cloneLine = Instantiate(LaserLine, transform.position, Quaternion.identity);
+            //cloneLine.GetComponent<Movement2D>().MoveTo(new Vector3(0.7f, -1, 0));
+
             yield return new WaitForSeconds(1f);
-            Debug.Log("테스트1");
+
             Destroy(Line);
-            Debug.Log("테스트2");
+
             Instantiate(Enemylaser, transform.position, Quaternion.identity);
-            Debug.Log(attackRate);
+            cloneLaser = Instantiate(Enemylaser,transform.position, Quaternion.identity);
+            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(-0.7f, -1, 0));
+
+            cloneLaser =Instantiate(Enemylaser,transform.position,Quaternion.identity);
+            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(0.7f, -1, 0));
+
+
+
+            Debug.Log("Laser");
+
+          
             yield return new WaitForSeconds(attackRate);
 
-            Debug.Log("테스트3");
         }
     }
-   
 }

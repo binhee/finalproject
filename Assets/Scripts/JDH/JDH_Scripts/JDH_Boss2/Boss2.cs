@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Boss2State { moveApeear =0, Pattern01, Pattern02 }
+public enum Boss2State { MoveApeear =0, Pattern01, Pattern02 }
 public class Boss2 : MonoBehaviour
 {
     [SerializeField]
@@ -10,7 +10,7 @@ public class Boss2 : MonoBehaviour
     [SerializeField]
     private float boss2Appear = 5f;
 
-    private Boss2State boss2State = Boss2State.moveApeear;
+    private Boss2State boss2State = Boss2State.MoveApeear;
     private Movement2D movement2D;
     private BossHp bosshp;
 
@@ -31,7 +31,7 @@ public class Boss2 : MonoBehaviour
         StartCoroutine(boss2State.ToString());
     }
 
-    private IEnumerator MoveAppear()
+    private IEnumerator MoveApeear()
     {
         movement2D.MoveTo(Vector3.down);
         while (true)
@@ -44,17 +44,17 @@ public class Boss2 : MonoBehaviour
             yield return null;
         }
     }
-    //private IEnumerator Pattern01()
-    //{
-    //    boss2Weapon.StartAttack(EnemyAttackType.Laser);
-
-    //    while(true)
-    //    {
-    //        if(bosshp.CurrentHP<=bosshp.MaxHP*0.7f)
-    //        {
-    //            boss2Weapon.StopAttack(EnemyAttackType.Laser);
-    //        }
-    //        yield return null;
-    //    }
-    //}
+    private IEnumerator Pattern01()
+    {
+        boss2Weapon.StartAttack(EnemyAttackType.Laser);
+        
+        while (true)
+        {
+            if (bosshp.CurrentHP <= bosshp.MaxHP * 0.7f)
+            {
+                boss2Weapon.StopAttack(EnemyAttackType.Laser);
+            }
+            yield return null;
+        }
+    }
 }

@@ -9,7 +9,7 @@ public class Enemy2Spawner : MonoBehaviour
     [SerializeField]
     private GameObject Enemys;
     [SerializeField]
-    private GameObject Boss2;
+    private GameObject boss2;
 
     [SerializeField]
     private GameObject Boss2PanelHp;
@@ -22,11 +22,11 @@ public class Enemy2Spawner : MonoBehaviour
     private int maxEnemyCounts = 20;
 
 
-    private void Awake()
+    private void Start()
     {
         Boss2textWarning.SetActive(false);
         Boss2PanelHp.SetActive(false);
-        Boss2.SetActive(false);
+        boss2.SetActive(false);
         
         StartCoroutine("Spawn2Enemys");
     }  
@@ -58,6 +58,7 @@ public class Enemy2Spawner : MonoBehaviour
 
         Boss2textWarning.SetActive(false);
         Boss2PanelHp.SetActive(true);
-        Boss2.SetActive(true);
+        boss2.SetActive(true);
+        boss2.GetComponent<Boss2>().ChangePattern(Boss2State.MoveApeear);
     }
 }
