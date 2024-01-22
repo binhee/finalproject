@@ -10,9 +10,12 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private RectTransform rect;
     private CanvasGroup canvasGroup;
 
+    public ItemType itemImageType;
     public GameObject descriptionPanel;
-    public Text descriptionTxt;
     public GameObject equipUI;
+    public Text descriptionTxt;
+    public Text potionCountTxt;
+    public int itemCount = 1;
     private void Awake()
     {
         canvas = FindObjectOfType<Canvas>().transform;
@@ -91,6 +94,10 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 //방어구 장착해제 할때
             }
         }
+    }
+    public void UpdateText()
+    {
+        potionCountTxt.text = $"{itemCount}";
     }
     public void OnBeginDrag(PointerEventData eventData)
     {

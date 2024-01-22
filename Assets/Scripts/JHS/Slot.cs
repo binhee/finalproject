@@ -30,6 +30,15 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerE
 
     public void OnDrop(PointerEventData eventData)
     {
+        if (eventData.pointerDrag != null && gameObject.transform.childCount == 1 && eventData.pointerDrag.GetComponent<DraggableUI>().itemImageType == ItemType.HpPotion)
+        {
+            if (transform.GetChild(0).GetComponent<DraggableUI>().itemImageType == ItemType.HpPotion)
+            {
+                transform.GetChild(0).GetComponent<DraggableUI>().itemCount += eventData.pointerDrag.GetComponent<DraggableUI>().itemCount;
+                transform.GetChild(0).GetComponent<DraggableUI>().UpdateText();
+                Destroy(eventData.pointerDrag);
+            }
+        }
         if (eventData.pointerDrag != null && gameObject.transform.childCount==0 && CheckType(eventData))
         {
             eventData.pointerDrag.transform.SetParent(transform);
