@@ -15,19 +15,21 @@ public class SceneChange : MonoBehaviour
         //태그가 Sound인 SoundManager에 접근.
         soundManager = GameObject.FindGameObjectWithTag("Sound").GetComponent<SoundManager>();
     }
-    public void InventoryLoad()     // 인벤토리 로드 함수
-    {
-        soundManager.PlatSFX(soundManager.BTNSound);    // BTNSound 재생
-        GameObject go = Resources.Load<GameObject>("YSJ/Inventory");
-        Instantiate(go);
-    }
+    //public void InventoryLoad()     // 인벤토리 로드 함수
+    //{
+    //    soundManager.PlatSFX(soundManager.BTNSound);    // BTNSound 재생
+    //    GameObject go = Resources.Load<GameObject>("YSJ/Inventory");
+    //    Instantiate(go);
+    //    Debug.Log("1");
+    //}
 
-    public void StoreLoad()     // 상점 로드 함수
-    {
-        soundManager.PlatSFX(soundManager.BTNSound);    // BTNSound 재생
-        GameObject go = Resources.Load<GameObject>("YSJ/Store");
-        Instantiate(go);
-    }
+    //public void StoreLoad()     // 상점 로드 함수
+    //{
+    //    soundManager.PlatSFX(soundManager.BTNSound);    // BTNSound 재생
+    //    GameObject go = Resources.Load<GameObject>("YSJ/Store");
+    //    Instantiate(go);
+    //    Debug.Log("2");
+    //}
 
     public void SetStagePanel()
     {
@@ -55,22 +57,22 @@ public class SceneChange : MonoBehaviour
 
     public void MainSceneLoad()    // 메인화면 입장
     {
-        SceneManager.LoadScene("YSJ_UI");    // "" 스테이지 씬 삽입
+        SceneManager.LoadScene("Main");    // "" 스테이지 씬 삽입
     }
 
     public void Stage1Load()    // 스테이지1 입장
     {
-        SceneManager.LoadScene("JBH_Stage");    // "" 스테이지 씬 삽입
+        SceneManager.LoadScene("Stage");    // "" 스테이지 씬 삽입
     }
 
     public void Stage2Load()    // 스테이지2 입장
     {
-        SceneManager.LoadScene("JBH_Stage");    // "" 스테이지 씬 삽입
+        SceneManager.LoadScene("Stage");    // "" 스테이지 씬 삽입
     }
 
     public void Stage3Load()    // 스테이지3 입장
     {
-        SceneManager.LoadScene("JBH_Stage");    // "" 스테이지 씬 삽입
+        SceneManager.LoadScene("Stage");    // "" 스테이지 씬 삽입
     }
 }
 
