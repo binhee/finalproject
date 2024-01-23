@@ -1,36 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using static PotionControl;
 
 public class Shop : MonoBehaviour
 {
+    public class ShopItemList
+    {
+        public GameObject shopItemImage;
+        public int itemCost;
+    }
+    public List<ShopItemList> shopList;
+
     public GameObject purchasePanel;
     public GameObject waringPanel;
     public Text goldText;
-    int itemCost;
+    int itemIndexNum;
     void Update()
     {
-        //goldText.text =  플레이어의 골드
+        goldText.text = $"{Inventory.instance.playerGold}";
     }
     public void ExitPanel(GameObject panel)
     {
         panel.SetActive(false);
     }
-    public void PurchaseNotice(int cost)
+    public void PurchaseNotice(int indexNum)
     {
-        itemCost= cost;
+        itemIndexNum = indexNum;
         purchasePanel.SetActive(true);
     }
     public void Purchase()
     {
-        //플레이어의 골드와 계산해서 처리
-        //현재는 조건으로 가져올 변수가 없어서 놔둠
         //될경우
-
-        //안될경우
-        itemCost = 0; 
-        waringPanel.SetActive(true);
+        if (shopList[itemIndexNum].itemCost <= Inventory.instance.playerGold)
+        {
+            Inventory.instance.playerGold -= shopList[itemIndexNum].itemCost;
+        }
+        else if (shopList[itemIndexNum].itemCost > Inventory.instance.playerGold)//안될경우
+        {
+            waringPanel.SetActive(true);
+        }
         purchasePanel.SetActive(false);
     }
 }
