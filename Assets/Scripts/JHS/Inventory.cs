@@ -15,7 +15,6 @@ public class Inventory : MonoBehaviour
 
     public int equipWeaponCount;
     public int equipArmorCount;
-    public int playerGold;
 
     public Text[] infoTexts;
 

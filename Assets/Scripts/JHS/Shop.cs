@@ -20,7 +20,7 @@ public class Shop : MonoBehaviour
     int itemIndexNum;
     void Update()
     {
-        goldText.text = $"{Inventory.instance.playerGold}";
+        goldText.text = $"{PlayerManager.instance.playerGold}";
     }
     public void ExitPanel(GameObject panel)
     {
@@ -34,11 +34,11 @@ public class Shop : MonoBehaviour
     public void Purchase()
     {
         //될경우
-        if (shopList[itemIndexNum].itemCost <= Inventory.instance.playerGold)
+        if (shopList[itemIndexNum].itemCost <= PlayerManager.instance.playerGold)
         {
-            Inventory.instance.playerGold -= shopList[itemIndexNum].itemCost;
+            PlayerManager.instance.playerGold -= shopList[itemIndexNum].itemCost;
         }
-        else if (shopList[itemIndexNum].itemCost > Inventory.instance.playerGold)//안될경우
+        else if (shopList[itemIndexNum].itemCost > PlayerManager.instance.playerGold)//안될경우
         {
             waringPanel.SetActive(true);
         }
