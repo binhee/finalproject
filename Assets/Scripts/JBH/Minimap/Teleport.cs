@@ -19,7 +19,7 @@ public class Teleport : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && Input.GetKeyDown(KeyCode.UpArrow))
+        if (collision.CompareTag("Player"))
         {
             StartCoroutine(TeleportRoutine());
         }
