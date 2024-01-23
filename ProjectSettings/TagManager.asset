@@ -6,8 +6,8 @@ TagManager:
   tags:
   - Item
   - Ground
-  - Boss
-  - Enemy
+  - Sound
+  - DieBox
   layers:
   - Default
   - TransparentFX
