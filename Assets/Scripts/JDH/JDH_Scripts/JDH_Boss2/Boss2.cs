@@ -12,14 +12,14 @@ public class Boss2 : MonoBehaviour
 
     private Boss2State boss2State = Boss2State.MoveApeear;
     private Movement2D movement2D;
-    private BossHp bosshp;
+    private BossHp2 bosshp2;
 
     private Boss2Weapon boss2Weapon;
 
     private void Awake()
     {
         movement2D = GetComponent<Movement2D>();
-        bosshp = GetComponent<BossHp>();
+        bosshp2 = GetComponent<BossHp2>();
         boss2Weapon = GetComponent<Boss2Weapon>();
 
     }
@@ -50,11 +50,26 @@ public class Boss2 : MonoBehaviour
         
         while (true)
         {
-            if (bosshp.CurrentHP <= bosshp.MaxHP * 0.7f)
+            if (bosshp2.CurrentHP2 <= bosshp2.MaxHP2 * 0.7f)
             {
                 boss2Weapon.StopAttack(EnemyAttackType.Laser);
+                ChangePattern(Boss2State.Pattern02);
             }
             yield return null;
         }
+    }
+    private IEnumerator Pattern02()
+    {
+        boss2Weapon.StartAttack(EnemyAttackType.TriangleLaser);
+        
+        while(true)
+        {
+            if (bosshp2.CurrentHP2 <= bosshp2.MaxHP2 * 0.3f)
+            {
+                boss2Weapon.StopAttack(EnemyAttackType.TriangleLaser);
+            }
+            yield return null;
+        }
+       
     }
 }

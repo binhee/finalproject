@@ -16,9 +16,18 @@ public class Boss : MonoBehaviour
     private Movement2D movement2D;
     private BossWeapon bossweapon;
     private BossHp bossHp;
+    private PlayerController playerController;
+
+    [SerializeField]
+    private GameObject ClearPanel;
+    [SerializeField]
+    private GameObject GameOverPanel;
+    [SerializeField]
+    private int BossGold = 10000;
 
     private void Awake()
     {
+        playerController = GetComponent<PlayerController>();
         movement2D = GetComponent<Movement2D>();
         bossweapon = GetComponent<BossWeapon>();   
         bossHp = GetComponent<BossHp>();
@@ -108,6 +117,9 @@ public class Boss : MonoBehaviour
     public void OnDie()
     {
         Instantiate(explosionPrefab,transform.position,Quaternion.identity);
+        //playerController.Gold += BossGold;
+        //PlayerPrefs.SetInt("Gold" + playerController.Gold);
+        ClearPanel.SetActive(true);
         Destroy(gameObject);
     }
 }
