@@ -11,6 +11,7 @@ public class Inventory : MonoBehaviour
 
     public GameObject inventoryPanel;
     public List<Slot> itemSlotList = new List<Slot>();
+    public bool potionOwn;
 
     public int equipWeaponCount;
     public int equipArmorCount;
@@ -40,5 +41,23 @@ public class Inventory : MonoBehaviour
     public void ExitInventoryPanel()
     {
         inventoryPanel.SetActive(false);
+    }
+    public void PotionDetect()
+    {
+        for (int i = 0; i < itemSlotList.Count; i++)
+        {
+            if (itemSlotList[i].transform.childCount == 1)
+            {
+                if (itemSlotList[i].transform.GetChild(0).GetComponent<DraggableUI>().itemImageType == ItemType.HpPotion)
+                {
+                    potionOwn=true;
+                    break;
+                }
+            }
+            else
+            {
+                potionOwn = false;
+            }
+        }
     }
 }
