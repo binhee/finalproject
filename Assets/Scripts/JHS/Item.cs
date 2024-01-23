@@ -15,7 +15,7 @@ public class Item : MonoBehaviour
     public GameObject itemImage;
     private void Awake()
     {
-        
+
     }
     void Start()
     {
@@ -35,24 +35,36 @@ public class Item : MonoBehaviour
     }
     private void ClassifyItem(ItemType itemtype, Collision2D collision)
     {
+        Inventory.instance.PotionDetect();
         switch (itemtype)
         {
             case ItemType.HpPotion:
                 for (int i = 0; i < Inventory.instance.itemSlotList.Count; i++)
                 {
-                    if (Inventory.instance.itemSlotList[i].transform.childCount == 0)
+                    Transform slotTransform = Inventory.instance.itemSlotList[i].transform;
+                    if (slotTransform.childCount == 0 && Inventory.instance.potionOwn == false)
                     {
-                        Instantiate(itemImage, Inventory.instance.itemSlotList[i].transform).GetComponent<DraggableUI>();
+                        Instantiate(itemImage, slotTransform).GetComponent<DraggableUI>().itemImageType = itemtype;
                         break;
+                    }
+                    else if(slotTransform.childCount == 1)
+                    {
+                        if (slotTransform.GetChild(0).GetComponent<DraggableUI>().itemImageType == itemtype)
+                        {
+                            slotTransform.GetChild(0).GetComponent<DraggableUI>().itemCount++;
+                            slotTransform.GetChild(0).GetComponent<DraggableUI>().UpdateText();
+                            break;
+                        }
                     }
                 }
                 break;
             case ItemType.Armor:
                 for (int i = 0; i < Inventory.instance.itemSlotList.Count; i++)
                 {
-                    if (Inventory.instance.itemSlotList[i].transform.childCount == 0)
+                    Transform slotTransform = Inventory.instance.itemSlotList[i].transform;
+                    if (slotTransform.childCount == 0)
                     {
-                        Instantiate(itemImage, Inventory.instance.itemSlotList[i].transform).GetComponent<DraggableUI>();
+                        Instantiate(itemImage, slotTransform).GetComponent<DraggableUI>().itemImageType = itemtype;
                         break;
                     }
                 }
@@ -60,9 +72,10 @@ public class Item : MonoBehaviour
             case ItemType.Weapon:
                 for (int i = 0; i < Inventory.instance.itemSlotList.Count; i++)
                 {
+                    Transform slotTransform = Inventory.instance.itemSlotList[i].transform;
                     if (Inventory.instance.itemSlotList[i].transform.childCount == 0)
                     {
-                        Instantiate(itemImage, Inventory.instance.itemSlotList[i].transform).GetComponent<DraggableUI>();
+                        Instantiate(itemImage, slotTransform).GetComponent<DraggableUI>().itemImageType = itemtype;
                         break;
                     }
                 }
