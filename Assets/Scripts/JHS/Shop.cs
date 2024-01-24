@@ -7,6 +7,7 @@ using static PotionControl;
 
 public class Shop : MonoBehaviour
 {
+    [System.Serializable]
     public class ShopItemList
     {
         public GameObject shopItemImage;
@@ -20,7 +21,7 @@ public class Shop : MonoBehaviour
     int itemIndexNum;
     void Update()
     {
-        goldText.text = $"{PlayerManager.instance.playerGold}";
+        goldText.text = $"Gold : {PlayerManager.instance.playerGold}";
     }
     public void ExitPanel(GameObject panel)
     {
@@ -37,6 +38,7 @@ public class Shop : MonoBehaviour
         if (shopList[itemIndexNum].itemCost <= PlayerManager.instance.playerGold)
         {
             PlayerManager.instance.playerGold -= shopList[itemIndexNum].itemCost;
+            Inventory.instance.ClassifyAndCreateItem(ItemType.HpPotion, shopList[itemIndexNum].shopItemImage);
         }
         else if (shopList[itemIndexNum].itemCost > PlayerManager.instance.playerGold)//안될경우
         {
