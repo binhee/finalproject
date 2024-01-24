@@ -103,7 +103,7 @@ public class Boss2Weapon : MonoBehaviour
             boom = Instantiate(boomPrefab, transform.position, Quaternion.identity);
             //boom.GetComponent<Movement2D>().MoveTo(new Vector3(0, -6, 0));
           
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1f);
             Effect = Instantiate(boomEffect, boom.transform.position, Quaternion.identity);
             Destroy(boom);
 

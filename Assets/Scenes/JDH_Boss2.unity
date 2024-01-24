@@ -916,7 +916,6 @@ GameObject:
   - component: {fileID: 676684486}
   - component: {fileID: 676684485}
   - component: {fileID: 676684484}
-  - component: {fileID: 676684491}
   m_Layer: 0
   m_Name: Player (1)
   m_TagString: Player
@@ -1094,18 +1093,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &676684491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 676684483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c25c4ca410f83744791f3e3d748fb272, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &708140771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,7 +1639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LaserLine: {fileID: 127120148636249937, guid: 8ff68186796b97349ba95e3aa11489fc, type: 3}
   Enemylaser: {fileID: 6104568068728798773, guid: 8189f480acad7194a954e3168dd0f3bb, type: 3}
-  attackRate: 1
+  attackRate: 0.5
   boomPrefab: {fileID: 9144159506539420479, guid: 6100609d6523fa643ac49c1562b9d435, type: 3}
   boomEffect: {fileID: 8309301430079731671, guid: 33879e73e28d93f43941b85ec90b7de6, type: 3}
 --- !u!114 &1079841326
@@ -1667,7 +1654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dbd989d49bed174186bd71d093d9efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 7
   moveDIrection: {x: 0, y: 0, z: 0}
 --- !u!58 &1079841327
 CircleCollider2D:
