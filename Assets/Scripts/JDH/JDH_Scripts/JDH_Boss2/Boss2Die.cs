@@ -11,7 +11,7 @@ public class Boss2Die : MonoBehaviour
     [SerializeField]
     private GameObject GameOverPanel;
     [SerializeField]
-    private int Boss2Gold = 15000;
+    private int Boss2Gold = 1500;
 
     private PlayerController playerController;
 

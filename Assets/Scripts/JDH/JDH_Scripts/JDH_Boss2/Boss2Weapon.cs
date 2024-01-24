@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EnemyAttackType { Laser=0, TriangleLaser }
+public enum EnemyAttackType { Laser=0, TriangleLaser, Boom }
 public class Boss2Weapon : MonoBehaviour
 {
     [SerializeField]
@@ -12,6 +12,10 @@ public class Boss2Weapon : MonoBehaviour
     [SerializeField]
     private float attackRate;
 
+    [SerializeField]
+    private GameObject boomPrefab;
+    [SerializeField]
+    private GameObject boomEffect;
     public void StartAttack(EnemyAttackType enemyAttackType)
     {
         StartCoroutine(enemyAttackType.ToString());
@@ -85,6 +89,27 @@ public class Boss2Weapon : MonoBehaviour
 
 
             yield return new WaitForSeconds(attackRate);
+
+        }
+    }
+
+    private IEnumerator Boom()
+    {
+        GameObject boom = null;
+        GameObject Effect = null;
+        while(true)
+        {
+            //Instantiate(boomPrefab, transform.position, Quaternion.identity);
+            boom = Instantiate(boomPrefab, transform.position, Quaternion.identity);
+            //boom.GetComponent<Movement2D>().MoveTo(new Vector3(0, -6, 0));
+          
+            yield return new WaitForSeconds(1.5f);
+            Effect = Instantiate(boomEffect, boom.transform.position, Quaternion.identity);
+            Destroy(boom);
+
+            yield return new WaitForSeconds(attackRate);
+            Destroy(Effect);
+
 
         }
     }

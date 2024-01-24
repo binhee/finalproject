@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class Projectile2 : MonoBehaviour
 {
     private int damage = 2;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -12,9 +12,9 @@ public class Projectile : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
-        else if(collision.CompareTag("Boss"))
+        else if (collision.CompareTag("Boss"))
         {
-            collision.GetComponent<BossHp>().TakeDamage(damage);
+            collision.GetComponent<BossHp2>().TakeDamage(damage);
             Destroy(gameObject);
         }
     }
