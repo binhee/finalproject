@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 696047536334971514}
   - component: {fileID: 7063617516439916294}
   - component: {fileID: 3430375235397343329}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 6496058075356895592}
   - component: {fileID: -4727558719790834112}
   - component: {fileID: -1484243468277980433}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: ArmorImage_Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,9 +173,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceedb733ac90cad45a7dd6c1d8f1738d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemImageType: 0
   descriptionPanel: {fileID: 6489231574560617786}
-  descriptionTxt: {fileID: 3892058158477745583}
   equipUI: {fileID: 4890648285820823306}
+  descriptionTxt: {fileID: 3892058158477745583}
+  potionCountTxt: {fileID: 0}
+  itemCount: 1
 --- !u!225 &-4727558719790834112
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -214,7 +217,7 @@ GameObject:
   - component: {fileID: 3415547524281847896}
   - component: {fileID: 4075705591742403714}
   - component: {fileID: 6388566112986365525}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +293,7 @@ GameObject:
   - component: {fileID: 1239259593587704919}
   - component: {fileID: 8051212209318419794}
   - component: {fileID: 7485105523609499527}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Equip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +373,7 @@ GameObject:
   - component: {fileID: 2740255777634387934}
   - component: {fileID: 1429232973560423593}
   - component: {fileID: 3892058158477745583}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,7 +453,7 @@ GameObject:
   - component: {fileID: 2385945019717592326}
   - component: {fileID: 57335166286561729}
   - component: {fileID: 7952774936525025139}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: DescriptionPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

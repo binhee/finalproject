@@ -11,6 +11,9 @@ public class PotionControl : MonoBehaviour
     public class Potion
     {
         public KeyCode key;
+        public int indexNum;
+        public bool onPotionEquip;
+        public GameObject potionUI;
         public Image potionImage;
         public Text cooldownText;
         public float cooldownTime = 5f;
@@ -47,7 +50,7 @@ public class PotionControl : MonoBehaviour
             {
                 UpdateCooldownUI(potion);
             }
-
+            UPdatePotionImage(potion);
             // 키 입력 시 포션 사용
             if (Input.GetKeyDown(potion.key))
             {
@@ -55,7 +58,21 @@ public class PotionControl : MonoBehaviour
             }
         }
     }
-
+    void UPdatePotionImage(Potion potionNum)
+    {
+        int num = potionNum.indexNum;
+        if (Inventory.instance.potionEquipSlots[num].transform.childCount==0 && potionNum.onPotionEquip)
+        {
+            Debug.Log("a");
+            potionNum.onPotionEquip = false;
+            Destroy(gameObject.transform.GetChild(num).GetChild(0));
+        }
+        if (Inventory.instance.potionEquipSlots[num].transform.childCount==1&& !potionNum.onPotionEquip)
+        {
+            potionNum.onPotionEquip = true;
+            Instantiate(Inventory.instance.potionEquipSlots[num].transform.GetChild(0),gameObject.transform.GetChild(num));
+        }
+    }
     // 포션 사용 메서드
     void UsePotion(Potion potion)
     {

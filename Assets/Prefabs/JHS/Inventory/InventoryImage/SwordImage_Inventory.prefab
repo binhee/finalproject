@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1007469960016304901}
   - component: {fileID: 446944081076730350}
   - component: {fileID: 4945723011948673346}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Equip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 5455880583373580858}
   - component: {fileID: 3405802216757308028}
   - component: {fileID: 4303349769186317223}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 5023601368933918323}
   - component: {fileID: 3689246806544043125}
   - component: {fileID: 7949545425184120245}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 941610494398669751}
   - component: {fileID: 344394061560946259}
   - component: {fileID: 81183661736723348}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: DescriptionPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 6863054652528924383}
   - component: {fileID: 8230660097924309799}
   - component: {fileID: 7453067266742214124}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +409,7 @@ GameObject:
   - component: {fileID: -1174089744378030755}
   - component: {fileID: -4753028969205175434}
   - component: {fileID: -5975338602648443644}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: SwordImage_Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,9 +488,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceedb733ac90cad45a7dd6c1d8f1738d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemImageType: 0
   descriptionPanel: {fileID: 2268712210228695827}
-  descriptionTxt: {fileID: 7949545425184120245}
   equipUI: {fileID: 916848981499017254}
+  descriptionTxt: {fileID: 7949545425184120245}
+  potionCountTxt: {fileID: 0}
+  itemCount: 1
 --- !u!225 &-4753028969205175434
 CanvasGroup:
   m_ObjectHideFlags: 0

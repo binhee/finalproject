@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage/Stage.unity
     guid: d918f821e00c11948a2179363ba9d522
   - enabled: 1
+    path: Assets/Scenes/JHS/JHS_Item_Stage.unity
+    guid: 85e880d2db65e7b47aeb620c3d6c9c6d
+  - enabled: 1
     path: Assets/Scenes/YSJ_TestStage.unity
     guid: 7d6eaf8d1db735b4f91d69eae1e9ab1e
   - enabled: 1

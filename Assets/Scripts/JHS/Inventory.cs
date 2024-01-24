@@ -11,6 +11,7 @@ public class Inventory : MonoBehaviour
 
     public GameObject inventoryPanel;
     public List<Slot> itemSlotList = new List<Slot>();
+    public List<Slot> potionEquipSlots = new List<Slot>();
     public bool potionOwn;
 
     public int equipWeaponCount;
@@ -20,7 +21,16 @@ public class Inventory : MonoBehaviour
 
     private void Awake()
     {
-            instance = this; 
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            if (instance != this)
+                Destroy(this.gameObject);
+        }
     }
     private void Update()
     {
