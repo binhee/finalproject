@@ -14,7 +14,7 @@ public class Projectile : MonoBehaviour
         }
         else if(collision.CompareTag("Boss"))
         {
-            collision.GetComponent<BossHp2>().TakeDamage(damage);
+            collision.GetComponent<BossHp>().TakeDamage(damage);
             Destroy(gameObject);
         }
     }
