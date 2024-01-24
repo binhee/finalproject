@@ -1653,6 +1653,8 @@ MonoBehaviour:
   LaserLine: {fileID: 127120148636249937, guid: 8ff68186796b97349ba95e3aa11489fc, type: 3}
   Enemylaser: {fileID: 6104568068728798773, guid: 8189f480acad7194a954e3168dd0f3bb, type: 3}
   attackRate: 1
+  boomPrefab: {fileID: 9144159506539420479, guid: 6100609d6523fa643ac49c1562b9d435, type: 3}
+  boomEffect: {fileID: 8309301430079731671, guid: 33879e73e28d93f43941b85ec90b7de6, type: 3}
 --- !u!114 &1079841326
 MonoBehaviour:
   m_ObjectHideFlags: 0

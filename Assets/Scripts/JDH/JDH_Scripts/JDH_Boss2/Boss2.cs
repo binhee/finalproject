@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Boss2State { MoveApeear =0, Pattern01, Pattern02 }
+public enum Boss2State { MoveApeear =0, Pattern01, Pattern02, Pattern03 }
 public class Boss2 : MonoBehaviour
 {
     [SerializeField]
@@ -47,7 +47,7 @@ public class Boss2 : MonoBehaviour
     private IEnumerator Pattern01()
     {
         boss2Weapon.StartAttack(EnemyAttackType.Laser);
-        
+
         while (true)
         {
             if (bosshp2.CurrentHP2 <= bosshp2.MaxHP2 * 0.7f)
@@ -61,15 +61,36 @@ public class Boss2 : MonoBehaviour
     private IEnumerator Pattern02()
     {
         boss2Weapon.StartAttack(EnemyAttackType.TriangleLaser);
-        
-        while(true)
+
+        while (true)
         {
-            if (bosshp2.CurrentHP2 <= bosshp2.MaxHP2 * 0.3f)
+            if (bosshp2.CurrentHP2 <= bosshp2.MaxHP2 * 0.5f)
             {
                 boss2Weapon.StopAttack(EnemyAttackType.TriangleLaser);
+                ChangePattern(Boss2State.Pattern03);
             }
             yield return null;
         }
-       
+    }
+
+    private IEnumerator Pattern03()
+    {
+        boss2Weapon.StartAttack(EnemyAttackType.Boom);
+
+
+        Vector3 direction = Vector3.right;
+        movement2D.MoveTo(direction);
+
+        while (true)
+        {
+            if (transform.position.x <= stageData.LimitMin.x ||
+                transform.position.x >= stageData.LimitMax.x)
+            {
+                direction *= -1;
+                movement2D.MoveTo(direction);
+            }
+            yield return null;
+        }
     }
 }
+
