@@ -8171,6 +8171,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 589901223358577539}
+    - target: {fileID: 3377181790576030322, guid: 408434142aeb6c045af0e05883115239, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TestStage2Load
+      objectReference: {fileID: 0}
     - target: {fileID: 4082198810025880547, guid: 408434142aeb6c045af0e05883115239, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

@@ -63,14 +63,14 @@ public class PotionControl : MonoBehaviour
         int num = potionNum.indexNum;
         if (Inventory.instance.potionEquipSlots[num].transform.childCount==0 && potionNum.onPotionEquip)
         {
-            Debug.Log("a");
             potionNum.onPotionEquip = false;
-            Destroy(gameObject.transform.GetChild(num).GetChild(0));
+            Destroy(gameObject.transform.GetChild(num).GetChild(0).gameObject);
         }
         if (Inventory.instance.potionEquipSlots[num].transform.childCount==1&& !potionNum.onPotionEquip)
         {
             potionNum.onPotionEquip = true;
-            Instantiate(Inventory.instance.potionEquipSlots[num].transform.GetChild(0),gameObject.transform.GetChild(num));
+            Instantiate(Inventory.instance.potionEquipSlots[num].transform.GetChild(0).gameObject , gameObject.transform.GetChild(num)).GetComponent<RectTransform>().anchoredPosition= new Vector2(0,0);
+            
         }
     }
     // 포션 사용 메서드
