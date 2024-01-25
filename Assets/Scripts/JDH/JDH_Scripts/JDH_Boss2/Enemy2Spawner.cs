@@ -7,7 +7,7 @@ public class Enemy2Spawner : MonoBehaviour
     [SerializeField]
     private StageData stageData;
     [SerializeField]
-    private GameObject Enemys;
+    private GameObject[] Enemys;
     [SerializeField]
     private GameObject boss2;
 
@@ -38,8 +38,12 @@ public class Enemy2Spawner : MonoBehaviour
         while (true)
         {
             float PositionX = Random.Range(stageData.LimitMin.x, stageData.LimitMax.x);
+            float PositionsX = Random.Range(stageData.LimitMin.x, stageData.LimitMax.x);
             Vector3 Position = new Vector3(PositionX, stageData.LimitMax.y, 0);
-            Instantiate(Enemys, Position, Quaternion.identity);
+            Vector3 Positions = new Vector3(PositionsX, stageData.LimitMax.y, 0);
+            Instantiate(Enemys[0], Position, Quaternion.identity);
+            yield return new WaitForSeconds(2f);
+            Instantiate(Enemys[1], Positions, Quaternion.identity);
 
             currentEnemy++;
             if (currentEnemy == maxEnemyCounts)

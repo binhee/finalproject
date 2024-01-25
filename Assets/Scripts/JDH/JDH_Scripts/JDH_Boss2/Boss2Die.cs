@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Boss2Die : MonoBehaviour
 {
@@ -22,10 +23,15 @@ public class Boss2Die : MonoBehaviour
     public void Boss2OnDie()
     {
         Instantiate(explosionDie,transform.position, Quaternion.identity);
-
+        ClearPanel.SetActive(true);
         Destroy(gameObject);
         //playerController.Gold += Boss2Gold;
+        GameOverPanel.SetActive(false);
+        
+    }
 
-        ClearPanel.SetActive(true);
+    public void Home()
+    {   
+        SceneManager.LoadScene("Main");
     }
 }

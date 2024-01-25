@@ -8,7 +8,7 @@ public class Boss2Weapon : MonoBehaviour
     [SerializeField]
     private GameObject LaserLine;
     [SerializeField]
-    private GameObject Enemylaser;
+    private GameObject[] Enemylaser;
     [SerializeField]
     private float attackRate;
 
@@ -29,7 +29,8 @@ public class Boss2Weapon : MonoBehaviour
     private IEnumerator Laser()
     {
         GameObject cloneLine = null;
-       
+        GameObject cloneLaser = null;
+
         while (true)
         {
 
@@ -40,8 +41,12 @@ public class Boss2Weapon : MonoBehaviour
 
             Destroy(Line);
 
-            Instantiate(Enemylaser, transform.position, Quaternion.identity);
-            
+            Instantiate(Enemylaser[0], transform.position, Quaternion.identity);
+            cloneLaser = Instantiate(Enemylaser[1], transform.position, Quaternion.identity);
+            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(-1f, -1, 0));
+            cloneLaser = Instantiate(Enemylaser[2], transform.position, Quaternion.identity);
+            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(1f, -1, 0));
+
             Debug.Log("Laser");
 
             yield return new WaitForSeconds(attackRate);
@@ -57,7 +62,8 @@ public class Boss2Weapon : MonoBehaviour
         while (true)
         {
 
-            GameObject Line = Instantiate(LaserLine, new Vector3(0, -4, 0), Quaternion.identity);
+            //GameObject Line = Instantiate(LaserLine,new Vector3(transform.position.x,-3,0), Quaternion.identity);
+
             //cloneLine = Instantiate(LaserLine, transform.position, Quaternion.identity);
             //cloneLine.GetComponent<Movement2D>().MoveTo(new Vector3(-0.8f, 0, 0));
             //cloneLine = Instantiate(Enemylaser, transform.position, Quaternion.identity);
@@ -68,22 +74,22 @@ public class Boss2Weapon : MonoBehaviour
             //cloneLine = Instantiate(Enemylaser, transform.position, Quaternion.identity);
             //cloneLine.GetComponent<Movement2D>().MoveTo(new Vector3(0.4f, 0, 0));
 
-            Debug.Log("Line");
+            //Debug.Log("Line");
 
             yield return new WaitForSeconds(1f);
 
-            Destroy(Line);
+            //Destroy(Line);
 
-            Instantiate(Enemylaser, transform.position, Quaternion.identity);
-            cloneLaser = Instantiate(Enemylaser, transform.position, Quaternion.identity);
-            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(-0.8f, -1, 0));
-            cloneLaser = Instantiate(Enemylaser, transform.position, Quaternion.identity);
-            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(-0.4f, -1, 0)); 
+            Instantiate(Enemylaser[0], transform.position, Quaternion.identity);
+            cloneLaser = Instantiate(Enemylaser[1], transform.position, Quaternion.identity);
+            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(-1f, -1, 0));
+            cloneLaser = Instantiate(Enemylaser[3], transform.position, Quaternion.identity);
+            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(-0.5f, -1, 0)); 
 
-            cloneLaser = Instantiate(Enemylaser, transform.position, Quaternion.identity);
-            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(0.8f, -1, 0));
-            cloneLaser = Instantiate(Enemylaser, transform.position, Quaternion.identity);
-            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(0.4f, -1, 0));
+            cloneLaser = Instantiate(Enemylaser[2], transform.position, Quaternion.identity);
+            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(1f, -1, 0));
+            cloneLaser = Instantiate(Enemylaser[4], transform.position, Quaternion.identity);
+            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(0.5f, -1, 0));
 
             Debug.Log("Laser1");
 
@@ -103,7 +109,7 @@ public class Boss2Weapon : MonoBehaviour
             boom = Instantiate(boomPrefab, transform.position, Quaternion.identity);
             //boom.GetComponent<Movement2D>().MoveTo(new Vector3(0, -6, 0));
           
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1f);
             Effect = Instantiate(boomEffect, boom.transform.position, Quaternion.identity);
             Destroy(boom);
 
