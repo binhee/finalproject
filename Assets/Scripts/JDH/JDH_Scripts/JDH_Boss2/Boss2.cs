@@ -62,9 +62,19 @@ public class Boss2 : MonoBehaviour
     {
         boss2Weapon.StartAttack(EnemyAttackType.TriangleLaser);
 
+        Vector3 direction = Vector3.right;
+        movement2D.MoveTo(direction);
+
         while (true)
         {
-            if (bosshp2.CurrentHP2 <= bosshp2.MaxHP2 * 0.5f)
+            if (transform.position.x <= stageData.LimitMin.x ||
+                transform.position.x >= stageData.LimitMax.x)
+            {
+                direction *= -1;
+                movement2D.MoveTo(direction);
+            }
+
+            if (bosshp2.CurrentHP2 <= bosshp2.MaxHP2 * 0.4f)
             {
                 boss2Weapon.StopAttack(EnemyAttackType.TriangleLaser);
                 ChangePattern(Boss2State.Pattern03);
@@ -78,7 +88,7 @@ public class Boss2 : MonoBehaviour
         boss2Weapon.StartAttack(EnemyAttackType.Boom);
 
 
-        Vector3 direction = Vector3.right;
+        Vector3 direction = Vector3.left;
         movement2D.MoveTo(direction);
 
         while (true)

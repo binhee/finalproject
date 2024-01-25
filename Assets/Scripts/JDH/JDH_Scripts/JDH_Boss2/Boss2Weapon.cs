@@ -29,7 +29,8 @@ public class Boss2Weapon : MonoBehaviour
     private IEnumerator Laser()
     {
         GameObject cloneLine = null;
-       
+        GameObject cloneLaser = null;
+
         while (true)
         {
 
@@ -41,7 +42,11 @@ public class Boss2Weapon : MonoBehaviour
             Destroy(Line);
 
             Instantiate(Enemylaser, transform.position, Quaternion.identity);
-            
+            cloneLaser = Instantiate(Enemylaser, transform.position, Quaternion.identity);
+            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(-1f, -1, 0));
+            cloneLaser = Instantiate(Enemylaser, transform.position, Quaternion.identity);
+            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(1f, -1, 0));
+
             Debug.Log("Laser");
 
             yield return new WaitForSeconds(attackRate);
@@ -57,7 +62,8 @@ public class Boss2Weapon : MonoBehaviour
         while (true)
         {
 
-            GameObject Line = Instantiate(LaserLine, new Vector3(0, -4, 0), Quaternion.identity);
+            //GameObject Line = Instantiate(LaserLine,new Vector3(transform.position.x,-3,0), Quaternion.identity);
+
             //cloneLine = Instantiate(LaserLine, transform.position, Quaternion.identity);
             //cloneLine.GetComponent<Movement2D>().MoveTo(new Vector3(-0.8f, 0, 0));
             //cloneLine = Instantiate(Enemylaser, transform.position, Quaternion.identity);
@@ -68,22 +74,22 @@ public class Boss2Weapon : MonoBehaviour
             //cloneLine = Instantiate(Enemylaser, transform.position, Quaternion.identity);
             //cloneLine.GetComponent<Movement2D>().MoveTo(new Vector3(0.4f, 0, 0));
 
-            Debug.Log("Line");
+            //Debug.Log("Line");
 
             yield return new WaitForSeconds(1f);
 
-            Destroy(Line);
+            //Destroy(Line);
 
             Instantiate(Enemylaser, transform.position, Quaternion.identity);
             cloneLaser = Instantiate(Enemylaser, transform.position, Quaternion.identity);
-            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(-0.8f, -1, 0));
+            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(-1f, -1, 0));
             cloneLaser = Instantiate(Enemylaser, transform.position, Quaternion.identity);
-            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(-0.4f, -1, 0)); 
+            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(-0.5f, -1, 0)); 
 
             cloneLaser = Instantiate(Enemylaser, transform.position, Quaternion.identity);
-            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(0.8f, -1, 0));
+            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(1f, -1, 0));
             cloneLaser = Instantiate(Enemylaser, transform.position, Quaternion.identity);
-            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(0.4f, -1, 0));
+            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(0.5f, -1, 0));
 
             Debug.Log("Laser1");
 
