@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Boss2Die : MonoBehaviour
 {
@@ -27,5 +28,11 @@ public class Boss2Die : MonoBehaviour
         //playerController.Gold += Boss2Gold;
 
         ClearPanel.SetActive(true);
+        Home();
+    }
+
+    public void Home()
+    {   
+        SceneManager.LoadScene("Main");
     }
 }

@@ -1010,7 +1010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b6b874941715ba4caf354b313540903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 2375486105820164113, guid: de08421211428834fbc644bb22858901, type: 3}
+  projectile: {fileID: 2375486105820164113, guid: 543305c0b24edd942be554ced05386c1, type: 3}
   attackRate: 0.1
 --- !u!114 &676684488
 MonoBehaviour:
@@ -1091,7 +1091,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &708140771
 GameObject:
@@ -1639,9 +1639,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LaserLine: {fileID: 127120148636249937, guid: 8ff68186796b97349ba95e3aa11489fc, type: 3}
-  Enemylaser: {fileID: 6104568068728798773, guid: 8189f480acad7194a954e3168dd0f3bb, type: 3}
+  Enemylaser:
+  - {fileID: 1777296099429060459, guid: 0df489d1135b35b43bc94cbb0b5147e1, type: 3}
+  - {fileID: 3016243910504359717, guid: 901a550932768e943b90b5b45ca8317a, type: 3}
+  - {fileID: 6010945915645341170, guid: 464a108eb6125eb49858785176888089, type: 3}
+  - {fileID: 4087359190436999457, guid: d8f3cfd48fa270649b3d62d18acfd56e, type: 3}
+  - {fileID: 1896398714130586669, guid: bddc5b14e2b58184d8a4084dbb6118a9, type: 3}
   attackRate: 0.5
-  boomPrefab: {fileID: 9144159506539420479, guid: 6100609d6523fa643ac49c1562b9d435, type: 3}
+  boomPrefab: {fileID: 6025302057466147185, guid: 853f027912303234dbcbba2039c8b447, type: 3}
   boomEffect: {fileID: 8309301430079731671, guid: 33879e73e28d93f43941b85ec90b7de6, type: 3}
 --- !u!114 &1079841326
 MonoBehaviour:
@@ -1729,7 +1734,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 5}
+  m_Size: {x: 4.5, y: 4.5}
   m_EdgeRadius: 0
 --- !u!50 &1079841331
 Rigidbody2D:
@@ -1870,7 +1875,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0.00012207031, y: 0}
   m_SizeDelta: {x: -0.1430664, y: -0.080566406}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1207400572
@@ -1881,141 +1886,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1207400570}
   m_CullTransparentMesh: 1
---- !u!1 &1330531651
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1330531653}
-  - component: {fileID: 1330531652}
-  - component: {fileID: 1330531655}
-  - component: {fileID: 1330531654}
-  m_Layer: 0
-  m_Name: Enemys
-  m_TagString: Enemy
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1330531652
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1330531651}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e54be54ee417a3140a0dffaac3ce949d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1330531653
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1330531651}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 11, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1330531654
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1330531651}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
---- !u!114 &1330531655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1330531651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dbd989d49bed174186bd71d093d9efa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  moveDIrection: {x: 0, y: -1, z: 0}
 --- !u!1 &1335570687
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,8 +1972,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1335570692}
-        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
-        m_MethodName: Stage1Load
+        m_TargetAssemblyTypeName: Boss2Die, Assembly-CSharp
+        m_MethodName: Home
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2160,11 +2030,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1335570687}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc3bf754dcaa5b34981b85cd6c4a8b9b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a68ba5cd41ba2c47a09b4fdb6b9bd26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OptionPanel: {fileID: 0}
-  StagePanel: {fileID: 0}
+  explosionDie: {fileID: 0}
+  ClearPanel: {fileID: 0}
+  GameOverPanel: {fileID: 0}
+  Boss2Gold: 1500
 --- !u!1 &1413220737
 GameObject:
   m_ObjectHideFlags: 0
@@ -2955,12 +2827,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageData: {fileID: 11400000, guid: 9375b436290b8f744b6b3594a32035f2, type: 2}
-  Enemys: {fileID: 1330531651}
+  Enemys:
+  - {fileID: 5769800058704930936, guid: 3c351ad99ccadb54a983fa9e814d8bf3, type: 3}
+  - {fileID: 5708533436379346485, guid: 7eea065987d6468428566e37d6769e99, type: 3}
   boss2: {fileID: 1079841320}
   Boss2PanelHp: {fileID: 1870758948}
   Boss2textWarning: {fileID: 20782261}
   SpawnDelay: 0.3
-  maxEnemyCounts: 3
+  maxEnemyCounts: 5
 --- !u!1 &2062205946
 GameObject:
   m_ObjectHideFlags: 0

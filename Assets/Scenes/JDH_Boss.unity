@@ -123,6 +123,56 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &492906675 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7462283142147035204, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
+  m_PrefabInstance: {fileID: 2879884373825249319}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &492906683
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492906675}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6, y: 6}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6, y: 6}
+  m_EdgeRadius: 0
 --- !u!1 &1201603104 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 72426615318308711, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
@@ -241,6 +291,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 195944580951722444, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 195944580951722444, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 195944580951722444, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120145695514784748, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
+      propertyPath: Meteorite
+      value: 
+      objectReference: {fileID: 5240605494963352681, guid: 737bcda892d73364ea67035f179461da, type: 3}
     - target: {fileID: 1263711685948357894, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -305,15 +371,23 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4965021014826002918, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
+      propertyPath: enemyProjectile
+      value: 
+      objectReference: {fileID: 4418494990061632243, guid: dd42a63846e4b0f448361bc5a621454f, type: 3}
     - target: {fileID: 9188246518072302565, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 3620c615d28bcb74c8e4e77964570ff1, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 195944580951722444, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 72426615318308711, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1201603112}
+    - targetCorrespondingSourceObject: {fileID: 7462283142147035204, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 492906683}
   m_SourcePrefab: {fileID: 100100000, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
