@@ -23,12 +23,11 @@ public class Boss2Die : MonoBehaviour
     public void Boss2OnDie()
     {
         Instantiate(explosionDie,transform.position, Quaternion.identity);
-
+        ClearPanel.SetActive(true);
         Destroy(gameObject);
         //playerController.Gold += Boss2Gold;
-
-        ClearPanel.SetActive(true);
-        Home();
+        GameOverPanel.SetActive(false);
+        
     }
 
     public void Home()
