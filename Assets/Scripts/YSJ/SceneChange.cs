@@ -76,7 +76,7 @@ public class SceneChange : MonoBehaviour
     public void Stage3Load()    // 스테이지3 입장
     {
         PlayerManager.instance.startPoint = new Vector2(-16.0f, -8.0f);
-        SceneManager.LoadScene("YSJ_TestStage 1");    // "" 스테이지 씬 삽입
+        SceneManager.LoadScene("JDH_Boss2");    // "" 스테이지 씬 삽입
     }
 }
 
