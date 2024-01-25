@@ -8,7 +8,8 @@ public class PlayerRespawn : MonoBehaviour
 
     private void Start()
     {
-        PlayerManager.instance.startPoint = transform.position;  // 플레이어의 시작 위치로 설정.
+        //PlayerManager.instance.startPoint = transform.position;  // 플레이어의 시작 위치로 설정.
+        Respawn();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
