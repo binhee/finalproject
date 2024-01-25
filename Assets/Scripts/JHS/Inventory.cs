@@ -12,7 +12,7 @@ public class Inventory : MonoBehaviour
     public GameObject inventoryPanel;
     public List<Slot> itemSlotList = new List<Slot>();
     public List<Slot> potionEquipSlots = new List<Slot>();
-    public bool potionOwn;
+    public bool[] potionOwn;
 
     public int equipWeaponCount;
     public int equipArmorCount;
@@ -58,15 +58,17 @@ public class Inventory : MonoBehaviour
         {
             if (itemSlotList[i].transform.childCount == 1)
             {
+                int boolnum = 0;
                 if (itemSlotList[i].transform.GetChild(0).GetComponent<DraggableUI>().itemImageType == ItemType.HpPotion)
                 {
-                    potionOwn=true;
+                    boolnum = 0;
+                    potionOwn[boolnum] =true;
                     break;
                 }
             }
             else
             {
-                potionOwn = false;
+               // potionOwn[boolnum] = false;
             }
         }
     }
@@ -80,7 +82,7 @@ public class Inventory : MonoBehaviour
                 for (int i = 0; i < itemSlotList.Count; i++)
                 {
                     Transform slotTransform = itemSlotList[i].transform;
-                    if (slotTransform.childCount == 0 && potionOwn == false)
+                    if (slotTransform.childCount == 0 && potionOwn[0] == false)
                     {
                         Instantiate(invenItem, slotTransform).GetComponent<DraggableUI>().itemImageType = itemtype;
                         break;
@@ -119,7 +121,64 @@ public class Inventory : MonoBehaviour
                 }
                 break;
             case ItemType.JumpPotion:
-
+                for (int i = 0; i < itemSlotList.Count; i++)
+                {
+                    Transform slotTransform = itemSlotList[i].transform;
+                    if (slotTransform.childCount == 0 && potionOwn[1] == false)
+                    {
+                        Instantiate(invenItem, slotTransform).GetComponent<DraggableUI>().itemImageType = itemtype;
+                        break;
+                    }
+                    else if (slotTransform.childCount == 1)
+                    {
+                        if (slotTransform.GetChild(0).GetComponent<DraggableUI>().itemImageType == itemtype)
+                        {
+                            slotTransform.GetChild(0).GetComponent<DraggableUI>().itemCount++;
+                            slotTransform.GetChild(0).GetComponent<DraggableUI>().UpdateText();
+                            break;
+                        }
+                    }
+                }
+                break;
+            case ItemType.SpeedPotion:
+                for (int i = 0; i < itemSlotList.Count; i++)
+                {
+                    Transform slotTransform = itemSlotList[i].transform;
+                    if (slotTransform.childCount == 0 && potionOwn[2] == false)
+                    {
+                        Instantiate(invenItem, slotTransform).GetComponent<DraggableUI>().itemImageType = itemtype;
+                        break;
+                    }
+                    else if (slotTransform.childCount == 1)
+                    {
+                        if (slotTransform.GetChild(0).GetComponent<DraggableUI>().itemImageType == itemtype)
+                        {
+                            slotTransform.GetChild(0).GetComponent<DraggableUI>().itemCount++;
+                            slotTransform.GetChild(0).GetComponent<DraggableUI>().UpdateText();
+                            break;
+                        }
+                    }
+                }
+                break;
+            case ItemType.EnchantPotion:
+                for (int i = 0; i < itemSlotList.Count; i++)
+                {
+                    Transform slotTransform = itemSlotList[i].transform;
+                    if (slotTransform.childCount == 0 && potionOwn[3] == false)
+                    {
+                        Instantiate(invenItem, slotTransform).GetComponent<DraggableUI>().itemImageType = itemtype;
+                        break;
+                    }
+                    else if (slotTransform.childCount == 1)
+                    {
+                        if (slotTransform.GetChild(0).GetComponent<DraggableUI>().itemImageType == itemtype)
+                        {
+                            slotTransform.GetChild(0).GetComponent<DraggableUI>().itemCount++;
+                            slotTransform.GetChild(0).GetComponent<DraggableUI>().UpdateText();
+                            break;
+                        }
+                    }
+                }
                 break;
         }
     }

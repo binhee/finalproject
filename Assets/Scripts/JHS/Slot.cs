@@ -30,9 +30,9 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerE
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (eventData.pointerDrag != null && gameObject.transform.childCount == 1 && eventData.pointerDrag.GetComponent<DraggableUI>().itemImageType == ItemType.HpPotion)
+        if (eventData.pointerDrag != null && gameObject.transform.childCount == 1)
         {
-            if (transform.GetChild(0).GetComponent<DraggableUI>().itemImageType == ItemType.HpPotion)
+            if (transform.GetChild(0).GetComponent<DraggableUI>().itemImageType == eventData.pointerDrag.GetComponent<DraggableUI>().itemImageType)
             {
                 transform.GetChild(0).GetComponent<DraggableUI>().itemCount += eventData.pointerDrag.GetComponent<DraggableUI>().itemCount;
                 transform.GetChild(0).GetComponent<DraggableUI>().UpdateText();
@@ -70,7 +70,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerE
         {
             return true;
         }
-        if (checkItemType.itemType == ItemType.HpPotion || checkItemType.itemType == ItemType.JumpPotion)
+        if (checkItemType.itemType == ItemType.HpPotion || checkItemType.itemType == ItemType.JumpPotion || checkItemType.itemType == ItemType.SpeedPotion || checkItemType.itemType == ItemType.EnchantPotion)
         {
             if(slotType == SlotType.PotionSlot)
             {

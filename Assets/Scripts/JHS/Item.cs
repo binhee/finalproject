@@ -5,7 +5,7 @@ using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum ItemType { HpPotion, Weapon, Helmet, Armor, Boots, JumpPotion }
+public enum ItemType { HpPotion, Weapon, Helmet, Armor, Boots, JumpPotion, SpeedPotion, EnchantPotion }
 public class Item : MonoBehaviour
 {
     [Header("ItemInformation")]
