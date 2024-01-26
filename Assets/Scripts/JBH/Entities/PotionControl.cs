@@ -61,7 +61,7 @@ public class PotionControl : MonoBehaviour
     void UPdatePotionImage(Potion potionNum)
     {
         int num = potionNum.indexNum;
-        if (Inventory.instance.potionEquipSlots[num].transform.childCount==0 && potionNum.onPotionEquip)
+        if (Inventory.instance.potionEquipSlots[num].transform.childCount == 0 && potionNum.onPotionEquip) ;
         {
             potionNum.onPotionEquip = false;
             Destroy(gameObject.transform.GetChild(num).GetChild(0).gameObject);
