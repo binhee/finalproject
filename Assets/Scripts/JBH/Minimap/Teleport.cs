@@ -33,7 +33,7 @@ public class Teleport : MonoBehaviour
     IEnumerator TeleportRoutine()
     {
         Boss.SetActive(true);
-        mainCamera.transform.position += new Vector3(50, 0, 0);
+        mainCamera.transform.position += new Vector3(100, 0, 0);
         Debug.Log("h");
         yield return null;   // 한 프레임 대기
         targetObj.transform.position = toObj.transform.position;   // 대상 오브젝트를 목표 위치로 이동
