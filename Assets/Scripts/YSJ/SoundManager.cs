@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
+    public static SoundManager instance;
     [Header("---------- Audio Source -----------")]
     [SerializeField] AudioSource BGMSource;
     [SerializeField] AudioSource SFXSource;
@@ -11,6 +12,8 @@ public class SoundManager : MonoBehaviour
     [Header("---------- Audio Clip -----------")]
     public AudioClip BGM;
     public AudioClip BTNSound;
+
+
 
     private void Start()
     {

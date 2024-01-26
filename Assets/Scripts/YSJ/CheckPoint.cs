@@ -5,10 +5,13 @@ using UnityEngine;
 public class CheckPoint : MonoBehaviour
 {
     PlayerRespawn playerRespawn;    // PlayerRespawn 스크립트에 엑세스
+    SpriteRenderer spriteRenderer;
+    public Sprite passive, active;
 
     private void Awake()
     {
         playerRespawn = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerRespawn>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -17,6 +20,7 @@ public class CheckPoint : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerRespawn.UpdateCheckPoint(transform.position);
+            spriteRenderer.sprite = active;
         }
     }
 }

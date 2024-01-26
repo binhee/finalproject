@@ -42,22 +42,24 @@ public class SceneChange : MonoBehaviour
         soundManager.PlatSFX(soundManager.BTNSound);    // BTNSound 재생
         bool IsSetOptionPanel = OptionPanel.activeSelf;
         OptionPanel.SetActive(!IsSetOptionPanel);
-        //if (!IsSetOptionPanel)
-        //{
-        //    // 판넬이 나타날 때 일시정지
-        //    Time.timeScale = 0f;
-        //}
-        //else
-        //{
-        //    // 판넬이 사라질 때 일시정지 해제
-        //    Time.timeScale = 1f;
-        //}
-        //Time.fixedDeltaTime = 0.02f*Time.timeScale;
+        if (!IsSetOptionPanel)
+        {
+            // 판넬이 나타날 때 일시정지
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            // 판넬이 사라질 때 일시정지 해제
+            Time.timeScale = 1f;
+        }
+        Time.fixedDeltaTime = 0.02f * Time.timeScale;
     }
 
     public void MainSceneLoad()    // 메인화면 입장
     {
         SceneManager.LoadScene("Main");    // "" 스테이지 씬 삽입
+        Time.timeScale = 1f;
+        Time.fixedDeltaTime = 0.02f * Time.timeScale;
     }
 
     public void Stage1Load()    // 스테이지1 입장
@@ -74,7 +76,7 @@ public class SceneChange : MonoBehaviour
     public void Stage3Load()    // 스테이지3 입장
     {
         PlayerManager.instance.startPoint = new Vector2(-16.0f, -8.0f);
-        SceneManager.LoadScene("YSJ_TestStage 1");    // "" 스테이지 씬 삽입
+        SceneManager.LoadScene("JDH_Boss2");    // "" 스테이지 씬 삽입
     }
 
     public void TestStage2Load()    // 스테이지2 입장
