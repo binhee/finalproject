@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: -4727558719790834112}
   - component: {fileID: -1484243468277980433}
   m_Layer: 6
-  m_Name: JumpPotionImage_Inventory
+  m_Name: Inventory_JumpPotionImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceedb733ac90cad45a7dd6c1d8f1738d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemImageType: 0
+  itemImageType: 5
   descriptionPanel: {fileID: 6489231574560617786}
   equipUI: {fileID: 4890648285820823306}
   descriptionTxt: {fileID: 1386818965821289457}
@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa0f6b5637fe2748b6544ee16a3b59f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 0
+  itemType: 5
   itemPotionRecoveryAmount: 0
   itemImage: {fileID: 3198257274824459387}
 --- !u!1 &2815785337729442278

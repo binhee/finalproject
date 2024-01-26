@@ -134,12 +134,12 @@ public class PotionControl : MonoBehaviour
             if (potion.cooldownTimer > 0f)
             {
                 // 남은 재사용 시간을 텍스트로 표시
-                potion.cooldownText.text = Mathf.CeilToInt(potion.cooldownTimer).ToString();
+                //potion.cooldownText.text = Mathf.CeilToInt(potion.cooldownTimer).ToString();
             }
             else
             {
-                potion.cooldownText.text = null;  // 텍스트 숨기기
-                Debug.Log("재사용 가능");
+                //potion.cooldownText.text = null;  // 텍스트 숨기기
+               // Debug.Log("재사용 가능");
             }
         }
     }

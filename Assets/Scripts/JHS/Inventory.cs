@@ -35,7 +35,7 @@ public class Inventory : MonoBehaviour
     private void Update()
     {
         OnOffInventoryPanel();
-        
+
     }
     private void OnOffInventoryPanel()
     {
@@ -62,13 +62,13 @@ public class Inventory : MonoBehaviour
                 if (itemSlotList[i].transform.GetChild(0).GetComponent<DraggableUI>().itemImageType == ItemType.HpPotion)
                 {
                     boolnum = 0;
-                    potionOwn[boolnum] =true;
+                    potionOwn[boolnum] = true;
                     break;
                 }
             }
             else
             {
-               // potionOwn[boolnum] = false;
+                // potionOwn[boolnum] = false;
             }
         }
     }
