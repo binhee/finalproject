@@ -445,7 +445,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uAC00\uACA9 : 1000000"
+  m_Text: "\uAC00\uACA9 : 100"
 --- !u!1 &745210780608611921
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +525,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uAC00\uACA9 : 1000000"
+  m_Text: "\uAC00\uACA9 : 100"
 --- !u!1 &908168517634573943
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,7 +655,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10000
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1676,7 +1676,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uAC00\uACA9 : 1000000"
+  m_Text: "\uAC00\uACA9 : 100"
 --- !u!1 &3147161204976573456
 GameObject:
   m_ObjectHideFlags: 0
@@ -2045,7 +2045,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1000
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2824,7 +2824,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 100
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3271,7 +3271,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 100000
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3923,8 +3923,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7199582851188944400}
   m_HandleRect: {fileID: 3620318928449325722}
   m_Direction: 2
-  m_Value: 0.9999997
-  m_Size: 0.6666667
+  m_Value: 1.0000004
+  m_Size: 0.66666675
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4208,7 +4208,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 479fcb26d90a92c48ba9cbf1ca31f8ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopList: []
+  shopList:
+  - shopItemImage: {fileID: 1472158750361724533, guid: e4bff696be19c53408d469cd8e9ea872, type: 3}
+    itemCost: 100
+  - shopItemImage: {fileID: 1472158750361724533, guid: 6810cb46190981a4786f0f0993b52854, type: 3}
+    itemCost: 100
+  - shopItemImage: {fileID: 1472158750361724533, guid: aefd887b9d56837408e7f49cd49414af, type: 3}
+    itemCost: 100
+  - shopItemImage: {fileID: 1472158750361724533, guid: b0b801766784ebc47a085cc0b01295fc, type: 3}
+    itemCost: 100
   purchasePanel: {fileID: 3377254321699269444}
   waringPanel: {fileID: 1583445476544715166}
   goldText: {fileID: 5500613487741449729}
@@ -4425,7 +4433,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uAC00\uACA9 : 1000000"
+  m_Text: "\uAC00\uACA9 : 100"
 --- !u!1 &8827061290449320290
 GameObject:
   m_ObjectHideFlags: 0

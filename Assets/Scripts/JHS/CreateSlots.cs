@@ -15,7 +15,6 @@ public class CreateSlots : MonoBehaviour
         {
             Inventory.instance.itemSlotList.Add(Instantiate(slot, gameObject.transform).GetComponent<Slot>());
         }
-        Debug.Log("a");
         Inventory.instance.ExitInventoryPanel();
     }
 }
