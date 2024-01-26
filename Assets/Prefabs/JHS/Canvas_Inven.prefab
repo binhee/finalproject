@@ -2023,7 +2023,7 @@ MonoBehaviour:
   - {fileID: 6440880087054673534}
   - {fileID: 784838796116948427}
   - {fileID: 159995968745603704}
-  potionOwn: 0
+  potionOwn: 00000000
   equipWeaponCount: 0
   equipArmorCount: 0
   infoTexts:

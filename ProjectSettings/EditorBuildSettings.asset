@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JDH_Boss2.unity
     guid: 6572524cb672caa4aad4cdc5ad653093
+  - enabled: 1
+    path: Assets/Scenes/JBH_Stage.unity
+    guid: dd500ce184f13a84ca6332ded17e8ce4
   m_configObjects: {}

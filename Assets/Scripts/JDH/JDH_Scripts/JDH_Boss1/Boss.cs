@@ -117,9 +117,9 @@ public class Boss : MonoBehaviour
     public void OnDie()
     {
         Instantiate(explosionPrefab,transform.position,Quaternion.identity);
+        ClearPanel.SetActive(true);
         //playerController.Gold += BossGold;
         //PlayerPrefs.SetInt("Gold" + playerController.Gold);
-        ClearPanel.SetActive(true);
         Destroy(gameObject);
     }
 }

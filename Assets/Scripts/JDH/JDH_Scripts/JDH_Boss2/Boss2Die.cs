@@ -30,8 +30,4 @@ public class Boss2Die : MonoBehaviour
         
     }
 
-    public void Home()
-    {   
-        SceneManager.LoadScene("Main");
-    }
 }
