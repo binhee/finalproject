@@ -5,14 +5,9 @@ using UnityEngine;
 public class CreateSlots : MonoBehaviour
 {
     public GameObject slot;
-    public GameObject panel;
-    private void Awake()
-    {
-        CreateSlot();
-    }
     private void Start()
     {
-        panel.SetActive(false);
+        CreateSlot();
     }
     public void CreateSlot()
     {
@@ -20,5 +15,7 @@ public class CreateSlots : MonoBehaviour
         {
             Inventory.instance.itemSlotList.Add(Instantiate(slot, gameObject.transform).GetComponent<Slot>());
         }
+        Debug.Log("a");
+        Inventory.instance.ExitInventoryPanel();
     }
 }
