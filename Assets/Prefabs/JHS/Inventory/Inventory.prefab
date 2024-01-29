@@ -2294,6 +2294,7 @@ MonoBehaviour:
   - {fileID: 6327962914587834561}
   itemEffect:
   - {fileID: 954748119260620261, guid: 8dbfa216f8839ca429aa6fee8eb851c4, type: 3}
+  - {fileID: 5572101721683809106, guid: c70272d5000fd5e42a867f9e3f933b9a, type: 3}
 --- !u!1 &5236033651526532090
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class AroundCircle : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Transform target;
+    public float moveSpeed;
+    private void Awake()
     {
-        
+        target = gameObject.transform.parent;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.RotateAround(target.position,Vector3.back , -1 * Time.deltaTime * moveSpeed);
     }
 }
+

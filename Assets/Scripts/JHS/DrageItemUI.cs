@@ -38,7 +38,7 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 Inventory.instance.equipWeaponCount++;
                 Inventory.instance.infoTexts[0].text = descriptionTxt.text;
                 //무기 장착 할때
-
+                gameObject.GetComponent<WeaponAction>().Use(itemSO);
             }
             else if (gameObject.GetComponent<Item>().itemType == ItemType.Armor)
             {
@@ -73,6 +73,7 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 Inventory.instance.equipWeaponCount--;
                 Inventory.instance.infoTexts[0].text = " ";
                 //무기 장착해제 할때
+                gameObject.GetComponent<WeaponAction>().Delete();
             }
             if (gameObject.GetComponent<Item>().itemType == ItemType.Armor)
             {
