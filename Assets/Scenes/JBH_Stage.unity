@@ -59440,6 +59440,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1120145695514784748, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
+      propertyPath: Meteorite
+      value: 
+      objectReference: {fileID: 5102254367674152833, guid: fee119abb41e9ec48985d3770c9427e9, type: 3}
     - target: {fileID: 1263711685948357894, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -59516,6 +59520,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2598619495493859124, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 40667842845052186, guid: de7d492ed19ed214bad4bb56152254e8, type: 3}
     - target: {fileID: 2671574912319671801, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -59724,9 +59732,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7462283142147035204, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2047500412}
-    - targetCorrespondingSourceObject: {fileID: 7462283142147035204, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2047500419}
   m_SourcePrefab: {fileID: 100100000, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
 --- !u!1 &1672582858
 GameObject:
@@ -65233,19 +65238,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
---- !u!114 &2047500419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047500410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8612fbd4a34a8234fa594291d3a366a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: 9375b436290b8f744b6b3594a32035f2, type: 2}
 --- !u!1001 &2074849441
 PrefabInstance:
   m_ObjectHideFlags: 0
