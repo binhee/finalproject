@@ -64,7 +64,7 @@ public class SceneChange : MonoBehaviour
 
     public void Stage1Load()    // 스테이지1 입장
     {
-        SceneManager.LoadScene("Stage");    // "" 스테이지 씬 삽입
+        SceneManager.LoadScene("JBH_Stage");    // "" 스테이지 씬 삽입
     }
 
     public void Stage2Load()    // 스테이지2 입장

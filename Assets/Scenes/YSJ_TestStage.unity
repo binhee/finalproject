@@ -6755,7 +6755,7 @@ GameObject:
   - component: {fileID: 1122498876}
   m_Layer: 6
   m_Name: DieSquare
-  m_TagString: DieBox
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9588,29 +9588,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potions:
   - key: 49
+    indexNum: 0
+    itemIndexNum: 0
+    onPotionEquip: 0
     potionImage: {fileID: 764863967}
     cooldownText: {fileID: 1999558851}
     cooldownTime: 7
     isOnCooldown: 0
     cooldownTimer: 0
+    potionAction: {fileID: 0}
+    ItemSO: {fileID: 0}
   - key: 50
+    indexNum: 0
+    itemIndexNum: 0
+    onPotionEquip: 0
     potionImage: {fileID: 160331714}
     cooldownText: {fileID: 466095825}
     cooldownTime: 7
     isOnCooldown: 0
     cooldownTimer: 0
+    potionAction: {fileID: 0}
+    ItemSO: {fileID: 0}
   - key: 51
+    indexNum: 0
+    itemIndexNum: 0
+    onPotionEquip: 0
     potionImage: {fileID: 2125402158}
     cooldownText: {fileID: 1518570567}
     cooldownTime: 7
     isOnCooldown: 0
     cooldownTimer: 0
+    potionAction: {fileID: 0}
+    ItemSO: {fileID: 0}
   - key: 52
+    indexNum: 0
+    itemIndexNum: 0
+    onPotionEquip: 0
     potionImage: {fileID: 564559434}
     cooldownText: {fileID: 945531703}
     cooldownTime: 7
     isOnCooldown: 0
     cooldownTimer: 0
+    potionAction: {fileID: 0}
+    ItemSO: {fileID: 0}
 --- !u!1 &1957518707 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8209670419948940985, guid: c75be14438bbdbc46b979193a7ae01d0, type: 3}

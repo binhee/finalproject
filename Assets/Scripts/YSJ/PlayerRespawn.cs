@@ -14,8 +14,8 @@ public class PlayerRespawn : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // DieBox에 닿으면 플레이어는 Die 실행.
-        if(collision.CompareTag("DieBox"))
+        // Trap 닿으면 플레이어는 Die 실행.
+        if(collision.CompareTag("Trap"))
         {
             Die();
         }
