@@ -15,5 +15,12 @@ public class AroundCircle : MonoBehaviour
     {
         transform.RotateAround(target.position,Vector3.back , -1 * Time.deltaTime * moveSpeed);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "")
+        {
+            Destroy(collision);
+        }
+    }
 }
 
