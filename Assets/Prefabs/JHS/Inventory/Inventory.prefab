@@ -1956,7 +1956,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slot: {fileID: 3455059879359929944, guid: fd72f8e0356d97c4b8b478450746bffa, type: 3}
-  panel: {fileID: 6823620241772659069}
 --- !u!1 &4428341197306021105
 GameObject:
   m_ObjectHideFlags: 0
@@ -2284,7 +2283,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryPanel: {fileID: 6823620241772659069}
   itemSlotList: []
-  potionOwn: 0
+  potionEquipSlots: []
+  potionOwn: 00000000
   equipWeaponCount: 0
   equipArmorCount: 0
   infoTexts:

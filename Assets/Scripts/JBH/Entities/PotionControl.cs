@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using static PotionControl;
 using UnityEditor.Experimental.GraphView;
+using static UnityEditor.Progress;
+using Unity.VisualScripting;
 
 public class PotionControl : MonoBehaviour
 {
@@ -12,13 +14,15 @@ public class PotionControl : MonoBehaviour
     {
         public KeyCode key;
         public int indexNum;
+        public int itemIndexNum;
         public bool onPotionEquip;
-        public GameObject potionUI;
         public Image potionImage;
         public Text cooldownText;
         public float cooldownTime = 5f;
         public bool isOnCooldown = false;
         public float cooldownTimer;
+        public PotionAction potionAction;
+        public ItemSO ItemSO;
     }
 
     public List<Potion> potions;
@@ -61,17 +65,21 @@ public class PotionControl : MonoBehaviour
     void UPdatePotionImage(Potion potionNum)
     {
         int num = potionNum.indexNum;
-        if (Inventory.instance.potionEquipSlots[num].transform.childCount == 0 && potionNum.onPotionEquip) ;
+        if (Inventory.instance.potionEquipSlots[num].transform.childCount == 0 && potionNum.onPotionEquip)
         {
             potionNum.onPotionEquip = false;
             Destroy(gameObject.transform.GetChild(num).GetChild(0).gameObject);
         }
-        if (Inventory.instance.potionEquipSlots[num].transform.childCount==1&& !potionNum.onPotionEquip)
+        if (Inventory.instance.potionEquipSlots[num].transform.childCount == 1 && !potionNum.onPotionEquip)
         {
             potionNum.onPotionEquip = true;
-            Instantiate(Inventory.instance.potionEquipSlots[num].transform.GetChild(0).gameObject , gameObject.transform.GetChild(num)).GetComponent<RectTransform>().anchoredPosition= new Vector2(0,0);
-            
-        }
+            GameObject item = Instantiate(Inventory.instance.potionEquipSlots[num].transform.GetChild(0).gameObject, gameObject.transform.GetChild(num));
+            item.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
+            potionNum.potionAction = item.GetComponent<PotionAction>();
+            potionNum.ItemSO = item.GetComponent<DraggableUI>().itemSO;
+            potionNum.itemIndexNum = item.GetComponent<DraggableUI>().itemIDNUM;
+    //potionNum.itemIndexNum = item.GetComponent<DraggableUI>().itemso.itemIDNum;
+}
     }
     // 포션 사용 메서드
     void UsePotion(Potion potion)
@@ -79,6 +87,7 @@ public class PotionControl : MonoBehaviour
         if (!potion.isOnCooldown)
         {
             // 포션 사용 후 쿨 대기
+            potion.potionAction.Use(potion.ItemSO);
             StartCoroutine(PotionCooldown(potion));
         }
         else
@@ -139,7 +148,7 @@ public class PotionControl : MonoBehaviour
             else
             {
                 //potion.cooldownText.text = null;  // 텍스트 숨기기
-               // Debug.Log("재사용 가능");
+                // Debug.Log("재사용 가능");
             }
         }
     }

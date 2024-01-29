@@ -144,6 +144,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.016189575
       objectReference: {fileID: 0}
+    - target: {fileID: 198362527000258339, guid: c75be14438bbdbc46b979193a7ae01d0, type: 3}
+      propertyPath: baseStats.speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3496531202580491467, guid: c75be14438bbdbc46b979193a7ae01d0, type: 3}
       propertyPath: m_BackGroundColor.a
       value: 0

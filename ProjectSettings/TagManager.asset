@@ -9,6 +9,9 @@ TagManager:
   - Sound
   - DieBox
   - Trap
+  - Boss
+  - Enemy
+  - NonPlayer
   layers:
   - Default
   - TransparentFX
