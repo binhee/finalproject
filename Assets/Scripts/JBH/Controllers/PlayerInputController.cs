@@ -1,11 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.DualShock;
-using static UnityEditor.Timeline.TimelinePlaybackControls;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class PlayerInputController : PlayerController
 {
@@ -13,8 +9,10 @@ public class PlayerInputController : PlayerController
     private Rigidbody2D _rigidbody;   // 주 플레이어 Rigidbody2D 컴포넌트
 
     private bool isJumping = false;   // 점프 중인지 여부
+    private bool jumpCooldown = false; // 점프 쿨다운 상태
 
     [SerializeField] public float jumpForce;   // 점프 힘
+    [SerializeField] private float jumpCooldownTime = 0.7f; // 점프 쿨다운 시간
 
     protected bool IsGrounded { get; set; } = true;   // 땅에 닿아 있는지 여부
 
@@ -54,11 +52,12 @@ public class PlayerInputController : PlayerController
     // 점프 입력 처리
     public void OnJump(InputValue value)
     {
-        if (IsGrounded && !isJumping)   // 땅에 닿아 있고 점프 중이 아닌 경우
+        if (IsGrounded && !isJumping && !jumpCooldown)   // 땅에 닿아 있고 점프 중이 아니며 점프 쿨다운 중이 아닌 경우
         {
             _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);   // 점프 힘을 가해줌
             IsGrounded = false;   // 땅에 닿아 있지 않음으로 설정
             isJumping = true;   // 점프 중으로 설정
+            StartCoroutine(JumpCooldown());   // 점프 쿨다운 코루틴 시작
         }
     }
 
@@ -70,5 +69,14 @@ public class PlayerInputController : PlayerController
             IsGrounded = true;   // 땅에 닿아 있음으로 설정
             isJumping = false;   // 점프 중이 아님으로 설정
         }
+    }
+
+    // 점프 쿨다운을 처리하는 코루틴
+    IEnumerator JumpCooldown()
+    {
+        jumpCooldown = true; // 점프 쿨다운 활성화
+        yield return new WaitForSeconds(jumpCooldownTime); // 일정 시간 동안 대기
+        jumpCooldown = false; // 점프 쿨다운 비활성화
+        IsGrounded = true;   // 다시 땅에 닿아 있음으로 설정
     }
 }
