@@ -7,13 +7,16 @@ public class SceneChange : MonoBehaviour
 {
     public GameObject OptionPanel;
     public GameObject StagePanel;
+    public GameObject TileOptionclosePanel;
 
     SoundManager soundManager;      // SoundManager 스크립트에 액세스.
+    VolumeSettings volumeSettings;      // VolumeSettings 스크립트에 액세스.
 
     private void Awake()
     {
         //태그가 Sound인 SoundManager에 접근.
         soundManager = GameObject.FindGameObjectWithTag("Sound").GetComponent<SoundManager>();
+
     }
     //public void InventoryLoad()     // 인벤토리 로드 함수
     //{
@@ -40,6 +43,7 @@ public class SceneChange : MonoBehaviour
     public void SetOptionPanel() //옵션창 생성 삭제
     {
         soundManager.PlatSFX(soundManager.BTNSound);    // BTNSound 재생
+        
         bool IsSetOptionPanel = OptionPanel.activeSelf;
         OptionPanel.SetActive(!IsSetOptionPanel);
         if (!IsSetOptionPanel)
@@ -55,11 +59,39 @@ public class SceneChange : MonoBehaviour
         Time.fixedDeltaTime = 0.02f * Time.timeScale;
     }
 
+    //public void SetTitleOptionPanel()
+    //{
+    //    if (SceneManager.GetActiveScene().buildIndex==0)
+    //    {
+    //        TileOptionclosePanel.SetActive(true);
+    //    }
+    //    else
+    //    {
+    //        TileOptionclosePanel.SetActive(false);
+    //    }
+    //}
+    
+
     public void MainSceneLoad()    // 메인화면 입장
     {
         SceneManager.LoadScene("Main");    // "" 스테이지 씬 삽입
         Time.timeScale = 1f;
-        Time.fixedDeltaTime = 0.02f * Time.timeScale;
+        Time.fixedDeltaTime = 0.02f * Time.timeScale;        
+    }
+    public void GoMainBtn()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            SetOptionPanel();
+        }
+        else
+        {
+            bool IsSetOptionPanel = OptionPanel.activeSelf;
+            OptionPanel.SetActive(!IsSetOptionPanel);
+            SceneManager.LoadScene("Main");    // "" 스테이지 씬 삽입
+            Time.timeScale = 1f;
+            Time.fixedDeltaTime = 0.02f * Time.timeScale;
+        }
     }
 
     public void Stage1Load()    // 스테이지1 입장
