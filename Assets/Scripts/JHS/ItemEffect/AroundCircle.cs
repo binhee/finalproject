@@ -17,7 +17,7 @@ public class AroundCircle : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "")
+        if(collision.tag == "")//적 총알 태그 넣기
         {
             Destroy(collision);
         }

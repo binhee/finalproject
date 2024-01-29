@@ -16,6 +16,9 @@ public class Inventory : MonoBehaviour
 
     public int equipWeaponCount;
     public int equipArmorCount;
+    public int equipHelmetCount;
+    public int equipBootsCount;
+
 
     public Text[] infoTexts;
     public GameObject[] itemEffect;
