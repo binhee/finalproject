@@ -5320,6 +5320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 14
+  jumpCooldownTime: 0.65
 --- !u!114 &5745400169566965013
 MonoBehaviour:
   m_ObjectHideFlags: 0
