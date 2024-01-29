@@ -123,6 +123,54 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1974487988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1974487989}
+  - component: {fileID: 1974487990}
+  m_Layer: 0
+  m_Name: EnemyPoolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1974487989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974487988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1974487990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974487988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8521f507a651ab4497745356a76d499, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemysPrefab: {fileID: 40667842845052186, guid: de7d492ed19ed214bad4bb56152254e8, type: 3}
+  EnemyProjectilePrefab: {fileID: 4418494990061632243, guid: dd42a63846e4b0f448361bc5a621454f, type: 3}
+  alertLinePrefab: {fileID: 5122939358223537548, guid: 1116b875dc298f04891cd9ac32dfb9ac, type: 3}
+  MeteoriteEnemyPrefab: {fileID: 5102254367674152833, guid: fee119abb41e9ec48985d3770c9427e9, type: 3}
 --- !u!1 &2025809234
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,6 +279,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossObjects
       objectReference: {fileID: 0}
+    - target: {fileID: 5114865887843471752, guid: 9a8a17d7a4042744eb27ce6d6214e4f6, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 40667842845052186, guid: de7d492ed19ed214bad4bb56152254e8, type: 3}
     - target: {fileID: 6644115122302865609, guid: 9a8a17d7a4042744eb27ce6d6214e4f6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -275,7 +327,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7625890801267990867, guid: 9a8a17d7a4042744eb27ce6d6214e4f6, type: 3}
+      propertyPath: Meteorite
+      value: 
+      objectReference: {fileID: 5102254367674152833, guid: fee119abb41e9ec48985d3770c9427e9, type: 3}
+    m_RemovedComponents:
+    - {fileID: 4803941713197417381, guid: 9a8a17d7a4042744eb27ce6d6214e4f6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
