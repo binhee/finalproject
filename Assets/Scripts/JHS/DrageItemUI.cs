@@ -11,11 +11,13 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private CanvasGroup canvasGroup;
 
     public ItemType itemImageType;
+    public int itemIDNUM;
     public GameObject descriptionPanel;
     public GameObject equipUI;
     public Text descriptionTxt;
     public Text potionCountTxt;
     public int itemCount = 1;
+    public ItemSO itemSO;
     private void Awake()
     {
         canvas = FindObjectOfType<Canvas>().transform;

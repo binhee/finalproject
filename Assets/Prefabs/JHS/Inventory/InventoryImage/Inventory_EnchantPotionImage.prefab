@@ -174,6 +174,7 @@ GameObject:
   - component: {fileID: 6496058075356895592}
   - component: {fileID: -4727558719790834112}
   - component: {fileID: -1484243468277980433}
+  - component: {fileID: 99294084130435723}
   m_Layer: 6
   m_Name: Inventory_EnchantPotionImage
   m_TagString: Untagged
@@ -255,11 +256,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemImageType: 7
+  itemIDNUM: 3
   descriptionPanel: {fileID: 6489231574560617786}
   equipUI: {fileID: 4890648285820823306}
   descriptionTxt: {fileID: 1386818965821289457}
   potionCountTxt: {fileID: 4431493284699552469}
   itemCount: 1
+  itemSO: {fileID: 11400000, guid: 4dfe8456369cb0642bcaa3e3c898d178, type: 2}
 --- !u!225 &-4727558719790834112
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -287,6 +290,18 @@ MonoBehaviour:
   itemType: 7
   itemPotionRecoveryAmount: 0
   itemImage: {fileID: 3198257274824459387}
+--- !u!114 &99294084130435723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472158750361724533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54292a4597d4ba24c9a660284723ed73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2815785337729442278
 GameObject:
   m_ObjectHideFlags: 0

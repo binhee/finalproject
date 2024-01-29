@@ -14,7 +14,7 @@ public class PlayerInputController : PlayerController
 
     private bool isJumping = false;   // 점프 중인지 여부
 
-    [SerializeField] private float jumpForce;   // 점프 힘
+    [SerializeField] public float jumpForce;   // 점프 힘
 
     protected bool IsGrounded { get; set; } = true;   // 땅에 닿아 있는지 여부
 

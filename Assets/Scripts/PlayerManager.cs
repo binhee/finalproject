@@ -11,6 +11,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Awake()
     {
+        FindPlayer();
         if (instance == null)
         {
             instance = this;
@@ -20,5 +21,9 @@ public class PlayerManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    public GameObject FindPlayer()
+    {
+        return GameObject.Find("Player");
     }
 }
