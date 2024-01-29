@@ -19,6 +19,14 @@ public class PlayerRespawn : MonoBehaviour
         {
             Die();
         }
+        else if(collision.CompareTag("Meteorite"))
+            {
+            Die();
+        }
+        else if(collision.CompareTag("BossProjectile"))
+        {
+            Die();
+        }
     }
 
     public void UpdateCheckPoint(Vector2 pos)
