@@ -12,6 +12,8 @@ TagManager:
   - Boss
   - Enemy
   - NonPlayer
+  - BossProjectile
+  - Boss2
   layers:
   - Default
   - TransparentFX

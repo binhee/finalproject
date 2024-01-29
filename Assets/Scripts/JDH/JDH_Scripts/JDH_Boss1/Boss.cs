@@ -11,7 +11,7 @@ public class Boss : MonoBehaviour
     [SerializeField]
     private GameObject explosionPrefab;
     [SerializeField]
-    private float bossAppearPoint = 1f;
+    private float bossAppearPoint = 4f;
     private BossState bossState =BossState.MoveToAppearPoint;
     private Movement2D movement2D;
     private BossWeapon bossweapon;
@@ -42,11 +42,11 @@ public class Boss : MonoBehaviour
 
     private IEnumerator MoveToAppearPoint()
     {
-        movement2D.MoveTo(Vector3.right);
+        movement2D.MoveTo(Vector3.up);
 
         while(true)
         {
-            if(transform.position.y<=bossAppearPoint)
+            if(transform.position.y>=bossAppearPoint)
             {
                 movement2D.MoveTo(Vector3.zero);
                 ChangeState(BossState.Phase01);

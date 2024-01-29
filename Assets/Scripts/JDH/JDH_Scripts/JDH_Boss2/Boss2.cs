@@ -8,7 +8,7 @@ public class Boss2 : MonoBehaviour
     [SerializeField]
     private StageData stageData;
     [SerializeField]
-    private float boss2Appear = 5f;
+    private float boss2Appear = 2f;
 
     private Boss2State boss2State = Boss2State.MoveApeear;
     private Movement2D movement2D;
@@ -33,10 +33,10 @@ public class Boss2 : MonoBehaviour
 
     private IEnumerator MoveApeear()
     {
-        movement2D.MoveTo(Vector3.down);
+        movement2D.MoveTo(Vector3.up);
         while (true)
         {
-            if (transform.position.y >= boss2Appear)
+            if (transform.position.y <= boss2Appear)
             {
                 movement2D.MoveTo(Vector3.zero);
                 ChangePattern(Boss2State.Pattern01);
