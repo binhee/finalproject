@@ -8,7 +8,7 @@ public class BossWeapon : MonoBehaviour
 {
     [SerializeField]
     private GameObject enemyProjectile;
-
+  
     public void StartFiring(AttackType attackType)
     {
         StartCoroutine(attackType.ToString());
@@ -39,6 +39,7 @@ public class BossWeapon : MonoBehaviour
                 clone.GetComponent<Movement2D>().MoveTo(new Vector2(x, y));
             }
             weightAngle += 1;
+           
 
             yield return new WaitForSeconds(attackRate);
         }

@@ -10,5 +10,13 @@ public class BossProjectile : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        else if(collision.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
+        }
+        else if(collision.CompareTag("Trap"))
+        {
+            Destroy(gameObject) ;
+        }
     }
 }

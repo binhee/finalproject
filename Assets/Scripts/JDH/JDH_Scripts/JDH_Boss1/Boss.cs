@@ -17,6 +17,7 @@ public class Boss : MonoBehaviour
     private BossWeapon bossweapon;
     private BossHp bossHp;
     private PlayerController playerController;
+    
 
     [SerializeField]
     private GameObject ClearPanel;
@@ -31,6 +32,7 @@ public class Boss : MonoBehaviour
         movement2D = GetComponent<Movement2D>();
         bossweapon = GetComponent<BossWeapon>();   
         bossHp = GetComponent<BossHp>();
+       
     }
 
     public void ChangeState(BossState newState)
