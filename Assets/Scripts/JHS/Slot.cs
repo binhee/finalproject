@@ -70,7 +70,8 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerE
         {
             return true;
         }
-        if (checkItemType.itemType == ItemType.HpPotion || checkItemType.itemType == ItemType.JumpPotion || checkItemType.itemType == ItemType.SpeedPotion || checkItemType.itemType == ItemType.EnchantPotion)
+        if (checkItemType.itemType == ItemType.HpPotion || checkItemType.itemType == ItemType.JumpPotion ||
+            checkItemType.itemType == ItemType.SpeedPotion || checkItemType.itemType == ItemType.EnchantPotion)
         {
             if(slotType == SlotType.PotionSlot)
             {

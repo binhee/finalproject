@@ -19,4 +19,4 @@ MonoBehaviour:
   jumpTime: 0
   jumpPower: 0
   enchantTime: 5
-  enchantPower: 10000
+  enchantPower: 500

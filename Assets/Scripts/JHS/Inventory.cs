@@ -18,7 +18,7 @@ public class Inventory : MonoBehaviour
     public int equipArmorCount;
 
     public Text[] infoTexts;
-
+    public GameObject[] itemEffect;
     private void Awake()
     {
         if (instance == null)
@@ -95,6 +95,28 @@ public class Inventory : MonoBehaviour
                             slotTransform.GetChild(0).GetComponent<DraggableUI>().UpdateText();
                             break;
                         }
+                    }
+                }
+                break;
+            case ItemType.Helmet:
+                for (int i = 0; i < itemSlotList.Count; i++)
+                {
+                    Transform slotTransform = itemSlotList[i].transform;
+                    if (slotTransform.childCount == 0)
+                    {
+                        Instantiate(invenItem, slotTransform).GetComponent<DraggableUI>().itemImageType = itemtype;
+                        break;
+                    }
+                }
+                break;
+            case ItemType.Boots:
+                for (int i = 0; i < itemSlotList.Count; i++)
+                {
+                    Transform slotTransform = itemSlotList[i].transform;
+                    if (slotTransform.childCount == 0)
+                    {
+                        Instantiate(invenItem, slotTransform).GetComponent<DraggableUI>().itemImageType = itemtype;
+                        break;
                     }
                 }
                 break;

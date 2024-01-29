@@ -6,6 +6,7 @@ public class PlayerManager : MonoBehaviour
 {
     public Vector2 startPoint;
     public int playerGold;
+    public int playerDamage;
 
     public static PlayerManager instance;
 
