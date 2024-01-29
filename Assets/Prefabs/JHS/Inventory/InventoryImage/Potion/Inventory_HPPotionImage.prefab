@@ -174,9 +174,9 @@ GameObject:
   - component: {fileID: 6496058075356895592}
   - component: {fileID: -4727558719790834112}
   - component: {fileID: -1484243468277980433}
-  - component: {fileID: -7552609638043216064}
+  - component: {fileID: 7260334209328584142}
   m_Layer: 6
-  m_Name: Inventory_SpeedPotionImage
+  m_Name: Inventory_HPPotionImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1949345101, guid: ba00d2cc9cfe3aa4dbabe584112b29a8, type: 3}
+  m_Sprite: {fileID: 1842145140, guid: ba00d2cc9cfe3aa4dbabe584112b29a8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -255,14 +255,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceedb733ac90cad45a7dd6c1d8f1738d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemImageType: 6
-  itemIDNUM: 2
+  itemImageType: 0
+  itemIDNUM: 0
   descriptionPanel: {fileID: 6489231574560617786}
   equipUI: {fileID: 4890648285820823306}
   descriptionTxt: {fileID: 1386818965821289457}
   potionCountTxt: {fileID: 4431493284699552469}
   itemCount: 1
-  itemSO: {fileID: 11400000, guid: 938994fbf6a24e346a1fadcdc52cc57a, type: 2}
+  itemSO: {fileID: 11400000, guid: ccb6d65c9ea0bf54fb0515d3ae7d8def, type: 2}
 --- !u!225 &-4727558719790834112
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -287,10 +287,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa0f6b5637fe2748b6544ee16a3b59f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 6
+  itemType: 0
   itemPotionRecoveryAmount: 0
   itemImage: {fileID: 3198257274824459387}
---- !u!114 &-7552609638043216064
+--- !u!114 &7260334209328584142
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -302,6 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54292a4597d4ba24c9a660284723ed73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  statsModifier: []
 --- !u!1 &2815785337729442278
 GameObject:
   m_ObjectHideFlags: 0

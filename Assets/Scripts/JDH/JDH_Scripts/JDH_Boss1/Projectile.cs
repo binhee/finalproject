@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    private int damage = 500;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
@@ -14,7 +13,7 @@ public class Projectile : MonoBehaviour
         }
         else if (collision.CompareTag("Boss"))
         {
-            collision.GetComponent<BossHp>().TakeDamage(damage);
+            collision.GetComponent<BossHp>().TakeDamage(PlayerManager.instance.playerDamage);
             Destroy(gameObject);
         }
         else if (collision.CompareTag("Boss2"))

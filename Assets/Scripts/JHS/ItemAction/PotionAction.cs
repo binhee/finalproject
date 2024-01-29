@@ -4,23 +4,21 @@ using UnityEngine;
 
 public class PotionAction : ItemAction
 {
-    public override void Use(ItemSO itemNum)
+    public  override void Use(ItemSO itemNum)
     {
         switch (itemNum.itemIDNum)
         {
             case 0://hp
-                Debug.Log("HP포션");
                 StartCoroutine(Shield(itemNum));
                 break;
             case 1://jump
-                Debug.Log("점프포션");
                 StartCoroutine(Jump(itemNum));
                 break;
             case 2://speed
-                Debug.Log("스피드포션");
+                StartCoroutine(Speed(itemNum));
                 break;
             case 3://enchant
-                Debug.Log("인첸트포션");
+                StartCoroutine(Enchant(itemNum));
                 break;
         }
     }
@@ -39,18 +37,41 @@ public class PotionAction : ItemAction
 
     IEnumerator Shield(ItemSO itemSO)
     {
+        GameObject player = PlayerManager.instance.FindPlayer();
+
         Debug.Log(" 쉴드 포션 ");
-        PlayerManager.instance.FindPlayer().tag = "NonPlayer";
+        GameObject effect = Instantiate(Inventory.instance.itemEffect[0], player.transform);
+        player.tag = "NonPlayer";
         yield return new WaitForSeconds(itemSO.shieldTime);
+        Destroy(effect);
         Debug.Log(" 효과 끝");
-        PlayerManager.instance.FindPlayer().tag = "Player";
+        player.tag = "Player";
     }
     IEnumerator Jump(ItemSO itemSO)
     {
+        PlayerInputController playerJump = PlayerManager.instance.FindPlayer().GetComponent<PlayerInputController>();
+
         Debug.Log(" 점프 포션 ");
-        PlayerManager.instance.FindPlayer().GetComponent<PlayerInputController>().jumpForce += itemSO.jumpPower;
+        playerJump.jumpForce += itemSO.jumpPower;
         yield return new WaitForSeconds(itemSO.jumpTime);
         Debug.Log(" 효과 끝");
-        PlayerManager.instance.FindPlayer().GetComponent<PlayerInputController>().jumpForce -= itemSO.jumpPower;
+        playerJump.jumpForce -= itemSO.jumpPower;
+    }
+    IEnumerator Speed(ItemSO itemSO)
+    {
+        CharacterStatsHandler playerHandler = PlayerManager.instance.FindPlayer().GetComponent<CharacterStatsHandler>();
+        Debug.Log(" 속도 포션 ");
+        playerHandler.CurrentStats.speed += itemSO.speedPower;
+        yield return new WaitForSeconds(itemSO.speedTime);
+        Debug.Log(" 효과 끝 ");
+        playerHandler.CurrentStats.speed -= itemSO.speedPower;
+    }
+    IEnumerator Enchant(ItemSO itemSO)
+    {
+        Debug.Log(" 강화 포션 ");
+        PlayerManager.instance.playerDamage += itemSO.enchantPower;
+        yield return new WaitForSeconds(itemSO.enchantTime);
+        Debug.Log(" 효과 끝 ");
+        PlayerManager.instance.playerDamage -= itemSO.enchantPower;
     }
 }

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 066c2c9becd349d498d69b28a3b9da46, type: 3}
-  m_Name: EnchantPotionSO
+  m_Name: AroundWeaponSO
   m_EditorClassIdentifier: 
-  itemIDNum: 3
+  itemIDNum: 4
   shieldTime: 0
   speedTime: 0
   speedPower: 0
   jumpTime: 0
   jumpPower: 0
-  enchantTime: 5
-  enchantPower: 500
+  enchantTime: 0
+  enchantPower: 0
