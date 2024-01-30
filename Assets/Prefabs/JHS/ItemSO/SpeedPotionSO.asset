@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SpeedPotionSO
   m_EditorClassIdentifier: 
   itemIDNum: 2
+  itemType: 6
   shieldTime: 0
   speedTime: 5
   speedPower: 10

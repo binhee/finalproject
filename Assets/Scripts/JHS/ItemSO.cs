@@ -6,6 +6,7 @@ using UnityEngine;
 public class ItemSO : ScriptableObject
 {
     public int itemIDNum;
+    public ItemType itemType;
 
     public int shieldTime;
     public int speedTime;

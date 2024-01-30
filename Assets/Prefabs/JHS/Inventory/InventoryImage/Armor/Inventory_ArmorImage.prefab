@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 6496058075356895592}
   - component: {fileID: -4727558719790834112}
   - component: {fileID: -1484243468277980433}
+  - component: {fileID: 7634186674197081577}
   m_Layer: 6
   m_Name: Inventory_ArmorImage
   m_TagString: Untagged
@@ -208,6 +209,18 @@ MonoBehaviour:
   itemType: 3
   itemPotionRecoveryAmount: 0
   itemImage: {fileID: 6401337948672724279}
+--- !u!114 &7634186674197081577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472158750361724533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e826e7389d6c9428853e6ef6557aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2815785337729442278
 GameObject:
   m_ObjectHideFlags: 0

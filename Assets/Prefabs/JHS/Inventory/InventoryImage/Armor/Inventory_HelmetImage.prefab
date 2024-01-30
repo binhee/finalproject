@@ -409,6 +409,7 @@ GameObject:
   - component: {fileID: -1174089744378030755}
   - component: {fileID: -4753028969205175434}
   - component: {fileID: -5975338602648443644}
+  - component: {fileID: -8850059569329872882}
   m_Layer: 6
   m_Name: Inventory_HelmetImage
   m_TagString: Untagged
@@ -495,7 +496,7 @@ MonoBehaviour:
   descriptionTxt: {fileID: 7949545425184120245}
   potionCountTxt: {fileID: 0}
   itemCount: 1
-  itemSO: {fileID: 0}
+  itemSO: {fileID: 11400000, guid: 93d295247b70eda498bee1ca0095023c, type: 2}
 --- !u!225 &-4753028969205175434
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -523,3 +524,15 @@ MonoBehaviour:
   itemType: 2
   itemPotionRecoveryAmount: 0
   itemImage: {fileID: 1401190609176836287}
+--- !u!114 &-8850059569329872882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8575132926966724862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e826e7389d6c9428853e6ef6557aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

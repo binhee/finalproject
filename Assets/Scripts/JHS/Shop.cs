@@ -12,6 +12,7 @@ public class Shop : MonoBehaviour
     {
         public GameObject shopItemImage;
         public int itemCost;
+        public ItemType type;
     }
     public List<ShopItemList> shopList;
 
@@ -19,6 +20,7 @@ public class Shop : MonoBehaviour
     public GameObject waringPanel;
     public Text goldText;
     int itemIndexNum;
+    
     void Update()
     {
         goldText.text = $"Gold : {PlayerManager.instance.playerGold}";
@@ -38,7 +40,7 @@ public class Shop : MonoBehaviour
         if (shopList[itemIndexNum].itemCost <= PlayerManager.instance.playerGold)
         {
             PlayerManager.instance.playerGold -= shopList[itemIndexNum].itemCost;
-            Inventory.instance.ClassifyAndCreateItem(ItemType.HpPotion, shopList[itemIndexNum].shopItemImage);
+            Inventory.instance.ClassifyAndCreateItem(shopList[itemIndexNum].type, shopList[itemIndexNum].shopItemImage);
         }
         else if (shopList[itemIndexNum].itemCost > PlayerManager.instance.playerGold)//안될경우
         {
