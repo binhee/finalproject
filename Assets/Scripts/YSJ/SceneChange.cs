@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
@@ -8,7 +10,7 @@ public class SceneChange : MonoBehaviour
     public GameObject OptionPanel;
     public GameObject StagePanel;
     public GameObject TileOptionclosePanel;
-
+    public GameObject panel;
     SoundManager soundManager;      // SoundManager 스크립트에 액세스.
     VolumeSettings volumeSettings;      // VolumeSettings 스크립트에 액세스.
 
@@ -93,7 +95,10 @@ public class SceneChange : MonoBehaviour
             Time.fixedDeltaTime = 0.02f * Time.timeScale;
         }
     }
-
+    public void InvenPanel()
+    {
+       Inventory.instance.inventoryPanel.SetActive(true);
+    }
     public void Stage1Load()    // 스테이지1 입장
     {
         SceneManager.LoadScene("JBH_Stage");    // "" 스테이지 씬 삽입
