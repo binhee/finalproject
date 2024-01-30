@@ -8,6 +8,9 @@ public class BossWeapon : MonoBehaviour
 {
     [SerializeField]
     private GameObject enemyProjectile;
+
+    public EnemyPoolManager enemyPoolManger;
+
   
     public void StartFiring(AttackType attackType)
     {
@@ -30,8 +33,12 @@ public class BossWeapon : MonoBehaviour
         {
             for(int i = 0; i < count; ++i)
             {
-                GameObject clone = Instantiate(enemyProjectile,transform.position, Quaternion.identity);
+                Debug.Log("h");
+                GameObject clone = enemyPoolManger.MakeObj("EnemyProjectile");
                 
+                clone.transform.position = transform.position;
+                    /*Instantiate(enemyProjectile,transform.position, Quaternion.identity);*/
+
                 float angle = weightAngle+intervalAngle*i;
                 float x = Mathf.Cos(angle * Mathf.PI / 180f);
                 float y = Mathf.Sin(angle * Mathf.PI / 180f);
@@ -52,7 +59,9 @@ public class BossWeapon : MonoBehaviour
     
         while(true)
         {
-            GameObject clone = Instantiate(enemyProjectile,transform.position, Quaternion.identity); 
+            GameObject clone = enemyPoolManger.MakeObj("EnemyProjectile");
+            clone.transform.position = transform.position;
+            /* Instantiate(enemyProjectile,transform.position, Quaternion.identity); */
             Vector3 direction = (PlayerManager.instance.FindPlayer().transform.position - clone.transform.position).normalized;
             clone.GetComponent<Movement2D>().MoveTo(direction);
            

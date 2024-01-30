@@ -70,6 +70,7 @@ public class EnemyPoolManager : MonoBehaviour
         }
         for(int i=0; i<targetPool.Length; i++)
         {
+            
             if (!targetPool[i].gameObject.activeSelf)
             {
                 targetPool[i].gameObject.SetActive(true);

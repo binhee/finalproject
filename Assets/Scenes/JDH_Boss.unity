@@ -123,6 +123,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1623995905 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3890895233622593541, guid: 9a8a17d7a4042744eb27ce6d6214e4f6, type: 3}
+  m_PrefabInstance: {fileID: 1216653531659899711}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1623995912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623995905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b6b874941715ba4caf354b313540903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 4418494990061632243, guid: dd42a63846e4b0f448361bc5a621454f, type: 3}
+  attackRate: 0.1
 --- !u!1 &1974487988
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,9 +350,16 @@ PrefabInstance:
       propertyPath: Meteorite
       value: 
       objectReference: {fileID: 5102254367674152833, guid: fee119abb41e9ec48985d3770c9427e9, type: 3}
+    - target: {fileID: 8591022435394129510, guid: 9a8a17d7a4042744eb27ce6d6214e4f6, type: 3}
+      propertyPath: enemyPoolManger
+      value: 
+      objectReference: {fileID: 1974487990}
     m_RemovedComponents:
     - {fileID: 4803941713197417381, guid: 9a8a17d7a4042744eb27ce6d6214e4f6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3890895233622593541, guid: 9a8a17d7a4042744eb27ce6d6214e4f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1623995912}
   m_SourcePrefab: {fileID: 100100000, guid: 9a8a17d7a4042744eb27ce6d6214e4f6, type: 3}
