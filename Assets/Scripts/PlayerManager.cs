@@ -7,12 +7,14 @@ public class PlayerManager : MonoBehaviour
     public Vector2 startPoint;
     public int playerGold;
     public int playerDamage;
+    public GameObject player;
 
     public static PlayerManager instance;
+    
 
     private void Awake()
     {
-        FindPlayer();
+        player = GameObject.Find("Player");
         if (instance == null)
         {
             instance = this;
@@ -25,6 +27,6 @@ public class PlayerManager : MonoBehaviour
     }
     public GameObject FindPlayer()
     {
-        return GameObject.Find("Player");
+        return player;
     }
 }

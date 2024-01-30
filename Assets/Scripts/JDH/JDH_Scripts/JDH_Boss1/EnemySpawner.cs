@@ -11,7 +11,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private float SpawnTime;
     [SerializeField]
-    private int maxEnemyCount = 100;
+    private int maxEnemyCount = 0;
     [SerializeField]
     private GameObject textBoss;
     [SerializeField]
@@ -25,28 +25,10 @@ public class EnemySpawner : MonoBehaviour
         textBoss.SetActive(false);
         panelBossHp.SetActive(false);
         boss.SetActive(false);
-        StartCoroutine("SpawnEnemy");
+        StartCoroutine("SpawnBoss");
     }
 
-    private IEnumerator SpawnEnemy()
-    {
-        int currentEnemyCount = 0;
-        while (true)
-        {
-            float PositionY = Random.Range(stageData.LimitMin.y, stageData.LimitMax.y);
-            Instantiate(enemy, new Vector3(stageData.LimitMax.x - 1f, PositionY), Quaternion.identity);
-
-            currentEnemyCount++;
-
-            if (currentEnemyCount == maxEnemyCount)
-            {
-                StartCoroutine("SpawnBoss");
-                break;
-            }
-            yield return new WaitForSeconds(SpawnTime);
-        }
-       
-    }
+  
 
     private IEnumerator SpawnBoss()
     {

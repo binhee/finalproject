@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -6280116852326100862}
   - component: {fileID: -5455983468594655203}
   - component: {fileID: 9172507118487668948}
+  - component: {fileID: 8491848732626714148}
   m_Layer: 0
   m_Name: Enemy Bullet 0
   m_TagString: BossProjectile
@@ -100,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dbd989d49bed174186bd71d093d9efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 7
   moveDIrection: {x: 0, y: 0, z: 0}
 --- !u!58 &-6280116852326100862
 CircleCollider2D:
@@ -177,3 +178,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageData: {fileID: 11400000, guid: 9375b436290b8f744b6b3594a32035f2, type: 2}
+--- !u!114 &8491848732626714148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4418494990061632243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f54bae796ac6f7438c4e27f6cca85fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

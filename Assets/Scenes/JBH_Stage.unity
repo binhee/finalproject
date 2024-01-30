@@ -59331,6 +59331,10 @@ PrefabInstance:
       propertyPath: enemy
       value: 
       objectReference: {fileID: 40667842845052186, guid: de7d492ed19ed214bad4bb56152254e8, type: 3}
+    - target: {fileID: 2598619495493859124, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
+      propertyPath: maxEnemyCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2671574912319671801, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       propertyPath: m_Sprite
       value: 

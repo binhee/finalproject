@@ -831,7 +831,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPoint: {x: 27, y: -4}
   playerGold: 100
-  playerDamage: 5
+  playerDamage: 100
+  player: {fileID: 8209670419948940985, guid: c75be14438bbdbc46b979193a7ae01d0, type: 3}
 --- !u!4 &285433060
 Transform:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1091318526869704072}
   - component: {fileID: 3663642775460052180}
   - component: {fileID: 3577484617990879693}
+  - component: {fileID: -586889074796643167}
   m_Layer: 0
   m_Name: MeteoritesEnemy
   m_TagString: Meteorite
@@ -148,3 +149,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f503bf959278f7e42b4d9a3576b5293c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-586889074796643167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5102254367674152833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8612fbd4a34a8234fa594291d3a366a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageData: {fileID: 11400000, guid: 9375b436290b8f744b6b3594a32035f2, type: 2}

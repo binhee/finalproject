@@ -47,14 +47,15 @@ public class BossWeapon : MonoBehaviour
 
     private IEnumerator SingleFireToCenterPosition()
     {
-        Vector3 targetPosition = Vector3.zero;
+        
         float attackRate = 0.5f;
-
+    
         while(true)
         {
             GameObject clone = Instantiate(enemyProjectile,transform.position, Quaternion.identity); 
-            Vector3 direction = (targetPosition -clone.transform.position).normalized;
+            Vector3 direction = (PlayerManager.instance.FindPlayer().transform.position - clone.transform.position).normalized;
             clone.GetComponent<Movement2D>().MoveTo(direction);
+           
             
             yield return new WaitForSeconds(attackRate);
         }
