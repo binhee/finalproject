@@ -10,7 +10,6 @@ public class WeaponAction : ItemAction
         GameObject player = PlayerManager.instance.FindPlayer();
         effect = Instantiate(Inventory.instance.itemEffect[1], player.transform);
         effect.GetComponent<AroundCircle>().moveSpeed = 100;
-
     }
     public override void Delete()
     {

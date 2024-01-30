@@ -68,6 +68,24 @@ public class Inventory : MonoBehaviour
                     potionOwn[boolnum] = true;
                     break;
                 }
+                if (itemSlotList[i].transform.GetChild(0).GetComponent<DraggableUI>().itemImageType == ItemType.SpeedPotion)
+                {
+                    boolnum = 0;
+                    potionOwn[boolnum] = true;
+                    break;
+                }
+                if (itemSlotList[i].transform.GetChild(0).GetComponent<DraggableUI>().itemImageType == ItemType.EnchantPotion)
+                {
+                    boolnum = 0;
+                    potionOwn[boolnum] = true;
+                    break;
+                }
+                if (itemSlotList[i].transform.GetChild(0).GetComponent<DraggableUI>().itemImageType == ItemType.JumpPotion)
+                {
+                    boolnum = 0;
+                    potionOwn[boolnum] = true;
+                    break;
+                }
             }
             else
             {

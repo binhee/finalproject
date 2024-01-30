@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 066c2c9becd349d498d69b28a3b9da46, type: 3}
-  m_Name: AroundWeaponSO
+  m_Name: SubArrowSO
   m_EditorClassIdentifier: 
-  itemIDNum: 4
-  itemType: 1
+  itemIDNum: 5
+  itemType: 2
   shieldTime: 0
   speedTime: 0
   speedPower: 0
