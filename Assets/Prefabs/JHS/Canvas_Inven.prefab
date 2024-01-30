@@ -1912,6 +1912,7 @@ GameObject:
   - component: {fileID: 2403813976342645147}
   - component: {fileID: 1761266089085665542}
   - component: {fileID: 6233481539965915823}
+  - component: {fileID: 6543542785995901080}
   m_Layer: 5
   m_Name: Canvas_Inven
   m_TagString: Untagged
@@ -2025,6 +2026,8 @@ MonoBehaviour:
   potionOwn: 00000000
   equipWeaponCount: 0
   equipArmorCount: 0
+  equipHelmetCount: 0
+  equipBootsCount: 0
   infoTexts:
   - {fileID: 7718610414766384806}
   - {fileID: 8838575979302409507}
@@ -2033,6 +2036,19 @@ MonoBehaviour:
   itemEffect:
   - {fileID: 954748119260620261, guid: 8dbfa216f8839ca429aa6fee8eb851c4, type: 3}
   - {fileID: 5572101721683809106, guid: c70272d5000fd5e42a867f9e3f933b9a, type: 3}
+--- !u!114 &6543542785995901080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4873181123653890375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb6778be0df1194ba68e4e47e19788f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  window: {fileID: 4284281417299568018}
 --- !u!1 &5276738363072814389
 GameObject:
   m_ObjectHideFlags: 0
