@@ -25,31 +25,32 @@ public class EnemySpawner : MonoBehaviour
         textBoss.SetActive(false);
         panelBossHp.SetActive(false);
         boss.SetActive(false);
-        StartCoroutine("SpawnEnemy");
+        StartCoroutine("SpawnBoss");
     }
 
-    private IEnumerator SpawnEnemy()
-    {
-        int currentEnemyCount = 0;
-        while (true)
-        {
-            float PositionY = Random.Range(stageData.LimitMin.y, stageData.LimitMax.y);
-            Instantiate(enemy, new Vector3(stageData.LimitMax.x - 1f, PositionY), Quaternion.identity);
+    //private IEnumerator SpawnEnemy()
+    //{
+    //    int currentEnemyCount = 0;
+    //    while (true)
+    //    {
+    //        float PositionY = Random.Range(stageData.LimitMin.y, stageData.LimitMax.y);
+    //        Instantiate(enemy, new Vector3(stageData.LimitMax.x - 1f, PositionY), Quaternion.identity);
 
-            currentEnemyCount++;
+    //        currentEnemyCount++;
 
-            if (currentEnemyCount == maxEnemyCount)
-            {
-                StartCoroutine("SpawnBoss");
-                break;
-            }
-            yield return new WaitForSeconds(SpawnTime);
-        }
+    //        if (currentEnemyCount == maxEnemyCount)
+    //        {
+    //            StartCoroutine("SpawnBoss");
+    //            break;
+    //        }
+    //        yield return new WaitForSeconds(SpawnTime);
+    //    }
        
-    }
+    //}
 
     private IEnumerator SpawnBoss()
     {
+        yield return new WaitForSeconds(2f);
         textBoss.SetActive (true);
         yield return new WaitForSeconds(1.0f);
         textBoss.SetActive(false);
