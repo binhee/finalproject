@@ -31,29 +31,29 @@ public class Enemy2Spawner : MonoBehaviour
         StartCoroutine("Spawn2Enemys");
     }  
 
-    private IEnumerator Spawn2Enemys()
-    {
-        int currentEnemy = 0;
+    //private IEnumerator Spawn2Enemys()
+    //{
+    //    int currentEnemy = 0;
 
-        while (true)
-        {
-            float PositionX = Random.Range(stageData.LimitMin.x, stageData.LimitMax.x);
-            float PositionsX = Random.Range(stageData.LimitMin.x, stageData.LimitMax.x);
-            Vector3 Position = new Vector3(PositionX, stageData.LimitMax.y, 0);
-            Vector3 Positions = new Vector3(PositionsX, stageData.LimitMax.y, 0);
-            Instantiate(Enemys[0], Position, Quaternion.identity);
-            yield return new WaitForSeconds(2f);
-            Instantiate(Enemys[1], Positions, Quaternion.identity);
+    //    while (true)
+    //    {
+    //        float PositionX = Random.Range(stageData.LimitMin.x, stageData.LimitMax.x);
+    //        float PositionsX = Random.Range(stageData.LimitMin.x, stageData.LimitMax.x);
+    //        Vector3 Position = new Vector3(PositionX, stageData.LimitMax.y, 0);
+    //        Vector3 Positions = new Vector3(PositionsX, stageData.LimitMax.y, 0);
+    //        Instantiate(Enemys[0], Position, Quaternion.identity);
+    //        yield return new WaitForSeconds(2f);
+    //        Instantiate(Enemys[1], Positions, Quaternion.identity);
 
-            currentEnemy++;
-            if (currentEnemy == maxEnemyCounts)
-            {
-                StartCoroutine("Boss2Spawn");
-                break;
-            }
-            yield return new WaitForSeconds(SpawnDelay);
-        }
-    }
+    //        currentEnemy++;
+    //        if (currentEnemy == maxEnemyCounts)
+    //        {
+    //            StartCoroutine("Boss2Spawn");
+    //            break;
+    //        }
+    //        yield return new WaitForSeconds(SpawnDelay);
+    //    }
+    //}
 
     private IEnumerator Boss2Spawn()
     {
