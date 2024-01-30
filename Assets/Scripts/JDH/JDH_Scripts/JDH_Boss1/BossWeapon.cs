@@ -35,7 +35,7 @@ public class BossWeapon : MonoBehaviour
             {
                 Debug.Log("h");
                 GameObject clone = enemyPoolManger.MakeObj("EnemyProjectile");
-                
+                Debug.Log("hhh");
                 clone.transform.position = transform.position;
                     /*Instantiate(enemyProjectile,transform.position, Quaternion.identity);*/
 
@@ -46,8 +46,8 @@ public class BossWeapon : MonoBehaviour
                 clone.GetComponent<Movement2D>().MoveTo(new Vector2(x, y));
             }
             weightAngle += 1;
-           
 
+            Debug.Log("hh");
             yield return new WaitForSeconds(attackRate);
         }
     }

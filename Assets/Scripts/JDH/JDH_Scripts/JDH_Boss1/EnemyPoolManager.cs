@@ -9,12 +9,12 @@ public class EnemyPoolManager : MonoBehaviour
     public GameObject alertLinePrefab;
     public GameObject MeteoriteEnemyPrefab;
 
-    private GameObject[] Enemys;
-    private GameObject[] EnemyProjectile;
-    private GameObject[] alertLine;
-    private GameObject[] MeteoriteEnemy;
+    public GameObject[] Enemys;
+    public GameObject[] EnemyProjectile;
+    public GameObject[] alertLine;
+    public GameObject[] MeteoriteEnemy;
 
-    private GameObject[] targetPool;
+    public GameObject[] targetPool;
 
     private void Awake()
     {
