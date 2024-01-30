@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: EnchantPotionSO
   m_EditorClassIdentifier: 
   itemIDNum: 3
+  itemType: 7
   shieldTime: 0
   speedTime: 0
   speedPower: 0

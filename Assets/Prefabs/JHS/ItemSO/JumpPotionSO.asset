@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: JumpPotionSO
   m_EditorClassIdentifier: 
   itemIDNum: 1
+  itemType: 5
   shieldTime: 0
   speedTime: 0
   speedPower: 0

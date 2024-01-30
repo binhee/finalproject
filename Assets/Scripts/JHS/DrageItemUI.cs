@@ -44,6 +44,7 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                     break;
                 case ItemType.Helmet:
                     EquipWithType(2, descriptionTxt.text, ref Inventory.instance.equipHelmetCount);
+                    gameObject.GetComponent<ArmorAction>().Use(itemSO);
                     // «Ô∏‰ ¿Â¬¯ «“∂ß¿« µø¿€
                     break;
                 case ItemType.Boots:

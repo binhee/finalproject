@@ -1178,6 +1178,14 @@ PrefabInstance:
       propertyPath: potionOwn.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6233481539965915823, guid: ae9294a38f2625f46a37a1881cb21298, type: 3}
+      propertyPath: itemEffect.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6233481539965915823, guid: ae9294a38f2625f46a37a1881cb21298, type: 3}
+      propertyPath: itemEffect.Array.data[2]
+      value: 
+      objectReference: {fileID: 5895203456092931781, guid: ef86c72355ee4fb42847d999a05cec19, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
