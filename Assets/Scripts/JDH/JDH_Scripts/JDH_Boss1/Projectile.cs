@@ -9,17 +9,20 @@ public class Projectile : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            //Destroy(gameObject);
         }
         else if (collision.CompareTag("Boss"))
         {
             collision.GetComponent<BossHp>().TakeDamage(PlayerManager.instance.playerDamage);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            //Destroy(gameObject);
         }
         else if (collision.CompareTag("Boss2"))
         {
             collision.GetComponent<BossHp2>().TakeDamage(PlayerManager.instance.playerDamage);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            //Destroy(gameObject);
         }
     }
 }
