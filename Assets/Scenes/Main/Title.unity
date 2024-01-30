@@ -830,8 +830,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startPoint: {x: 27, y: -4}
-  playerGold: 10000
-  playerDamage: 500
+  playerGold: 100
+  playerDamage: 5
 --- !u!4 &285433060
 Transform:
   m_ObjectHideFlags: 0

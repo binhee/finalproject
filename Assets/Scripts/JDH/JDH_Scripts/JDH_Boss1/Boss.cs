@@ -24,7 +24,7 @@ public class Boss : MonoBehaviour
     [SerializeField]
     private GameObject GameOverPanel;
     [SerializeField]
-    private int BossGold = 10000;
+    private int BossGold = 500;
 
     private void Awake()
     {
@@ -120,6 +120,7 @@ public class Boss : MonoBehaviour
     {
         Instantiate(explosionPrefab,transform.position,Quaternion.identity);
         ClearPanel.SetActive(true);
+        PlayerManager.instance.playerGold += BossGold;
         //playerController.Gold += BossGold;
         //PlayerPrefs.SetInt("Gold" + playerController.Gold);
         Destroy(gameObject);
