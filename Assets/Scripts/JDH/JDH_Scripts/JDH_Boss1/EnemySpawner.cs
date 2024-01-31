@@ -6,12 +6,12 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField]
     StageData stageData;
-    [SerializeField]
-    private GameObject enemy;
+    //[SerializeField]
+    //private GameObject enemy;
     [SerializeField]
     private float SpawnTime;
-    [SerializeField]
-    private int maxEnemyCount = 100;
+    //[SerializeField]
+    //private int maxEnemyCount = 100;
     [SerializeField]
     private GameObject textBoss;
     [SerializeField]
