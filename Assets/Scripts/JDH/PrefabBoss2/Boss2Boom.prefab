@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -7984820647983732688}
   - component: {fileID: -8876025249791667356}
   m_Layer: 0
-  m_Name: Boss2Projectiles
+  m_Name: Boss2Boom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
