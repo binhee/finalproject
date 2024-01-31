@@ -30,7 +30,7 @@ public class MeteoriteSpawner : MonoBehaviour
             alertLineClone.transform.position = new Vector3(PositionX,0,0);
             yield return new WaitForSeconds(1.0f);
 
-            alertLineClone.SetActive(false);
+            gameObject.SetActive(false);
             //Destroy(alertLineClone);
 
             Vector3 meteoritePosition = new Vector3(PositionX, stageData.LimitMax.y + 2.0f, 0);
