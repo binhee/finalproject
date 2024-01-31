@@ -81,7 +81,7 @@ public class Boss : MonoBehaviour
 
         while(true)
         {
-            if(transform.position.y<=stageData.LimitMin.y-14||
+            if(transform.position.y<=stageData.LimitMin.y||
                 transform.position.y >=stageData.LimitMax.y)
             {
                 direction *= -1;
@@ -107,7 +107,7 @@ public class Boss : MonoBehaviour
 
         while(true)
         {
-            if (transform.position.y <= stageData.LimitMin.y + 14 ||
+            if (transform.position.y <= stageData.LimitMin.y ||
                 transform.position.y >= stageData.LimitMax.y)
             {
                 direction *= -1;

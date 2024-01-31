@@ -11,7 +11,7 @@ public class BossWeapon : MonoBehaviour
 
     public EnemyPoolManager enemyPoolManger;
 
-
+  
     public void StartFiring(AttackType attackType)
     {
         StartCoroutine(attackType.ToString());

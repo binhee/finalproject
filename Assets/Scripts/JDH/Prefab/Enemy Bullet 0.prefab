@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 987758452978932283}
   - component: {fileID: -6280116852326100862}
   - component: {fileID: -5455983468594655203}
+  - component: {fileID: 9172507118487668948}
   - component: {fileID: 8491848732626714148}
-  - component: {fileID: -6819124220345306283}
   m_Layer: 0
   m_Name: Enemy Bullet 0
   m_TagString: BossProjectile
@@ -165,19 +165,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8491848732626714148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4418494990061632243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f54bae796ac6f7438c4e27f6cca85fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-6819124220345306283
+--- !u!114 &9172507118487668948
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,3 +178,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageData: {fileID: 11400000, guid: 9375b436290b8f744b6b3594a32035f2, type: 2}
+--- !u!114 &8491848732626714148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4418494990061632243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f54bae796ac6f7438c4e27f6cca85fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
