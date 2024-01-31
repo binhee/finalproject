@@ -13,6 +13,7 @@ public class SceneChange : MonoBehaviour
     public GameObject panel;
     SoundManager soundManager;      // SoundManager 스크립트에 액세스.
     VolumeSettings volumeSettings;      // VolumeSettings 스크립트에 액세스.
+    PlayerRespawn playerRespawn;
 
     private void Awake()
     {
@@ -101,24 +102,25 @@ public class SceneChange : MonoBehaviour
     }
     public void Stage1Load()    // 스테이지1 입장
     {
+        PlayerManager.instance.startPoint = new Vector2(27, -4);
         SceneManager.LoadScene("JBH_Stage");    // "" 스테이지 씬 삽입
     }
 
     public void Stage2Load()    // 스테이지2 입장
     {
-        PlayerManager.instance.startPoint = new Vector2(5.5f, -1.4f);
-        SceneManager.LoadScene("YSJ_TestStage");    // "" 스테이지 씬 삽입
+        PlayerManager.instance.startPoint = new Vector2(27, -4);
+        SceneManager.LoadScene("JBH_Stage2");    // "" 스테이지 씬 삽입
     }
 
     public void Stage3Load()    // 스테이지3 입장
     {
-        PlayerManager.instance.startPoint = new Vector2(-16.0f, -8.0f);
+        PlayerManager.instance.startPoint = new Vector2(27, -4);
         SceneManager.LoadScene("JDH_Boss2");    // "" 스테이지 씬 삽입
     }
 
     public void TestStage2Load()    // 스테이지2 입장
     {
-        PlayerManager.instance.startPoint = new Vector2(5.5f, -1.4f);
+        PlayerManager.instance.startPoint = new Vector2(27, -4);
         SceneManager.LoadScene("JHS_Item_Stage");    // "" 스테이지 씬 삽입
     }
 }
