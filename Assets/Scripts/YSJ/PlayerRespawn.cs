@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerRespawn : MonoBehaviour
 {
-    
+    public AnimationController animationController;
 
     private void Start()
-    {
+    {        
         //PlayerManager.instance.startPoint = transform.position;  // 플레이어의 시작 위치로 설정.
         Respawn();
     }
@@ -37,6 +37,7 @@ public class PlayerRespawn : MonoBehaviour
 
     void Die()
     {
+        animationController.Hit();
         // 플레이어가 Die되면 Respawn 실행.
         Respawn();
     }
