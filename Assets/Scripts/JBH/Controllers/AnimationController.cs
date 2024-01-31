@@ -41,7 +41,7 @@ public class AnimationController : Animations
     }
 
     // 피격 이벤트에서 호출되는 함수
-    private void Hit()
+    public void Hit()
     {
         animator.SetBool(IsHit, true);   // 피격 애니메이션 설정
     }
