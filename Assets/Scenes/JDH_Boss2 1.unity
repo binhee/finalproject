@@ -396,18 +396,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d0ab746e08f2541802db89e61ad72e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss2BoomPrefab: {fileID: 6025302057466147185, guid: 853f027912303234dbcbba2039c8b447, type: 3}
+  Boss2BoomPrefab: {fileID: 8309301430079731671, guid: 33879e73e28d93f43941b85ec90b7de6, type: 3}
+  Boss2ProjectileBoomPrefab: {fileID: 6025302057466147185, guid: 853f027912303234dbcbba2039c8b447, type: 3}
   Boss2Projectile1Prefab: {fileID: 1777296099429060459, guid: 0df489d1135b35b43bc94cbb0b5147e1, type: 3}
   Boss2Projectile2Prefab: {fileID: 3016243910504359717, guid: 901a550932768e943b90b5b45ca8317a, type: 3}
   Boss2Projectile3Prefab: {fileID: 6010945915645341170, guid: 464a108eb6125eb49858785176888089, type: 3}
   Boss2Projectile4Prefab: {fileID: 4087359190436999457, guid: d8f3cfd48fa270649b3d62d18acfd56e, type: 3}
   Boss2Projectile5Prefab: {fileID: 1896398714130586669, guid: bddc5b14e2b58184d8a4084dbb6118a9, type: 3}
+  Boss2LaserPrefab: {fileID: 127120148636249937, guid: 8ff68186796b97349ba95e3aa11489fc, type: 3}
   Boss2Boom: []
+  Boss2ProjectileBoom: []
   Boss2Projectile1: []
   Boss2Projectile2: []
   Boss2Projectile3: []
   Boss2Projectile4: []
   Boss2Projectile5: []
+  Boss2Laser: []
   targetPool: []
 --- !u!1 &394208579
 GameObject:
@@ -1570,6 +1574,7 @@ MonoBehaviour:
   attackRate: 0.5
   boomPrefab: {fileID: 6025302057466147185, guid: 853f027912303234dbcbba2039c8b447, type: 3}
   boomEffect: {fileID: 8309301430079731671, guid: 33879e73e28d93f43941b85ec90b7de6, type: 3}
+  Enemy2PoolManager: {fileID: 168020665}
 --- !u!114 &1079841326
 MonoBehaviour:
   m_ObjectHideFlags: 0
