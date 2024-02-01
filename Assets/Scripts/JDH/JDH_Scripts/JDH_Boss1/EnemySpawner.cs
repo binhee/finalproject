@@ -50,7 +50,7 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnBoss()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
         textBoss.SetActive (true);
         yield return new WaitForSeconds(1.0f);
         textBoss.SetActive(false);

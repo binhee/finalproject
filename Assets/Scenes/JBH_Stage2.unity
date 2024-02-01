@@ -79896,7 +79896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4283211087146082412, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4283211087146082412, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_LocalPosition.z
@@ -79950,13 +79950,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7878683445102967792, guid: 703428e70077fe547a6886e5b4282391, type: 3}
+      propertyPath: stageData
+      value: 
+      objectReference: {fileID: 11400000, guid: 7df0ca5079bd60c4e9419eef70db7da1, type: 2}
+    - target: {fileID: 7878683445102967792, guid: 703428e70077fe547a6886e5b4282391, type: 3}
+      propertyPath: boss2Appear
+      value: 33
+      objectReference: {fileID: 0}
     - target: {fileID: 8843763609338095469, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_LocalPosition.x
       value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 8843763609338095469, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 40
+      value: 32
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
