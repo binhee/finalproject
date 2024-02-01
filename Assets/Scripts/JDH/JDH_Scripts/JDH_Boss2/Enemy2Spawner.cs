@@ -28,7 +28,7 @@ public class Enemy2Spawner : MonoBehaviour
         Boss2PanelHp.SetActive(false);
         boss2.SetActive(false);
         
-        StartCoroutine("Boss2Spawn");
+        StartCoroutine("Spawn2Enemys");
     }  
 
     //private IEnumerator Spawn2Enemys()
