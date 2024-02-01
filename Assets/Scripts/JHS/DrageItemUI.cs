@@ -40,6 +40,7 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                     break;
                 case ItemType.Armor:
                     EquipWithType(1, descriptionTxt.text, ref Inventory.instance.equipArmorCount);
+                    gameObject.GetComponent<ArmorAction>().Use(itemSO);
                     // 방어구 장착 할때의 동작
                     break;
                 case ItemType.Helmet:
@@ -63,6 +64,7 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                     break;
                 case ItemType.Armor:
                     UnequipWithType(1, ref Inventory.instance.equipArmorCount);
+                    gameObject.GetComponent<ArmorAction>().ResetArmor();
                     // 방어구 해제 할때의 동작
                     break;
                 case ItemType.Helmet:
