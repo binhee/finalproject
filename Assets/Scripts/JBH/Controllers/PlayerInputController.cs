@@ -10,6 +10,7 @@ public class PlayerInputController : PlayerController
 
     private bool isJumping = false;   // 점프 중인지 여부
     private bool jumpCooldown = false; // 점프 쿨다운 상태
+    public bool itemDoubleJumping = false; // 더블 점프 가능한 아이템 장착 여부
 
     [SerializeField] public float jumpForce;   // 점프 힘
     [SerializeField] private float jumpCooldownTime = 0.7f; // 점프 쿨다운 시간
@@ -54,10 +55,17 @@ public class PlayerInputController : PlayerController
     {
         if (IsGrounded && !isJumping && !jumpCooldown)   // 땅에 닿아 있고 점프 중이 아니며 점프 쿨다운 중이 아닌 경우
         {
+            Debug.Log("a");
             _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);   // 점프 힘을 가해줌
             IsGrounded = false;   // 땅에 닿아 있지 않음으로 설정
             isJumping = true;   // 점프 중으로 설정
             StartCoroutine(JumpCooldown());   // 점프 쿨다운 코루틴 시작
+        }
+        else if(!IsGrounded && isJumping&& jumpCooldown&& itemDoubleJumping)
+        {
+            Debug.Log("b");
+            jumpCooldown = false;
+            _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
 
