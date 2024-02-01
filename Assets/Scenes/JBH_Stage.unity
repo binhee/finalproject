@@ -23095,10 +23095,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e193902c3cac4dc49a05deff53d1ca15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationController: {fileID: 0}
 --- !u!4 &112219423 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3766544155311734581, guid: c75be14438bbdbc46b979193a7ae01d0, type: 3}
+  m_PrefabInstance: {fileID: 112219420}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &112219424 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4456569557116531850, guid: c75be14438bbdbc46b979193a7ae01d0, type: 3}
   m_PrefabInstance: {fileID: 112219420}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &158312883
@@ -41762,6 +41766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _impactParticleSystem: {fileID: 1919957335}
+  dieEffect: {fileID: 112219424}
 --- !u!114 &1237487568
 MonoBehaviour:
   m_ObjectHideFlags: 0
