@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerRespawn : MonoBehaviour
 {
@@ -60,6 +59,4 @@ public class PlayerRespawn : MonoBehaviour
         transform.localScale = new Vector3 (2, 2, 2);       // 오브젝트 크기 원복.
         playerRb.simulated = true;      // 플레이어 리지드바디 시뮬레이티드 기능 활성화.
     }
-
-    
 }
