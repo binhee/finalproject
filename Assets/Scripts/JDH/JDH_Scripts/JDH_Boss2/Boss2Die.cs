@@ -25,7 +25,9 @@ public class Boss2Die : MonoBehaviour
         Instantiate(explosionDie,transform.position, Quaternion.identity);
         ClearPanel.SetActive(true);
         Destroy(gameObject);
-        //playerController.Gold += Boss2Gold;
+        PlayerManager.instance.playerGold += Boss2Gold;
+
+        PlayerPrefs.SetInt("Gold",PlayerManager.instance.playerGold);
         GameOverPanel.SetActive(false);
         
     }

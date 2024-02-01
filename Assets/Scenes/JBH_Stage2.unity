@@ -51224,7 +51224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4283211087146082412, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4283211087146082412, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_LocalPosition.z
@@ -51278,13 +51278,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7878683445102967792, guid: 703428e70077fe547a6886e5b4282391, type: 3}
+      propertyPath: boss2Appear
+      value: 33
+      objectReference: {fileID: 0}
     - target: {fileID: 8843763609338095469, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_LocalPosition.x
       value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 8843763609338095469, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 40
+      value: 32
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -57148,6 +57152,8 @@ MonoBehaviour:
   toObj: {fileID: 7150185234374539843}
   Boss: {fileID: 0}
   mainCamera: {fileID: 0}
+  camera1: {fileID: 0}
+  camera2: {fileID: 0}
 --- !u!1 &7150185234374539843
 GameObject:
   m_ObjectHideFlags: 0
@@ -57280,6 +57286,8 @@ MonoBehaviour:
   toObj: {fileID: 7150185234374539843}
   Boss: {fileID: 0}
   mainCamera: {fileID: 212772256}
+  camera1: {fileID: 0}
+  camera2: {fileID: 0}
 --- !u!61 &8771482324213514951
 BoxCollider2D:
   m_ObjectHideFlags: 0

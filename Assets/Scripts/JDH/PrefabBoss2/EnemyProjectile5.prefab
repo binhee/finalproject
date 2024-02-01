@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9184559660627081189}
   - component: {fileID: 7579322640516482917}
   - component: {fileID: 3971559036953553760}
+  - component: {fileID: 4515216482197339038}
   m_Layer: 0
   m_Name: EnemyProjectile5
   m_TagString: BossProjectile
@@ -145,3 +146,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   moveDIrection: {x: 0, y: -1, z: 0}
+--- !u!114 &4515216482197339038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896398714130586669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8612fbd4a34a8234fa594291d3a366a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageData: {fileID: 11400000, guid: 7df0ca5079bd60c4e9419eef70db7da1, type: 2}
