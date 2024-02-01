@@ -159,7 +159,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBE68\uAC04 \uD3EC\uC158"
+  m_Text: "\uC778\uCC48\uD2B8 \uD3EC\uC158"
 --- !u!1 &1472158750361724533
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1842145140, guid: ba00d2cc9cfe3aa4dbabe584112b29a8, type: 3}
+  m_Sprite: {fileID: 553437222, guid: ba00d2cc9cfe3aa4dbabe584112b29a8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -457,7 +457,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uD55C\uB3D9\uC548 \uC548 \uB9DE\uC744\uAEBC \uAC19\uB2E4\n"
+  m_Text: "\uACF5\uACA9\uB825\uC774 \uC62C\uB77C\uAC04\uAC70 \uAC19\uB2E4"
 --- !u!1 &4890648285820823306
 GameObject:
   m_ObjectHideFlags: 0

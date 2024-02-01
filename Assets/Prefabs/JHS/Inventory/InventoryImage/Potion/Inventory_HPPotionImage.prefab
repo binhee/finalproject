@@ -159,7 +159,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBE68\uAC04 \uD3EC\uC158"
+  m_Text: "\uC274\uB4DC \uD3EC\uC158"
 --- !u!1 &1472158750361724533
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,7 +302,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54292a4597d4ba24c9a660284723ed73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statsModifier: []
 --- !u!1 &2815785337729442278
 GameObject:
   m_ObjectHideFlags: 0

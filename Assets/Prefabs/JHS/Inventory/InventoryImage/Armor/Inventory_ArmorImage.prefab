@@ -181,7 +181,7 @@ MonoBehaviour:
   descriptionTxt: {fileID: 3892058158477745583}
   potionCountTxt: {fileID: 0}
   itemCount: 1
-  itemSO: {fileID: 0}
+  itemSO: {fileID: 11400000, guid: 81190f303c8b4a848ae642c082ffac00, type: 2}
 --- !u!225 &-4727558719790834112
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -456,7 +456,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uD2BC\uD2BC\uD574\uC9C4\uAC70 \uAC19\uB2E4\n"
+  m_Text: "\uBAB8\uC774 \uAC00\uBCBC\uC6CC\uC9C4\uB2E4\n"
 --- !u!1 &6489231574560617786
 GameObject:
   m_ObjectHideFlags: 0
