@@ -496,7 +496,7 @@ MonoBehaviour:
   descriptionTxt: {fileID: 7949545425184120245}
   potionCountTxt: {fileID: 0}
   itemCount: 1
-  itemSO: {fileID: 11400000, guid: e7eda61f4f9578c43a4389ecec579acc, type: 2}
+  itemSO: {fileID: 11400000, guid: 4eba40818af41ea4b8e62e3ce88e614b, type: 2}
 --- !u!225 &-4753028969205175434
 CanvasGroup:
   m_ObjectHideFlags: 0

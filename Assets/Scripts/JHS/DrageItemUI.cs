@@ -50,6 +50,7 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                     break;
                 case ItemType.Boots:
                     EquipWithType(3, descriptionTxt.text, ref Inventory.instance.equipBootsCount);
+                    gameObject.GetComponent<ArmorAction>().Use(itemSO);
                     // 부츠 장착 할때의 동작
                     break;
             }
@@ -69,10 +70,12 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                     break;
                 case ItemType.Helmet:
                     UnequipWithType(2, ref Inventory.instance.equipHelmetCount);
+                    gameObject.GetComponent<ArmorAction>().Delete();
                     // 헬멧 해제 할때의 동작
                     break;
                 case ItemType.Boots:
                     UnequipWithType(3, ref Inventory.instance.equipBootsCount);
+                    gameObject.GetComponent<ArmorAction>().ResetBoots();
                     // 부츠 해제 할때의 동작
                     break;
             }

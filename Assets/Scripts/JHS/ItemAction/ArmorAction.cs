@@ -18,7 +18,7 @@ public class ArmorAction : ItemAction
         }
         else if (itemNum.itemType == ItemType.Boots)
         {
-            effect = Instantiate(Inventory.instance.itemEffect[3], player.transform);
+            player.GetComponent<PlayerInputController>().itemDoubleJumping = true;
         }
     }
     public override void Delete()
@@ -29,6 +29,11 @@ public class ArmorAction : ItemAction
     {
         GameObject player = PlayerManager.instance.FindPlayer();
         player.GetComponent<CharacterStatsHandler>().CurrentStats.attackSO.speed -= 10;
+    }
+    public void ResetBoots()
+    {
+        GameObject player = PlayerManager.instance.FindPlayer();
+        player.GetComponent<PlayerInputController>().itemDoubleJumping = false;
     }
     public override void Upgrade()
     {
