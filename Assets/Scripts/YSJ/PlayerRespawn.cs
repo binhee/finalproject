@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerRespawn : MonoBehaviour
 {
-    public AnimationController animationController;
+    //public AnimationController animationController;
 
     private void Start()
     {        
@@ -37,7 +37,7 @@ public class PlayerRespawn : MonoBehaviour
 
     void Die()
     {
-        animationController.Hit();
+        //animationController.Hit();
         // 플레이어가 Die되면 Respawn 실행.
         Respawn();
     }

@@ -10,7 +10,7 @@ public class Teleport : MonoBehaviour
     public GameObject Boss;
     public GameObject mainCamera;
     public GameObject camera1;    // 시네머신 카메라
-    public GameObject camera2;
+    public GameObject camera2;    
 
     // 트리거 영역에 플레이어가 진입했을 때 호출되는 메서드
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,6 +41,6 @@ public class Teleport : MonoBehaviour
         yield return null;   // 한 프레임 대기
         targetObj.transform.position = toObj.transform.position;   // 대상 오브젝트를 목표 위치로 이동        
         
-        camera2.SetActive(true);
+        camera2.SetActive(true);        
     }
 }
