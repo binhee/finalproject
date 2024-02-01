@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Purchasing;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -9,6 +10,7 @@ public class PlayerManager : MonoBehaviour
     public int playerDamage;
 
     public static PlayerManager instance;
+
 
     private void Awake()
     {

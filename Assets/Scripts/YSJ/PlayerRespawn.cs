@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerRespawn : MonoBehaviour
 {
-    
+    //public AnimationController animationController;
 
     private void Start()
-    {
+    {        
         //PlayerManager.instance.startPoint = transform.position;  // 플레이어의 시작 위치로 설정.
         Respawn();
     }
@@ -37,6 +38,7 @@ public class PlayerRespawn : MonoBehaviour
 
     void Die()
     {
+        //animationController.Hit();
         // 플레이어가 Die되면 Respawn 실행.
         Respawn();
     }
@@ -46,4 +48,6 @@ public class PlayerRespawn : MonoBehaviour
         // Respawn되면 startPos로 위치 이동.
         transform.position = PlayerManager.instance.startPoint;
     }
+
+    
 }
