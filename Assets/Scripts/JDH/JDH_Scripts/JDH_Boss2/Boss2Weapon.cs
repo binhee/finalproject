@@ -37,7 +37,7 @@ public class Boss2Weapon : MonoBehaviour
             GameObject Line = Instantiate(LaserLine, new Vector3(0, -4, 0), Quaternion.identity);
            
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
 
             Destroy(Line);
 
@@ -76,7 +76,7 @@ public class Boss2Weapon : MonoBehaviour
 
             //Debug.Log("Line");
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.7f);
 
             //Destroy(Line);
 
