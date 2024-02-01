@@ -6,11 +6,18 @@ using UnityEngine.SceneManagement;
 public class PlayerRespawn : MonoBehaviour
 {
     //public AnimationController animationController;
+    Rigidbody2D playerRb;
+    ProjectileManager projectileManager;
+
+    private void Awake()
+    {
+        playerRb = GetComponent<Rigidbody2D>();
+    }
 
     private void Start()
-    {        
+    {
         //PlayerManager.instance.startPoint = transform.position;  // 플레이어의 시작 위치로 설정.
-        Respawn();
+        transform.position = PlayerManager.instance.startPoint;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -40,13 +47,18 @@ public class PlayerRespawn : MonoBehaviour
     {
         //animationController.Hit();
         // 플레이어가 Die되면 Respawn 실행.
-        Respawn();
+        ProjectileManager.Instance.dieEffect.Play();    // 파티클 이펙트 실행.
+        StartCoroutine(Respawn(0.5f));
     }
 
-    void Respawn()
+    IEnumerator Respawn(float duration)
     {
-        // Respawn되면 startPos로 위치 이동.
-        transform.position = PlayerManager.instance.startPoint;
+        playerRb.simulated = false;     //플레이어 리지드바디 시뮬레이티드 기능 비활성화.
+        transform.localScale = new Vector3(0, 0, 0);    // 오브젝트의 크기를 0,0,0으로 만듬(안보임).
+        yield return new WaitForSeconds(duration);      // duration 시간동안 잠시 정지.
+        transform.position = PlayerManager.instance.startPoint;     // Respawn되면 startPos로 위치 이동.
+        transform.localScale = new Vector3 (2, 2, 2);       // 오브젝트 크기 원복.
+        playerRb.simulated = true;      // 플레이어 리지드바디 시뮬레이티드 기능 활성화.
     }
 
     

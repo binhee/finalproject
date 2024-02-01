@@ -21009,6 +21009,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e193902c3cac4dc49a05deff53d1ca15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!198 &112219423 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4456569557116531850, guid: c75be14438bbdbc46b979193a7ae01d0, type: 3}
+  m_PrefabInstance: {fileID: 112219420}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &158312883
 GameObject:
   m_ObjectHideFlags: 0
@@ -26562,6 +26567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _impactParticleSystem: {fileID: 1919957335}
+  dieEffect: {fileID: 112219423}
 --- !u!114 &1237487568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57148,6 +57154,8 @@ MonoBehaviour:
   toObj: {fileID: 7150185234374539843}
   Boss: {fileID: 0}
   mainCamera: {fileID: 0}
+  camera1: {fileID: 0}
+  camera2: {fileID: 0}
 --- !u!1 &7150185234374539843
 GameObject:
   m_ObjectHideFlags: 0
@@ -57280,6 +57288,8 @@ MonoBehaviour:
   toObj: {fileID: 7150185234374539843}
   Boss: {fileID: 0}
   mainCamera: {fileID: 212772256}
+  camera1: {fileID: 0}
+  camera2: {fileID: 0}
 --- !u!61 &8771482324213514951
 BoxCollider2D:
   m_ObjectHideFlags: 0

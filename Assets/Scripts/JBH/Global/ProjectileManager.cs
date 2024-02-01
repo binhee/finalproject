@@ -5,6 +5,7 @@ using UnityEngine;
 public class ProjectileManager : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _impactParticleSystem;  // 투사체 피격 이펙트를 담은 파티클 시스템
+    [SerializeField] public ParticleSystem dieEffect;  //죽었을때 파티클 효과.
 
     public static ProjectileManager Instance;   // 싱글톤 인스턴스
 
