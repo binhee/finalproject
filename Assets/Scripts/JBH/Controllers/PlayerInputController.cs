@@ -61,7 +61,7 @@ public class PlayerInputController : PlayerController
             isJumping = true;   // 점프 중으로 설정
             StartCoroutine(JumpCooldown());   // 점프 쿨다운 코루틴 시작
         }
-        if(!IsGrounded && isJumping&& jumpCooldown&& itemDoubleJumping)
+        else if(!IsGrounded && isJumping&& jumpCooldown&& itemDoubleJumping)
         {
             Debug.Log("b");
             jumpCooldown = false;
