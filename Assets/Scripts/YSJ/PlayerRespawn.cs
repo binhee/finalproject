@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerRespawn : MonoBehaviour
 {
@@ -48,6 +47,4 @@ public class PlayerRespawn : MonoBehaviour
         // Respawn되면 startPos로 위치 이동.
         transform.position = PlayerManager.instance.startPoint;
     }
-
-    
 }
