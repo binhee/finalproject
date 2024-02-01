@@ -51279,6 +51279,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7878683445102967792, guid: 703428e70077fe547a6886e5b4282391, type: 3}
+      propertyPath: stageData
+      value: 
+      objectReference: {fileID: 11400000, guid: 7df0ca5079bd60c4e9419eef70db7da1, type: 2}
+    - target: {fileID: 7878683445102967792, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: boss2Appear
       value: 33
       objectReference: {fileID: 0}
