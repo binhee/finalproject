@@ -24665,6 +24665,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3766544155311734581, guid: c75be14438bbdbc46b979193a7ae01d0, type: 3}
   m_PrefabInstance: {fileID: 112219420}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &112219424 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4456569557116531850, guid: c75be14438bbdbc46b979193a7ae01d0, type: 3}
+  m_PrefabInstance: {fileID: 112219420}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &158312883
 GameObject:
   m_ObjectHideFlags: 0
@@ -30120,7 +30125,6 @@ MonoBehaviour:
   startPos: {fileID: 1416370430}
   endPos: {fileID: 750432076}
   desPos: {fileID: 750432076}
-  telPos: {fileID: 750432076}
   speed: 18
 --- !u!20 &442657950 stripped
 Camera:
@@ -30361,7 +30365,6 @@ MonoBehaviour:
   startPos: {fileID: 1376908185}
   endPos: {fileID: 1755830173}
   desPos: {fileID: 1755830173}
-  telPos: {fileID: 1710193347}
   speed: 18
 --- !u!66 &488937979
 CompositeCollider2D:
@@ -41162,7 +41165,6 @@ MonoBehaviour:
   startPos: {fileID: 165146256}
   endPos: {fileID: 1300516216}
   desPos: {fileID: 1300516216}
-  telPos: {fileID: 1300516216}
   speed: 6
 --- !u!1 &1218662182
 GameObject:
@@ -41279,7 +41281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _impactParticleSystem: {fileID: 1919957335}
-  dieEffect: {fileID: 0}
+  dieEffect: {fileID: 112219424}
 --- !u!114 &1237487568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75812,7 +75814,6 @@ MonoBehaviour:
   startPos: {fileID: 1908228828}
   endPos: {fileID: 952225129}
   desPos: {fileID: 952225129}
-  telPos: {fileID: 952225129}
   speed: 5
 --- !u!251 &1562678327
 PlatformEffector2D:
