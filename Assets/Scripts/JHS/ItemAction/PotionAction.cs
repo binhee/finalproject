@@ -40,7 +40,7 @@ public class PotionAction : ItemAction
         GameObject player = PlayerManager.instance.FindPlayer();
 
         Debug.Log(" ½¯µå Æ÷¼Ç ");
-        GameObject effect = Instantiate(Inventory.instance.itemEffect[0], player.transform);
+        GameObject effect = Instantiate(Inventory.instance.itemEffect[0], Inventory.instance.effectController.transform);
         player.tag = "NonPlayer";
         yield return new WaitForSeconds(itemSO.shieldTime);
         Destroy(effect);
