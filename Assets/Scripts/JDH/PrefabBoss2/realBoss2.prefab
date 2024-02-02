@@ -1521,7 +1521,7 @@ Transform:
   - {fileID: 3516415119544934522}
   - {fileID: 5926889874734692005}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5371550240739681545
 GameObject:
@@ -1835,7 +1835,7 @@ GameObject:
   - component: {fileID: 5037367202915310464}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Boss
+  m_TagString: Boss2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

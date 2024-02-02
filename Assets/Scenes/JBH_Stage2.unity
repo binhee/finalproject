@@ -30120,7 +30120,6 @@ MonoBehaviour:
   startPos: {fileID: 1416370430}
   endPos: {fileID: 750432076}
   desPos: {fileID: 750432076}
-  telPos: {fileID: 750432076}
   speed: 18
 --- !u!20 &442657950 stripped
 Camera:
@@ -30361,7 +30360,6 @@ MonoBehaviour:
   startPos: {fileID: 1376908185}
   endPos: {fileID: 1755830173}
   desPos: {fileID: 1755830173}
-  telPos: {fileID: 1710193347}
   speed: 18
 --- !u!66 &488937979
 CompositeCollider2D:
@@ -41162,7 +41160,6 @@ MonoBehaviour:
   startPos: {fileID: 165146256}
   endPos: {fileID: 1300516216}
   desPos: {fileID: 1300516216}
-  telPos: {fileID: 1300516216}
   speed: 6
 --- !u!1 &1218662182
 GameObject:
@@ -75812,7 +75809,6 @@ MonoBehaviour:
   startPos: {fileID: 1908228828}
   endPos: {fileID: 952225129}
   desPos: {fileID: 952225129}
-  telPos: {fileID: 952225129}
   speed: 5
 --- !u!251 &1562678327
 PlatformEffector2D:
@@ -84200,6 +84196,10 @@ PrefabInstance:
     - target: {fileID: 5238066284962848302, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238066284962848302, guid: 703428e70077fe547a6886e5b4282391, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5620029947493914154, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: ClearPanel
