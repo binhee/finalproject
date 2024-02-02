@@ -34,6 +34,10 @@ public class PlayerRespawn : MonoBehaviour
         {
             Die();
         }
+        else if(collision.CompareTag("Boss"))
+        {
+            Die();
+        }
     }
 
     public void UpdateCheckPoint(Vector2 pos)

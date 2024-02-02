@@ -52,10 +52,15 @@ public class BossWeapon : MonoBehaviour
 
         while(true)
         {
-            GameObject clone = Instantiate(enemyProjectile,transform.position, Quaternion.identity); 
-            Vector3 direction = (targetPosition -clone.transform.position).normalized;
-            clone.GetComponent<Movement2D>().MoveTo(direction);
-            
+            GameObject cloneLeft = Instantiate(enemyProjectile,transform.position, Quaternion.identity); 
+            Vector3 Leftdirection = (targetPosition -cloneLeft.transform.position).normalized;
+            cloneLeft.GetComponent<Movement2D>().MoveTo(Leftdirection);
+
+
+            GameObject cloneRight = Instantiate(enemyProjectile, transform.position, Quaternion.identity);
+            Vector3 Rightdirection = (targetPosition + cloneRight.transform.position).normalized;
+            cloneRight.GetComponent<Movement2D>().MoveTo(Rightdirection);
+
             yield return new WaitForSeconds(attackRate);
         }
     }
