@@ -7,18 +7,19 @@ public class ArmorAction : ItemAction
     GameObject effect;
     public override void Use(ItemSO itemNum)
     {
-        GameObject player = PlayerManager.instance.FindPlayer();
         if (itemNum.itemType == ItemType.Helmet)
         {
-            effect = Instantiate(Inventory.instance.itemEffect[2], player.transform);
+            effect = Instantiate(Inventory.instance.itemEffect[2],Inventory.instance.effectController.transform);
         }
         else if (itemNum.itemType == ItemType.Armor)
         {
-            player.GetComponent<CharacterStatsHandler>().CurrentStats.attackSO.speed += 10;
+            PlayerManager.instance.playerProjectileAS = 20;
+            //player.GetComponent<CharacterStatsHandler>().CurrentStats.attackSO.speed = 20;
         }
         else if (itemNum.itemType == ItemType.Boots)
         {
-            player.GetComponent<PlayerInputController>().itemDoubleJumping = true;
+            PlayerManager.instance.isDoubleJump = true;
+           //player.GetComponent<PlayerInputController>().itemDoubleJumping = true;
         }
     }
     public override void Delete()
@@ -27,13 +28,14 @@ public class ArmorAction : ItemAction
     }
     public void ResetArmor()
     {
-        GameObject player = PlayerManager.instance.FindPlayer();
-        player.GetComponent<CharacterStatsHandler>().CurrentStats.attackSO.speed -= 10;
+        PlayerManager.instance.playerProjectileAS = 10;
+        //player.GetComponent<CharacterStatsHandler>().CurrentStats.attackSO.speed -= 10;
     }
     public void ResetBoots()
     {
         GameObject player = PlayerManager.instance.FindPlayer();
-        player.GetComponent<PlayerInputController>().itemDoubleJumping = false;
+        PlayerManager.instance.isDoubleJump = false;
+        //  player.GetComponent<PlayerInputController>().itemDoubleJumping = false;
     }
     public override void Upgrade()
     {

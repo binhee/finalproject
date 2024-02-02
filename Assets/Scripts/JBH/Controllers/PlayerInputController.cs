@@ -23,7 +23,6 @@ public class PlayerInputController : PlayerController
         _camera = Camera.main;   // 메인 카메라 가져오기
         _rigidbody = GetComponent<Rigidbody2D>();   // Rigidbody2D 컴포넌트 가져오기
     }
-
     // 이동 입력 처리
     public void OnMove(InputValue value)
     {

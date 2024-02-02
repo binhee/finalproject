@@ -6,12 +6,15 @@ public class SubArrowLauncher : MonoBehaviour
 {
     public RangedAttackData rangedAttackData;
     public float shotDelay;
+    public Vector3 pos;
 
     private Vector2 mousePos;
     private float time;
+    public GameObject player;
     void Update()
     {
         SubArrowShooting();
+        SetPosition();
     }
     void SubArrowShooting()
     {
@@ -21,7 +24,15 @@ public class SubArrowLauncher : MonoBehaviour
         {
             time = 0;
             Vector2 pos = transform.position;
-            ProjectileManager.Instance.ShootBullet(pos , mousePos - pos , rangedAttackData);
+            ProjectileManager.Instance.ShootBullet(pos , (mousePos - pos).normalized , rangedAttackData);
         }
+    }
+    void SetPosition()
+    {
+        if(player == null)
+        {
+            player = PlayerManager.instance.FindPlayer();
+        }
+        transform.position = player.transform.position - pos;
     }
 }

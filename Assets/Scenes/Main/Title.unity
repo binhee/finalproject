@@ -5856,6 +5856,8 @@ MonoBehaviour:
   playerGold: 100
   playerDamage: 5
   player: {fileID: 0}
+  playerProjectileAS: 0
+  isDoubleJump: 0
 --- !u!4 &285433060
 Transform:
   m_ObjectHideFlags: 0
@@ -5872,6 +5874,7 @@ Transform:
   - {fileID: 5533507769620651008}
   - {fileID: 1823271812}
   - {fileID: 501558677}
+  - {fileID: 1074400972}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6564,6 +6567,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6233481539965915823, guid: ae9294a38f2625f46a37a1881cb21298, type: 3}
+      propertyPath: effectController
+      value: 
+      objectReference: {fileID: 1074400971}
     - target: {fileID: 6233481539965915823, guid: ae9294a38f2625f46a37a1881cb21298, type: 3}
       propertyPath: potionOwn.Array.size
       value: 4
@@ -12781,6 +12788,50 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &1074400971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1074400972}
+  - component: {fileID: 1074400973}
+  m_Layer: 0
+  m_Name: ItemEffectController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1074400972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074400971}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 285433060}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1074400973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074400971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48cd8e3a52bdec6498152764a4b7fa0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1138844484
 GameObject:
   m_ObjectHideFlags: 0
@@ -13254,7 +13305,6 @@ GameObject:
   - component: {fileID: 1325361596}
   - component: {fileID: 1325361595}
   - component: {fileID: 1325361594}
-  - component: {fileID: 1325361598}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -13353,18 +13403,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1325361598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325361593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a6ecb9f28b0b5542a569d9c467fd8db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1397306136
 GameObject:
   m_ObjectHideFlags: 0

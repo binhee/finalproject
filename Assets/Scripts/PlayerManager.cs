@@ -11,10 +11,13 @@ public class PlayerManager : MonoBehaviour
 
     public static PlayerManager instance;
     public GameObject player;
+    public float playerProjectileAS;
+    public bool isDoubleJump;
 
     private void Awake()
     {
         FindPlayer();
+        playerProjectileAS = 10;
         if (instance == null)
         {
             instance = this;
@@ -25,8 +28,25 @@ public class PlayerManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void Update()
+    {
+        if (player == null)
+        {
+            player = FindPlayer();
+        }
+
+        if (player != null)
+        {
+            StatsUpdate();
+        }
+    }
     public GameObject FindPlayer()
     {
         return GameObject.Find("Player");
+    }
+    public void StatsUpdate()
+    {
+        player.GetComponent<PlayerInputController>().itemDoubleJumping = isDoubleJump;
+        player.GetComponent<CharacterStatsHandler>().CurrentStats.attackSO.speed = playerProjectileAS;
     }
 }

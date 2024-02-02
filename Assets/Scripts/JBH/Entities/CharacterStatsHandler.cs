@@ -13,6 +13,7 @@ public class CharacterStatsHandler : MonoBehaviour
     private void Awake()
     {
         UpdateCharacterStats();   // 캐릭터 스탯 업데이트 메서드 호출
+
     }
     // 캐릭터 스탯 업데이트 메서드
     public void UpdateCharacterStats()

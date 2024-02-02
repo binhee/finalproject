@@ -8,7 +8,7 @@ public class WeaponAction : ItemAction
     public override void Use(ItemSO itemNum)
     {
         GameObject player = PlayerManager.instance.FindPlayer();
-        effect = Instantiate(Inventory.instance.itemEffect[1], player.transform);
+        effect = Instantiate(Inventory.instance.itemEffect[1], Inventory.instance.effectController.transform);
         effect.GetComponent<AroundCircle>().moveSpeed = 100;
     }
     public override void Delete()
