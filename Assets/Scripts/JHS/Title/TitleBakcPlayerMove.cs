@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Overlays;
+using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -14,7 +16,7 @@ public class TitleBakcPlayerMove : MonoBehaviour
     float time;
     void Update()
     {
-       // LimitY(limitPosY);
+        // LimitY(limitPosY);
         Speed();
         Direction();
         Move(moveDirection);
@@ -37,7 +39,7 @@ public class TitleBakcPlayerMove : MonoBehaviour
             moveDirection = true;
             transform.localScale = new Vector3(-1, 1, 0);
         }
-        else if(-limitPosX> transform.position.x)
+        else if (-limitPosX > transform.position.x)
         {
             moveDirection = false;
             transform.localScale = new Vector3(1, 1, 0);
@@ -46,7 +48,7 @@ public class TitleBakcPlayerMove : MonoBehaviour
     void Speed()
     {
         time += Time.deltaTime;
-        if(time> speedChangeTime)
+        if (time > speedChangeTime)
         {
             time = 0;
             speed = Random.RandomRange(2, 9);
@@ -54,7 +56,7 @@ public class TitleBakcPlayerMove : MonoBehaviour
     }
     void LimitY(float limit)
     {
-        if(transform.position.y <= limit)
+        if (transform.position.y <= limit)
         {
             Vector3 pos = transform.position;
             pos.y = limit;
