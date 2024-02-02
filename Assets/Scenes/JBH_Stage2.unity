@@ -24665,6 +24665,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3766544155311734581, guid: c75be14438bbdbc46b979193a7ae01d0, type: 3}
   m_PrefabInstance: {fileID: 112219420}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &112219424 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4456569557116531850, guid: c75be14438bbdbc46b979193a7ae01d0, type: 3}
+  m_PrefabInstance: {fileID: 112219420}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &158312883
 GameObject:
   m_ObjectHideFlags: 0
@@ -41276,7 +41281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _impactParticleSystem: {fileID: 1919957335}
-  dieEffect: {fileID: 0}
+  dieEffect: {fileID: 112219424}
 --- !u!114 &1237487568
 MonoBehaviour:
   m_ObjectHideFlags: 0
