@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     public static Inventory instance;
+    public GameObject effectController;
 
     public GameObject inventoryPanel;
     public List<Slot> itemSlotList = new List<Slot>();
@@ -103,7 +104,7 @@ public class Inventory : MonoBehaviour
                 for (int i = 0; i < itemSlotList.Count; i++)
                 {
                     Transform slotTransform = itemSlotList[i].transform;
-                    if (slotTransform.childCount == 0 && potionOwn[0] == false)
+                    if (slotTransform.childCount == 0 && potionOwn[1] == false)
                     {
                         Instantiate(invenItem, slotTransform).GetComponent<DraggableUI>().itemImageType = itemtype;
                         break;
