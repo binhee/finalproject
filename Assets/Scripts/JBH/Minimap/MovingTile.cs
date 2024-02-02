@@ -16,6 +16,7 @@ public class MovingTile : MonoBehaviour
         transform.position = startPos.position;
         desPos = endPos;
     }
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Player"))
@@ -30,9 +31,11 @@ public class MovingTile : MonoBehaviour
         {
             collision.transform.SetParent(null);
         }
+
+       
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.position = Vector2.MoveTowards(transform.position, desPos.position, Time.deltaTime * speed);
 
