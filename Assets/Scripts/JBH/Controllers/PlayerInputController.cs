@@ -55,7 +55,6 @@ public class PlayerInputController : PlayerController
     {
         if (IsGrounded && !isJumping && !jumpCooldown)   // 땅에 닿아 있고 점프 중이 아니며 점프 쿨다운 중이 아닌 경우
         {
-            Debug.Log("a");
             _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);   // 점프 힘을 가해줌
             IsGrounded = false;   // 땅에 닿아 있지 않음으로 설정
             isJumping = true;   // 점프 중으로 설정
@@ -63,7 +62,6 @@ public class PlayerInputController : PlayerController
         }
         else if(!IsGrounded && isJumping&& jumpCooldown&& itemDoubleJumping)
         {
-            Debug.Log("b");
             jumpCooldown = false;
             _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
