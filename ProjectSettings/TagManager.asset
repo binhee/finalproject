@@ -16,6 +16,7 @@ TagManager:
   - Boss2
   - Meteorite
   - ItemEffect
+  - Boss2Projectile
   layers:
   - Default
   - TransparentFX

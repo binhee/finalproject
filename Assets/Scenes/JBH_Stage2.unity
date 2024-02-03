@@ -84218,6 +84218,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6138793007828599971, guid: 703428e70077fe547a6886e5b4282391, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7878683445102967792, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: stageData
       value: 
