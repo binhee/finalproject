@@ -42,7 +42,7 @@ public class Boss2Weapon : MonoBehaviour
 
 
             yield return new WaitForSeconds(1f);
-            Debug.Log("¿Ö¾ÈµÅ");
+            Debug.Log("¿Ö¾ÈµÅ");   
             cloneLine.SetActive(false);
             //Destroy(Line);
 

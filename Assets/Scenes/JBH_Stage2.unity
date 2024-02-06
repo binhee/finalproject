@@ -83427,7 +83427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2651545533104147254, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3397653031411085576, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -83439,7 +83439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4283211087146082412, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4283211087146082412, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_LocalPosition.y
@@ -83483,7 +83483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5238066284962848302, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5238066284962848302, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_TagString
@@ -83501,6 +83501,14 @@ PrefabInstance:
       propertyPath: Enemy2PoolManager
       value: 
       objectReference: {fileID: 325482837}
+    - target: {fileID: 5673286232632911018, guid: 703428e70077fe547a6886e5b4282391, type: 3}
+      propertyPath: stageData
+      value: 
+      objectReference: {fileID: 11400000, guid: 7df0ca5079bd60c4e9419eef70db7da1, type: 2}
+    - target: {fileID: 5749074409375929357, guid: 703428e70077fe547a6886e5b4282391, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5814839810953941929, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -83517,9 +83525,13 @@ PrefabInstance:
       propertyPath: boss2Appear
       value: 33
       objectReference: {fileID: 0}
+    - target: {fileID: 8125227328265186545, guid: 703428e70077fe547a6886e5b4282391, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8843763609338095469, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 170
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 8843763609338095469, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_LocalPosition.y
