@@ -31,10 +31,11 @@ public class BossWeapon : MonoBehaviour
 
         while(true)
         {
+            GameObject clone = null;
             for(int i = 0; i < count; ++i)
             {
                 Debug.Log("h");
-                GameObject clone = enemyPoolManger.MakeObj("EnemyProjectile");
+                 clone = enemyPoolManger.MakeObj("EnemyProjectile");
                 Debug.Log("hhh");
                 clone.transform.position = transform.position;
                     /*Instantiate(enemyProjectile,transform.position, Quaternion.identity);*/
@@ -56,10 +57,11 @@ public class BossWeapon : MonoBehaviour
     {
         
         float attackRate = 0.5f;
+        GameObject clone = null;
     
         while(true)
         {
-            GameObject clone = enemyPoolManger.MakeObj("EnemyProjectile");
+            clone = enemyPoolManger.MakeObj("EnemyProjectile");
             clone.transform.position = transform.position;
             /* Instantiate(enemyProjectile,transform.position, Quaternion.identity); */
             Vector3 direction = (PlayerManager.instance.FindPlayer().transform.position - clone.transform.position).normalized;
