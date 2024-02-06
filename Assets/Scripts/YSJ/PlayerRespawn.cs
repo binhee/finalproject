@@ -34,7 +34,15 @@ public class PlayerRespawn : MonoBehaviour
         {
             Die();
         }
+        else if(collision.CompareTag("Boss2Projectile"))
+        {
+            Die();
+        }
         else if(collision.CompareTag("Boss"))
+        {
+            Die();
+        }
+        else if(collision.CompareTag("Boss2"))
         {
             Die();
         }
