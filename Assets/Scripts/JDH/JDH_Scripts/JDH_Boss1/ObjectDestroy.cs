@@ -16,7 +16,7 @@ public class ObjectDestroy : MonoBehaviour
             transform.position.x<stageData.LimitMin.x -destroyLine||
             transform.position.x>stageData.LimitMax.x +destroyLine)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

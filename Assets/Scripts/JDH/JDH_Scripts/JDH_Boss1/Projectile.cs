@@ -8,7 +8,8 @@ public class Projectile : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
+           
             gameObject.SetActive(false);
             //Destroy(gameObject);
         }

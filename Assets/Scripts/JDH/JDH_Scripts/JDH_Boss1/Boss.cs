@@ -123,6 +123,6 @@ public class Boss : MonoBehaviour
         PlayerManager.instance.playerGold += BossGold;
         //playerController.Gold += BossGold;
         PlayerPrefs.SetInt("Gold", PlayerManager.instance.playerGold);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }
