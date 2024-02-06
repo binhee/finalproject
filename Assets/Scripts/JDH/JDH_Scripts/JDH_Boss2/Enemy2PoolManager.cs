@@ -29,14 +29,14 @@ public class Enemy2PoolManager : MonoBehaviour
 
     private void Awake()
     {
-        Boss2Boom = new GameObject[3];
-        Boss2ProjectileBoom = new GameObject[3];
-        Boss2Projectile1 = new GameObject[3];
-        Boss2Projectile2 = new GameObject[3];
-        Boss2Projectile3 = new GameObject[3];
-        Boss2Projectile4 = new GameObject[3];
-        Boss2Projectile5 = new GameObject[3];
-        Boss2Laser = new GameObject[3];
+        Boss2Boom = new GameObject[5];
+        Boss2ProjectileBoom = new GameObject[5];
+        Boss2Projectile1 = new GameObject[15];
+        Boss2Projectile2 = new GameObject[15];
+        Boss2Projectile3 = new GameObject[15];
+        Boss2Projectile4 = new GameObject[15];
+        Boss2Projectile5 = new GameObject[15];
+        Boss2Laser = new GameObject[5];
 
         BossProjectiles();
     }

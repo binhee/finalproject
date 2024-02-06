@@ -28652,6 +28652,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 317985446}
   m_CullTransparentMesh: 1
+--- !u!1 &325482836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 325482838}
+  - component: {fileID: 325482837}
+  m_Layer: 0
+  m_Name: EnemyPoolManager2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &325482837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325482836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92d0ab746e08f2541802db89e61ad72e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Boss2BoomPrefab: {fileID: 8309301430079731671, guid: 33879e73e28d93f43941b85ec90b7de6, type: 3}
+  Boss2ProjectileBoomPrefab: {fileID: 6025302057466147185, guid: 853f027912303234dbcbba2039c8b447, type: 3}
+  Boss2Projectile1Prefab: {fileID: 1777296099429060459, guid: 0df489d1135b35b43bc94cbb0b5147e1, type: 3}
+  Boss2Projectile2Prefab: {fileID: 3016243910504359717, guid: 901a550932768e943b90b5b45ca8317a, type: 3}
+  Boss2Projectile3Prefab: {fileID: 6010945915645341170, guid: 464a108eb6125eb49858785176888089, type: 3}
+  Boss2Projectile4Prefab: {fileID: 4087359190436999457, guid: d8f3cfd48fa270649b3d62d18acfd56e, type: 3}
+  Boss2Projectile5Prefab: {fileID: 1896398714130586669, guid: bddc5b14e2b58184d8a4084dbb6118a9, type: 3}
+  Boss2LaserPrefab: {fileID: 127120148636249937, guid: ac85659b33abb0041a622e47038a00de, type: 3}
+  Boss2Boom: []
+  Boss2ProjectileBoom: []
+  Boss2Projectile1: []
+  Boss2Projectile2: []
+  Boss2Projectile3: []
+  Boss2Projectile4: []
+  Boss2Projectile5: []
+  Boss2Laser: []
+  targetPool: []
+--- !u!4 &325482838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325482836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &396335224
 GameObject:
   m_ObjectHideFlags: 0
@@ -83378,7 +83439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4283211087146082412, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4283211087146082412, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_LocalPosition.y
@@ -83436,6 +83497,10 @@ PrefabInstance:
       propertyPath: GameOverPanel
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5620797258982797637, guid: 703428e70077fe547a6886e5b4282391, type: 3}
+      propertyPath: Enemy2PoolManager
+      value: 
+      objectReference: {fileID: 325482837}
     - target: {fileID: 5814839810953941929, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -83454,7 +83519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8843763609338095469, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 70
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 8843763609338095469, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_LocalPosition.y
