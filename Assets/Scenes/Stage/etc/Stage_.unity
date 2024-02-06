@@ -1432,7 +1432,7 @@ PrefabInstance:
     - target: {fileID: 3315001608563007908, guid: a4244fe7921e6004f97ed341d4ef5904, type: 3}
       propertyPath: OptionPanel
       value: 
-      objectReference: {fileID: 1617775474}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1760,6 +1760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _impactParticleSystem: {fileID: 1919957335}
+  dieEffect: {fileID: 0}
 --- !u!114 &1237487568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1900,9 +1901,129 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3620318928449325722, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620318928449325722, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620318928449325722, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341051881234491574, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341051881234491574, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341051881234491574, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341051881234491574, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341051881234491574, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341051881234491574, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884079258608369001, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884079258608369001, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884079258608369001, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884079258608369001, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884079258608369001, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884079258608369001, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5055236061734781756, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
       propertyPath: m_Name
       value: Canvas (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6620564132872202946, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6620564132872202946, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6620564132872202946, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564460520503669480, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564460520503669480, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564460520503669480, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564460520503669480, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564460520503669480, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564460520503669480, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844000007217250236, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844000007217250236, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844000007217250236, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844000007217250236, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844000007217250236, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844000007217250236, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3628,7 +3749,7 @@ RectTransform:
   - {fileID: 1969345817}
   - {fileID: 1051328985}
   - {fileID: 1403602850}
-  - {fileID: 1617775475}
+  - {fileID: 2046305431}
   - {fileID: 1568550898}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -3950,16 +4071,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97816fbb1b323ae498b3a5902c156294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1617775474 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1312728740535368190, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
-  m_PrefabInstance: {fileID: 2046305430}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &1617775475 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5533507768996757750, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
-  m_PrefabInstance: {fileID: 2046305430}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1672582858
 GameObject:
   m_ObjectHideFlags: 0
@@ -4151,6 +4262,7 @@ MonoBehaviour:
   potions:
   - key: 49
     indexNum: 0
+    itemIndexNum: 0
     onPotionEquip: 0
     potionImage: {fileID: 764863967}
     cooldownText: {fileID: 0}
@@ -4158,9 +4270,10 @@ MonoBehaviour:
     isOnCooldown: 0
     cooldownTimer: 0
     potionAction: {fileID: 0}
-    itemInfo: {fileID: 11400000, guid: 188c239dafd91c24fa1875127e944a7c, type: 2}
+    ItemSO: {fileID: 0}
   - key: 50
     indexNum: 1
+    itemIndexNum: 0
     onPotionEquip: 0
     potionImage: {fileID: 160331714}
     cooldownText: {fileID: 0}
@@ -4168,9 +4281,10 @@ MonoBehaviour:
     isOnCooldown: 0
     cooldownTimer: 0
     potionAction: {fileID: 0}
-    itemInfo: {fileID: 11400000, guid: 188c239dafd91c24fa1875127e944a7c, type: 2}
+    ItemSO: {fileID: 0}
   - key: 51
     indexNum: 2
+    itemIndexNum: 0
     onPotionEquip: 0
     potionImage: {fileID: 2125402158}
     cooldownText: {fileID: 0}
@@ -4178,9 +4292,10 @@ MonoBehaviour:
     isOnCooldown: 0
     cooldownTimer: 0
     potionAction: {fileID: 0}
-    itemInfo: {fileID: 11400000, guid: 188c239dafd91c24fa1875127e944a7c, type: 2}
+    ItemSO: {fileID: 0}
   - key: 52
     indexNum: 3
+    itemIndexNum: 0
     onPotionEquip: 0
     potionImage: {fileID: 564559434}
     cooldownText: {fileID: 0}
@@ -4188,7 +4303,7 @@ MonoBehaviour:
     isOnCooldown: 0
     cooldownTimer: 0
     potionAction: {fileID: 0}
-    itemInfo: {fileID: 11400000, guid: 188c239dafd91c24fa1875127e944a7c, type: 2}
+    ItemSO: {fileID: 0}
 --- !u!1 &1919957332
 GameObject:
   m_ObjectHideFlags: 0
@@ -9398,6 +9513,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
+--- !u!224 &2046305431 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7084429748311660723, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
+  m_PrefabInstance: {fileID: 2046305430}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2125402156
 GameObject:
   m_ObjectHideFlags: 0
