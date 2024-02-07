@@ -7,10 +7,13 @@ public class PlayerRespawn : MonoBehaviour
     //public AnimationController animationController;
     Rigidbody2D playerRb;
     ProjectileManager projectileManager;
+    SoundManager soundManager;
+    VolumeSettings volumeSettings;
 
     private void Awake()
     {
         playerRb = GetComponent<Rigidbody2D>();
+        soundManager = GameObject.FindGameObjectWithTag("Sound").GetComponent<SoundManager>();    //태그가 Sound인 SoundManager에 접근.
     }
 
     private void Start()
@@ -58,6 +61,7 @@ public class PlayerRespawn : MonoBehaviour
     {
         //animationController.Hit();
         // 플레이어가 Die되면 Respawn 실행.
+        soundManager.PlaySFX(soundManager.DieSound);    // 죽었을 때 소리 실행.
         ProjectileManager.Instance.dieEffect.Play();    // 파티클 이펙트 실행.
         StartCoroutine(Respawn(0.5f));
     }
