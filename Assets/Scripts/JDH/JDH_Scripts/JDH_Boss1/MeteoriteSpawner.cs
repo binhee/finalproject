@@ -23,16 +23,16 @@ public class MeteoriteSpawner : MonoBehaviour
         while (true)
         {
             float PositionX = Random.Range(stageData.LimitMin.x, stageData.LimitMax.x);
-            GameObject alertLineClone = enemyPoolManger.MakeObj("alertLine"); /*Instantiate(alertline,new Vector3(PositionX, 0, 0),Quaternion.identity);*/
+            GameObject alertLineClone = enemyPoolManger.MakeObj("alertLine");
             alertLineClone.transform.position = new Vector3(PositionX, 0, 0);
             yield return new WaitForSeconds(1.0f);
 
             Debug.Log("Meteo");
             alertLineClone.SetActive(false);
-            //Destroy(alertLineClone);
+           
             Debug.Log("Meteorite");
             Vector3 meteoritePosition = new Vector3(PositionX, stageData.LimitMax.y + 2.0f, 0);
-            //Instantiate(Meteorite,meteoritePosition, Quaternion.identity);
+          
             GameObject MeteoEnemy =enemyPoolManger.MakeObj("MeteoriteEnemy");
             MeteoEnemy.transform.position = meteoritePosition;
             Debug.Log("Me");
