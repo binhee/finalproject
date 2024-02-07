@@ -32,10 +32,13 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerE
     {
         if (eventData.pointerDrag != null && gameObject.transform.childCount == 1)
         {
-            if (transform.GetChild(0).GetComponent<DraggableUI>().itemImageType == eventData.pointerDrag.GetComponent<DraggableUI>().itemImageType)
+            DraggableUI existUI = transform.GetChild(0).GetComponent<DraggableUI>(); // 현재 밑에 자식으로 슬롯에 존재하는 아이템
+            DraggableUI dragUI = eventData.pointerDrag.GetComponent<DraggableUI>(); // 현재 드래그 중인 아이템
+
+            if (existUI.itemImageType == dragUI.itemImageType)
             {
-                transform.GetChild(0).GetComponent<DraggableUI>().itemCount += eventData.pointerDrag.GetComponent<DraggableUI>().itemCount;
-                transform.GetChild(0).GetComponent<DraggableUI>().UpdateText();
+                existUI.itemCount += dragUI.itemCount;
+                existUI.UpdateText();
                 Destroy(eventData.pointerDrag);
             }
         }
