@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6422331579302602038}
   - component: {fileID: 1916315713046067087}
-  - component: {fileID: 6203309816015101372}
   - component: {fileID: -3553538120812994218}
+  - component: {fileID: -5900315318612372567}
   m_Layer: 0
   m_Name: LaserLine
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 127120148636249937}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 6, z: 1}
+  m_LocalScale: {x: 2, y: 25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -86,18 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6203309816015101372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 127120148636249937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91f39f4caf96ccc479d795656144cd83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-3553538120812994218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,3 +100,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   moveDIrection: {x: 0, y: 0, z: 0}
+--- !u!114 &-5900315318612372567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127120148636249937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42dceab6c6cbe4d41869b6c90568e47a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

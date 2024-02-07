@@ -38,7 +38,7 @@ public class Boss2Weapon : MonoBehaviour
         {
 
             //GameObject Line = Instantiate(LaserLine, new Vector3(0, -4, 0), Quaternion.identity);
-            cloneLine = Enemy2PoolManager.MakeProjectiles("EnemyLaser");
+            cloneLine = Enemy2PoolManager.MakeProjectiles("Boss2Laser");
 
 
             yield return new WaitForSeconds(1f);

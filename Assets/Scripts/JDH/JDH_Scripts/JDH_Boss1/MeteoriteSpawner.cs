@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MeteoriteSpawner : MonoBehaviour
 {
-    private EnemyPoolManager enemyPoolManger;
+    public EnemyPoolManager enemyPoolManger;
     [SerializeField]
     private StageData stageData;
     [SerializeField]
@@ -30,13 +30,15 @@ public class MeteoriteSpawner : MonoBehaviour
             alertLineClone.transform.position = new Vector3(PositionX, 0, 0);
             yield return new WaitForSeconds(1.0f);
 
-            gameObject.SetActive(false);
+            Debug.Log("Meteo");
+            alertLineClone.SetActive(false);
             //Destroy(alertLineClone);
-
+            Debug.Log("Meteorite");
             Vector3 meteoritePosition = new Vector3(PositionX, stageData.LimitMax.y + 2.0f, 0);
             //Instantiate(Meteorite,meteoritePosition, Quaternion.identity);
-            enemyPoolManger.MakeObj("MeteoriteEnemy");
-            transform.position = meteoritePosition;
+            GameObject MeteoEnemy =enemyPoolManger.MakeObj("MeteoriteEnemy");
+            MeteoEnemy.transform.position = meteoritePosition;
+            Debug.Log("Me");
 
 
             float spawnTime = Random.Range(minSpawnTime, maxSpawnTime);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Twinkle : MonoBehaviour
 {
-    private float fadeTime = 0.1f;
+    private float fadeTime = 0.8f;
     private SpriteRenderer spriterenderer;
 
     private void Awake()

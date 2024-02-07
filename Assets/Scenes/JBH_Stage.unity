@@ -68314,6 +68314,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 104247646427283000, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 104770922443788523, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 195944580951722444, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       propertyPath: m_Offset.x
       value: 5
@@ -68334,6 +68342,14 @@ PrefabInstance:
       propertyPath: Meteorite
       value: 
       objectReference: {fileID: 5102254367674152833, guid: fee119abb41e9ec48985d3770c9427e9, type: 3}
+    - target: {fileID: 1120145695514784748, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
+      propertyPath: alertline
+      value: 
+      objectReference: {fileID: 127120148636249937, guid: 8ff68186796b97349ba95e3aa11489fc, type: 3}
+    - target: {fileID: 1120145695514784748, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
+      propertyPath: enemyPoolManger
+      value: 
+      objectReference: {fileID: 1760281086}
     - target: {fileID: 1263711685948357894, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

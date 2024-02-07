@@ -33,14 +33,12 @@ public class Boss2 : MonoBehaviour
 
     private IEnumerator MoveApeear()
     {
-        movement2D.MoveTo(Vector3.up);
+        
         while (true)
         {
-            if (transform.position.y <= boss2Appear)
-            {
-                movement2D.MoveTo(Vector3.zero);
-                ChangePattern(Boss2State.Pattern01);
-            }
+            movement2D.MoveTo(Vector3.zero);
+            ChangePattern(Boss2State.Pattern01);
+           
             yield return null;
         }
     }
