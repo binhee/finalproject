@@ -39,13 +39,13 @@ public class SceneChange : MonoBehaviour
 
     public void SetStagePanel()
     {
-        soundManager.PlatSFX(soundManager.BTNSound);    // BTNSound 재생
+        soundManager.PlaySFX(soundManager.BTNSound);    // BTNSound 재생
         bool IsSetStagePanel = StagePanel.activeSelf;
         StagePanel.SetActive(!IsSetStagePanel);
     }
     public void SetOptionPanel() //옵션창 생성 삭제
     {
-        soundManager.PlatSFX(soundManager.BTNSound);    // BTNSound 재생
+        soundManager.PlaySFX(soundManager.BTNSound);    // BTNSound 재생
         
         bool IsSetOptionPanel = OptionPanel.activeSelf;
         OptionPanel.SetActive(!IsSetOptionPanel);
@@ -77,7 +77,7 @@ public class SceneChange : MonoBehaviour
 
     public void MainSceneLoad()    // 메인화면 입장
     {
-        soundManager.PlatSFX(soundManager.BTNSound);    // BTNSound 재생
+        soundManager.PlaySFX(soundManager.BTNSound);    // BTNSound 재생
         SceneManager.LoadScene("Main");    // "" 스테이지 씬 삽입
         Time.timeScale = 1f;
         Time.fixedDeltaTime = 0.02f * Time.timeScale;        
@@ -90,7 +90,7 @@ public class SceneChange : MonoBehaviour
         }
         else
         {
-            soundManager.PlatSFX(soundManager.BTNSound);    // BTNSound 재생
+            soundManager.PlaySFX(soundManager.BTNSound);    // BTNSound 재생
             bool IsSetOptionPanel = OptionPanel.activeSelf;
             OptionPanel.SetActive(!IsSetOptionPanel);
             SceneManager.LoadScene("Main");    // "" 스테이지 씬 삽입
@@ -100,19 +100,19 @@ public class SceneChange : MonoBehaviour
     }
     public void InvenPanel()
     {
-        soundManager.PlatSFX(soundManager.BTNSound);    // BTNSound 재생
+        soundManager.PlaySFX(soundManager.BTNSound);    // BTNSound 재생
         Inventory.instance.inventoryPanel.SetActive(true);
     }
     public void Stage1Load()    // 스테이지1 입장
     {
-        soundManager.PlatSFX(soundManager.BTNSound);    // BTNSound 재생
+        soundManager.PlaySFX(soundManager.BTNSound);    // BTNSound 재생
         PlayerManager.instance.startPoint = new Vector2(27, -4);
         SceneManager.LoadScene("JBH_Stage");    // "" 스테이지 씬 삽입
     }
 
     public void Stage2Load()    // 스테이지2 입장
     {
-        soundManager.PlatSFX(soundManager.BTNSound);    // BTNSound 재생
+        soundManager.PlaySFX(soundManager.BTNSound);    // BTNSound 재생
         PlayerManager.instance.startPoint = new Vector2(27, -4);
         SceneManager.LoadScene("JBH_Stage2");    // "" 스테이지 씬 삽입
     }
