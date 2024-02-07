@@ -178,6 +178,9 @@ MonoBehaviour:
   SFXSource: {fileID: 5483212923406810890}
   BGM: {fileID: 8300000, guid: 5b59cce20f4d42a48b3069957f936fe4, type: 3}
   BTNSound: {fileID: 8300000, guid: 32d4b1811dda14a6cb9e059ee8ad17d2, type: 3}
+  AttackSound: {fileID: 8300000, guid: 0994c12e202f342459a4212e7287f7e8, type: 3}
+  JumpSound: {fileID: 8300000, guid: 7e9ee6dc04a5d40d1a5dfc4beb9865e7, type: 3}
+  DieSound: {fileID: 8300000, guid: 7bef0064f8567430cac22499c6b93d4f, type: 3}
 --- !u!1 &7320880641017601188
 GameObject:
   m_ObjectHideFlags: 0

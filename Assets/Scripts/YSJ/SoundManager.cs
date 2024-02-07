@@ -11,6 +11,9 @@ public class SoundManager : MonoBehaviour
     [Header("---------- Audio Clip -----------")]
     public AudioClip BGM;
     public AudioClip BTNSound;
+    public AudioClip AttackSound;
+    public AudioClip JumpSound;
+    public AudioClip DieSound;
 
 
 
@@ -21,7 +24,7 @@ public class SoundManager : MonoBehaviour
         BGMSource.Play();
     }
 
-    public void PlatSFX(AudioClip clip)     // 원하는 사운드 효과 재생(SFX)
+    public void PlaySFX(AudioClip clip)     // 원하는 사운드 효과 재생(SFX)
     {
         SFXSource.PlayOneShot(clip);
     }
