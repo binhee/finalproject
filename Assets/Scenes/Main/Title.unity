@@ -5404,6 +5404,17 @@ MonoBehaviour:
   size: 0.1
   upSizeTime: 1
   delayAni: 0.1
+--- !u!114 &187180267 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7184397668570126952, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
+  m_PrefabInstance: {fileID: 2429710643227482673}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &188129108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25002,13 +25013,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285433060}
     m_Modifications:
+    - target: {fileID: 1184253238036742376, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
+      propertyPath: SFXSlider
+      value: 
+      objectReference: {fileID: 187180267}
     - target: {fileID: 2148407943394612775, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 188129109}
+    - target: {fileID: 4111645769405101393, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
+      propertyPath: m_text
+      value: SFX
+      objectReference: {fileID: 0}
     - target: {fileID: 4144494524679268985, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330000468797953242, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
+      propertyPath: m_Name
+      value: SFXSound
       objectReference: {fileID: 0}
     - target: {fileID: 5811908163784322927, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
       propertyPath: m_text
@@ -25157,6 +25180,34 @@ PrefabInstance:
     - target: {fileID: 7084429748311660723, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7184397668570126952, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
+      propertyPath: m_MinValue
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7184397668570126952, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7184397668570126952, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5533507769620651009}
+    - target: {fileID: 7184397668570126952, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSFXVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 7184397668570126952, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VolumeSettings, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292595834805974609, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
+      propertyPath: m_Name
+      value: SFXSlider
+      objectReference: {fileID: 0}
+    - target: {fileID: 7841068996723795913, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
+      propertyPath: m_Name
+      value: SFX(TMP)
       objectReference: {fileID: 0}
     - target: {fileID: 9127838786239284845, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
       propertyPath: m_Name
@@ -30304,6 +30355,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7084429748311660723, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
   m_PrefabInstance: {fileID: 2429710643227482673}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5533507769620651009 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1184253238036742376, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
+  m_PrefabInstance: {fileID: 2429710643227482673}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693198147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f346f6ab44d2bd418e6060b98e08170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5745400171196657601
 MonoBehaviour:
   m_ObjectHideFlags: 0
