@@ -9,8 +9,7 @@ public class Boss2Die : MonoBehaviour
     private GameObject explosionDie;
     [SerializeField]
     private GameObject ClearPanel;
-    [SerializeField]
-    private GameObject GameOverPanel;
+   
     [SerializeField]
     private int Boss2Gold = 1500;
 
@@ -28,8 +27,7 @@ public class Boss2Die : MonoBehaviour
         PlayerManager.instance.playerGold += Boss2Gold;
 
         PlayerPrefs.SetInt("Gold",PlayerManager.instance.playerGold);
-        GameOverPanel.SetActive(false);
-        
+
     }
 
 }

@@ -7,9 +7,7 @@ public class Boss2 : MonoBehaviour
 {
     [SerializeField]
     private StageData stageData;
-    [SerializeField]
-    private float boss2Appear = 32f;
-
+    
     private Boss2State boss2State = Boss2State.MoveApeear;
     private Movement2D movement2D;
     private BossHp2 bosshp2;

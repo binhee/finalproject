@@ -68527,6 +68527,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4633945848343445937, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
+      propertyPath: BossGold
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633945848343445937, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       propertyPath: GameOverPanel
       value: 
       objectReference: {fileID: 0}
@@ -68573,7 +68577,7 @@ PrefabInstance:
     - target: {fileID: 4965021014826002918, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       propertyPath: enemyProjectile
       value: 
-      objectReference: {fileID: 4418494990061632243, guid: dd42a63846e4b0f448361bc5a621454f, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5876513739651915175, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       propertyPath: m_IsActive
       value: 0

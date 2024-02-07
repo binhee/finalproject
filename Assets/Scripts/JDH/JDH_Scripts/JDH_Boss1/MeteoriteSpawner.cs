@@ -7,10 +7,7 @@ public class MeteoriteSpawner : MonoBehaviour
     public EnemyPoolManager enemyPoolManger;
     [SerializeField]
     private StageData stageData;
-    [SerializeField]
-    private GameObject alertline;
-    [SerializeField]
-    private GameObject Meteorite;
+   
     [SerializeField]
     private float minSpawnTime = 1.0f;
     [SerializeField]

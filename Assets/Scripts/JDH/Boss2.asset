@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aae5fa5d308b0f4428673c910c1cd559, type: 3}
   m_Name: Boss2
   m_EditorClassIdentifier: 
-  limitMin: {x: 20, y: 0}
-  limitMax: {x: 250, y: 32}
+  limitMin: {x: 130, y: -6}
+  limitMax: {x: 210, y: 32}

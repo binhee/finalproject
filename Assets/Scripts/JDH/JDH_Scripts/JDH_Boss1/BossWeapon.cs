@@ -6,9 +6,6 @@ public enum AttackType { CircleFire = 0, SingleFireToCenterPosition }
 
 public class BossWeapon : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject enemyProjectile;
-
     public EnemyPoolManager enemyPoolManger;
 
 
