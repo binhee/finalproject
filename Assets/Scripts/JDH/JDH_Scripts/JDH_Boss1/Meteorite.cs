@@ -8,11 +8,11 @@ public class Meteorite : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         else if(collision.CompareTag("Ground"))
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

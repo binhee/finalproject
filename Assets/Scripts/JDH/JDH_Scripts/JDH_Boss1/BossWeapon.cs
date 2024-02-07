@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum AttackType { CircleFire =0, SingleFireToCenterPosition }
+public enum AttackType { CircleFire = 0, SingleFireToCenterPosition }
 
 public class BossWeapon : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject enemyProjectile;
-  
+    public EnemyPoolManager enemyPoolManger;
+
+
     public void StartFiring(AttackType attackType)
     {
         StartCoroutine(attackType.ToString());
@@ -26,21 +26,24 @@ public class BossWeapon : MonoBehaviour
         float intervalAngle = 360 / count;
         float weightAngle = 0;
 
-        while(true)
+        while (true)
         {
-            for(int i = 0; i < count; ++i)
+            for (int i = 0; i < count; ++i)
             {
-                GameObject clone = Instantiate(enemyProjectile,transform.position, Quaternion.identity);
-                
-                float angle = weightAngle+intervalAngle*i;
+               
+                GameObject clone = enemyPoolManger.MakeObj("EnemyProjectile");
+               
+                clone.transform.position = transform.position;
+               
+
+                float angle = weightAngle + intervalAngle * i;
                 float x = Mathf.Cos(angle * Mathf.PI / 180f);
                 float y = Mathf.Sin(angle * Mathf.PI / 180f);
 
                 clone.GetComponent<Movement2D>().MoveTo(new Vector2(x, y));
             }
             weightAngle += 1;
-           
-
+     
             yield return new WaitForSeconds(attackRate);
         }
     }
@@ -50,18 +53,22 @@ public class BossWeapon : MonoBehaviour
         Vector3 targetPosition = Vector3.zero;
         float attackRate = 0.5f;
 
-        while(true)
+        while (true)
         {
-            GameObject cloneLeft = Instantiate(enemyProjectile,transform.position, Quaternion.identity); 
-            Vector3 Leftdirection = (targetPosition -cloneLeft.transform.position).normalized;
-            cloneLeft.GetComponent<Movement2D>().MoveTo(Leftdirection);
+            GameObject Leftclone = enemyPoolManger.MakeObj("EnemyProjectile");
+            Leftclone.transform.position = transform.position;
+          
+            Vector3 Leftdirection = (targetPosition - Leftclone.transform.position).normalized;
+            Leftclone.GetComponent<Movement2D>().MoveTo(Leftdirection);
 
+            GameObject Rightclone = enemyPoolManger.MakeObj("EnemyProjectile");
+            Rightclone.transform.position = transform.position;
+            Vector3 Rightdirection = (targetPosition + Rightclone.transform.position).normalized;
+            Rightclone.GetComponent<Movement2D>().MoveTo(Rightdirection);
 
-            GameObject cloneRight = Instantiate(enemyProjectile, transform.position, Quaternion.identity);
-            Vector3 Rightdirection = (targetPosition + cloneRight.transform.position).normalized;
-            cloneRight.GetComponent<Movement2D>().MoveTo(Rightdirection);
 
             yield return new WaitForSeconds(attackRate);
         }
     }
 }
+

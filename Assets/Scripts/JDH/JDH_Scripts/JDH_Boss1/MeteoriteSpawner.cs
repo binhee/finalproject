@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class MeteoriteSpawner : MonoBehaviour
 {
+    public EnemyPoolManager enemyPoolManger;
     [SerializeField]
     private StageData stageData;
-    [SerializeField]
-    private GameObject alertline;
-    [SerializeField]
-    private GameObject Meteorite;
+   
     [SerializeField]
     private float minSpawnTime = 1.0f;
     [SerializeField]
@@ -22,18 +20,25 @@ public class MeteoriteSpawner : MonoBehaviour
 
     private IEnumerator SpawnMeteorite()
     {
-        while(true)
+        while (true)
         {
             float PositionX = Random.Range(stageData.LimitMin.x, stageData.LimitMax.x);
-            GameObject alertLineClone = Instantiate(alertline,new Vector3(PositionX, 0, 0),Quaternion.identity);
+            GameObject alertLineClone = enemyPoolManger.MakeObj("alertLine");
+            alertLineClone.transform.position = new Vector3(PositionX, 0, 0);
             yield return new WaitForSeconds(1.0f);
 
-            Destroy(alertLineClone);
-
+            Debug.Log("Meteo");
+            alertLineClone.SetActive(false);
+           
+            Debug.Log("Meteorite");
             Vector3 meteoritePosition = new Vector3(PositionX, stageData.LimitMax.y + 2.0f, 0);
-            Instantiate(Meteorite,meteoritePosition, Quaternion.identity);
+          
+            GameObject MeteoEnemy =enemyPoolManger.MakeObj("MeteoriteEnemy");
+            MeteoEnemy.transform.position = meteoritePosition;
+            Debug.Log("Me");
 
-            float spawnTime =Random.Range(minSpawnTime,maxSpawnTime);
+
+            float spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
             yield return new WaitForSeconds(spawnTime);
         }
     }

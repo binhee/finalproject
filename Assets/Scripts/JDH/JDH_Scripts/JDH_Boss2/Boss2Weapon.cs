@@ -2,20 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EnemyAttackType { Laser=0, TriangleLaser, Boom }
+public enum EnemyAttackType { Laser = 0, TriangleLaser, Boom }
 public class Boss2Weapon : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject LaserLine;
-    [SerializeField]
-    private GameObject[] Enemylaser;
+    public Enemy2PoolManager Enemy2PoolManager;
+
     [SerializeField]
     private float attackRate;
 
-    [SerializeField]
-    private GameObject boomPrefab;
-    [SerializeField]
-    private GameObject boomEffect;
     public void StartAttack(EnemyAttackType enemyAttackType)
     {
         StartCoroutine(enemyAttackType.ToString());
@@ -27,69 +21,58 @@ public class Boss2Weapon : MonoBehaviour
     }
 
     private IEnumerator Laser()
-    {
-        GameObject cloneLine = null;
-        GameObject cloneLaser = null;
+    {   
 
         while (true)
         {
 
-            GameObject Line = Instantiate(LaserLine, new Vector3(0, -4, 0), Quaternion.identity);
-           
+            GameObject cloneLine = Enemy2PoolManager.MakeProjectiles("Boss2Laser");
+            cloneLine.transform.position = transform.position;
+            
+            yield return new WaitForSeconds(1f);
+            Debug.Log("¿Ö¾ÈµÅ");
+            cloneLine.SetActive(false);
 
-            yield return new WaitForSeconds(0.6f);
-
-            Destroy(Line);
-
-            Instantiate(Enemylaser[0], transform.position, Quaternion.identity);
-            cloneLaser = Instantiate(Enemylaser[1], transform.position, Quaternion.identity);
-            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(-1f, -1, 0));
-            cloneLaser = Instantiate(Enemylaser[2], transform.position, Quaternion.identity);
-            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(1f, -1, 0));
-
-            Debug.Log("Laser");
-
+            GameObject Center = Enemy2PoolManager.MakeProjectiles("Boss2Projectile1");
+            Center.transform.position = transform.position;
+            GameObject LeftAttack = Enemy2PoolManager.MakeProjectiles("Boss2Projectile1");
+            LeftAttack.transform.position = transform.position;
+            LeftAttack.GetComponent<Movement2D>().MoveTo(new Vector3(-1f, -1, 0));
+            GameObject RightAttack = Enemy2PoolManager.MakeProjectiles("Boss2Projectile1");
+            RightAttack.transform.position = transform.position;
+            RightAttack.GetComponent<Movement2D>().MoveTo(new Vector3(1f, -1, 0));
+         
             yield return new WaitForSeconds(attackRate);
-
+           
         }
     }
 
     private IEnumerator TriangleLaser()
     {
-        GameObject cloneLine = null;
-        GameObject cloneLaser = null;
-
+       
         while (true)
         {
 
-            //GameObject Line = Instantiate(LaserLine,new Vector3(transform.position.x,-3,0), Quaternion.identity);
+            yield return new WaitForSeconds(1f);
 
-            //cloneLine = Instantiate(LaserLine, transform.position, Quaternion.identity);
-            //cloneLine.GetComponent<Movement2D>().MoveTo(new Vector3(-0.8f, 0, 0));
-            //cloneLine = Instantiate(Enemylaser, transform.position, Quaternion.identity);
-            //cloneLine.GetComponent<Movement2D>().MoveTo(new Vector3(-0.4f, 0, 0));
+            GameObject cloneLaser = Enemy2PoolManager.MakeProjectiles("Boss2Projectile2");
+            cloneLaser.transform.position = transform.position;
 
-            //cloneLine = Instantiate(LaserLine, transform.position, Quaternion.identity);
-            //cloneLine.GetComponent<Movement2D>().MoveTo(new Vector3(0.8f, 0, 0));
-            //cloneLine = Instantiate(Enemylaser, transform.position, Quaternion.identity);
-            //cloneLine.GetComponent<Movement2D>().MoveTo(new Vector3(0.4f, 0, 0));
+            GameObject halfLeftClone = Enemy2PoolManager.MakeProjectiles("Boss2Projectile2");
+            halfLeftClone.transform.position = transform.position;
+            halfLeftClone.GetComponent<Movement2D>().MoveTo(new Vector3(-0.5f, -1, 0));
 
-            //Debug.Log("Line");
+            GameObject halfRightClone = Enemy2PoolManager.MakeProjectiles("Boss2Projectile2");
+            halfRightClone.transform.position = transform.position;
+            halfRightClone.GetComponent<Movement2D>().MoveTo(new Vector3(0.5f, -1, 0));
 
-            yield return new WaitForSeconds(0.8f);
+            GameObject LeftClone = Enemy2PoolManager.MakeProjectiles("Boss2Projectile2");
+            LeftClone.transform.position = transform.position;
+            LeftClone.GetComponent<Movement2D>().MoveTo(new Vector3(-1, -1, 0));
 
-            //Destroy(Line);
-
-            Instantiate(Enemylaser[0], transform.position, Quaternion.identity);
-            cloneLaser = Instantiate(Enemylaser[1], transform.position, Quaternion.identity);
-            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(-1f, -1, 0));
-            cloneLaser = Instantiate(Enemylaser[3], transform.position, Quaternion.identity);
-            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(-0.5f, -1, 0)); 
-
-            cloneLaser = Instantiate(Enemylaser[2], transform.position, Quaternion.identity);
-            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(1f, -1, 0));
-            cloneLaser = Instantiate(Enemylaser[4], transform.position, Quaternion.identity);
-            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(0.5f, -1, 0));
+            GameObject RightClone = Enemy2PoolManager.MakeProjectiles("Boss2Projectile2");
+            RightClone.transform.position = transform.position;
+            RightClone.GetComponent<Movement2D>().MoveTo(new Vector3(1, -1, 0));
 
             Debug.Log("Laser1");
 
@@ -103,18 +86,20 @@ public class Boss2Weapon : MonoBehaviour
     {
         GameObject boom = null;
         GameObject Effect = null;
-        while(true)
+        while (true)
         {
-            //Instantiate(boomPrefab, transform.position, Quaternion.identity);
-            boom = Instantiate(boomPrefab, transform.position, Quaternion.identity);
-            //boom.GetComponent<Movement2D>().MoveTo(new Vector3(0, -6, 0));
-          
+           
+            boom = Enemy2PoolManager.MakeProjectiles("Boss2ProjectileBoom");
+            boom.transform.position = transform.position;
+           
             yield return new WaitForSeconds(1f);
-            Effect = Instantiate(boomEffect, boom.transform.position, Quaternion.identity);
-            Destroy(boom);
+
+            Effect = Enemy2PoolManager.MakeProjectiles("Boss2Boom");
+            Effect.transform.position = boom.transform.position;
+            boom.SetActive(false);
 
             yield return new WaitForSeconds(attackRate);
-            Destroy(Effect);
+            Effect.SetActive(false);
 
 
         }

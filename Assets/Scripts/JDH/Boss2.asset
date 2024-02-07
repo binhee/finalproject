@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aae5fa5d308b0f4428673c910c1cd559, type: 3}
-  m_Name: StageData 1
+  m_Name: Boss2
   m_EditorClassIdentifier: 
-  limitMin: {x: 120, y: -10}
+  limitMin: {x: 130, y: -6}
   limitMax: {x: 210, y: 32}
