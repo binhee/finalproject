@@ -30,7 +30,7 @@ public class Movement : MonoBehaviour
     // 이동 이벤트에서 호출되는 함수
     private void Move(Vector2 direction)
     {
-        _movementDirection = direction;   // 이동 방향 갱신
+        _movementDirection = direction;   // 이동 방향 갱신        
     }
 
     // Rigidbody2D에 이동 방향을 적용하는 함수
