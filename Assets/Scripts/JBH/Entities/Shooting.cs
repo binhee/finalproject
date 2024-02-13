@@ -51,7 +51,7 @@ public class Shooting : MonoBehaviour
     // 탄환을 생성하는 함수
     private void CreateProjectile(RangedAttackData rangedAttackData, float angle)
     {
-        _projectileManager.ShootBullet(projectileSpawnPosition.position, RotateVector2(_aimDirection, angle), rangedAttackData);
+        //_projectileManager.ShootBullet(projectileSpawnPosition.position, RotateVector2(_aimDirection, angle), rangedAttackData);
     }
 
     // 2D 벡터를 주어진 각도로 회전시키는 함수

@@ -9,7 +9,7 @@ public class ProjectileManager : MonoBehaviour
 
     public static ProjectileManager Instance;   // 싱글톤 인스턴스
 
-    private ObjectPool objectPool;   // 오브젝트 풀
+    private PlayerAttackObjectPool objectPool;   // 오브젝트 풀
 
     private void Awake()
     {
@@ -18,19 +18,18 @@ public class ProjectileManager : MonoBehaviour
 
     void Start()
     {
-        objectPool = GetComponent<ObjectPool>();   // 오브젝트 풀 컴포넌트 가져오기
+        objectPool = GetComponent<PlayerAttackObjectPool>();   // 오브젝트 풀 컴포넌트 가져오기
     }
 
-    // 투사체 발사 메서드
-    public void ShootBullet(Vector2 startPosition, Vector2 direction, RangedAttackData attackData)
+    public class Projectile : MonoBehaviour
     {
-        GameObject obj = objectPool.SpawnFromPool(attackData.bulletNameTag);   // 오브젝트 풀에서 투사체 가져오기
-
-        obj.transform.position = startPosition;   // 투사체의 시작 위치 설정
-        RangedAttackController attackController = obj.GetComponent<RangedAttackController>();   // 투사체 컨트롤러 컴포넌트 가져오기
-        attackController.InitializeAttack(direction, attackData, this);   // 투사체 초기화
-
-        obj.SetActive(true);   // 투사체 활성화
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Ground"))
+            {
+                gameObject.SetActive(false);
+            }
+        }
     }
 
     // 투사체 피격 이펙트 생성 메서드

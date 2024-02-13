@@ -24,7 +24,7 @@ public class SubArrowLauncher : MonoBehaviour
         {
             time = 0;
             Vector2 pos = transform.position;
-            ProjectileManager.Instance.ShootBullet(pos , (mousePos - pos).normalized , rangedAttackData);
+            //ProjectileManager.Instance.ShootBullet(pos , (mousePos - pos).normalized , rangedAttackData);
         }
     }
     void SetPosition()

@@ -12,7 +12,7 @@ public class WeaponController : MonoBehaviour
 
         // 활의 방향을 마우스 위치로 설정
         Vector3 direction = mousePosition - bowPosition;
-        direction.z = 0f; // 활은 2D 평면에서 동작하므로 z축 값을 0으로 설정
+        direction.z = 0f; // z축 값을 0으로 설정
 
         // 활의 각도를 계산하여 회전
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
