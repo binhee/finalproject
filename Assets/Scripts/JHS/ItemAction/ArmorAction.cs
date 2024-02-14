@@ -4,42 +4,47 @@ using UnityEngine;
 
 public class ArmorAction : ItemAction
 {
+    public List<GameObject> effects = new List<GameObject>();
     GameObject effect;
     public override void Use(ItemSO itemNum)
     {
         if (itemNum.itemType == ItemType.Helmet)
         {
-            effect = Instantiate(Inventory.instance.itemEffect[2],Inventory.instance.effectController.transform);
+            for (int i = 0; i <= grade; i++)
+            {
+                effect = Instantiate(Inventory.instance.itemEffect[2], Inventory.instance.effectController.transform);
+                effect.GetComponent<SubArrowLauncher>().PosByGrade(i);
+                effects.Add(effect);
+            }
         }
         else if (itemNum.itemType == ItemType.Armor)
         {
-            PlayerManager.instance.playerProjectileAS = 20;
-            //player.GetComponent<CharacterStatsHandler>().CurrentStats.attackSO.speed = 20;
+            PlayerManager.instance.playerProjectileAS = 20+(5*grade);
         }
         else if (itemNum.itemType == ItemType.Boots)
         {
             PlayerManager.instance.isDoubleJump = true;
-           //player.GetComponent<PlayerInputController>().itemDoubleJumping = true;
         }
     }
     public override void Delete()
     {
-        Destroy(effect);
+        for (int i = 0; i < effects.Count; i++)
+        {
+            Destroy(effects[i]);
+        }
+        effects.Clear();
     }
     public void ResetArmor()
     {
         PlayerManager.instance.playerProjectileAS = 10;
-        //player.GetComponent<CharacterStatsHandler>().CurrentStats.attackSO.speed -= 10;
     }
     public void ResetBoots()
     {
-        GameObject player = PlayerManager.instance.FindPlayer();
         PlayerManager.instance.isDoubleJump = false;
-        //  player.GetComponent<PlayerInputController>().itemDoubleJumping = false;
     }
     public override void Upgrade()
     {
-
+        grade++;
     }
     public override void Mix()
     {

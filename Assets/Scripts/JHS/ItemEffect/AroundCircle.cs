@@ -8,6 +8,7 @@ public class AroundCircle : MonoBehaviour
     public float moveSpeed;
     public GameObject player;
     public Vector3 offset;
+    private Vector3 startPos;
     void Update()
     {
         SetPosition();
@@ -26,11 +27,32 @@ public class AroundCircle : MonoBehaviour
     {
         if (player == null)
         {
-            transform.rotation = new Quaternion(0, 0, 0, 0);
             player = PlayerManager.instance.FindPlayer();
-            transform.position = player.transform.position + new Vector3(-2, 2, 0);
+            transform.position = player.transform.position + startPos;
             offset = transform.position - player.transform.position;
         }
     }
+    public void PosbyGrade(int itemgrade)
+    {
+        switch (itemgrade)
+        {
+            case 0:
+                startPos = new Vector3(-2, 2, 0);
+                transform.rotation = Quaternion.Euler(0,0,0);
+                break;
+            case 1:
+                startPos = new Vector3(2, 2, 0);
+                transform.rotation = Quaternion.Euler(0, 0, -90);
+                break;
+            case 2:
+                startPos = new Vector3(2, -2, 0);
+                transform.rotation = Quaternion.Euler(0, 0, -180);
+                break;
+            case 3:
+                startPos = new Vector3(-2, -2, 0);
+                transform.rotation = Quaternion.Euler(0, 0, -270);
+                break;
+        }
+   }
 }
 

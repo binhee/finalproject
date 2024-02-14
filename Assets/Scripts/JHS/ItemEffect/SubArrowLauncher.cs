@@ -19,20 +19,37 @@ public class SubArrowLauncher : MonoBehaviour
     void SubArrowShooting()
     {
         time += Time.deltaTime;
-        mousePos= Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (time > shotDelay)
         {
             time = 0;
             Vector2 pos = transform.position;
-            ProjectileManager.Instance.ShootBullet(pos , (mousePos - pos).normalized , rangedAttackData);
+            ProjectileManager.Instance.ShootBullet(pos, (mousePos - pos).normalized, rangedAttackData);
         }
     }
     void SetPosition()
     {
-        if(player == null)
+        if (player == null)
         {
             player = PlayerManager.instance.FindPlayer();
         }
         transform.position = player.transform.position - pos;
+    }
+    public void PosByGrade(int grade)
+    {
+        switch (grade)
+        {
+            case 0:
+                break;
+            case 1:
+                pos = new Vector3(1.5f, -1, 0);
+                break;
+            case 2:
+                pos = new Vector3(1, -0.5f, 0);
+                break;
+            case 3:
+                pos = new Vector3(1.5f, -0.5f, 0);
+                break;
+        }
     }
 }

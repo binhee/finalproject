@@ -79,7 +79,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uAC15\uCCA0 \uAC11\uC637\n"
+  m_Text: "\uAC15\uCCA0 \uAC11\uC637"
 --- !u!1 &1472158750361724533
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +180,7 @@ MonoBehaviour:
   equipUI: {fileID: 4890648285820823306}
   descriptionTxt: {fileID: 3892058158477745583}
   potionCountTxt: {fileID: 0}
+  itemNameTxt: {fileID: 3430375235397343329}
   itemCount: 1
   itemSO: {fileID: 11400000, guid: 81190f303c8b4a848ae642c082ffac00, type: 2}
 --- !u!225 &-4727558719790834112
@@ -221,6 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9e826e7389d6c9428853e6ef6557aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grade: 0
 --- !u!1 &2815785337729442278
 GameObject:
   m_ObjectHideFlags: 0
