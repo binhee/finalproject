@@ -1105,6 +1105,7 @@ GameObject:
   - component: {fileID: 7138297775609364795}
   - component: {fileID: 5396147695248562017}
   - component: {fileID: 8669374670262371178}
+  - component: {fileID: 8045267629304366679}
   m_Layer: 5
   m_Name: StageChoice
   m_TagString: Untagged
@@ -1201,6 +1202,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8045267629304366679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8062070106296830098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f63f2ddb7722de7448541cd9ebed05cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons: []
 --- !u!1 &8620892985726221404
 GameObject:
   m_ObjectHideFlags: 0
