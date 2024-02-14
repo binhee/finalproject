@@ -25,5 +25,12 @@ public class Projectile : MonoBehaviour
             gameObject.SetActive(false);
             //Destroy(gameObject);
         }
+        else if (collision.CompareTag("Ground"))
+        {
+
+            gameObject.SetActive(false);
+            //Destroy(gameObject);
+        }
+
     }
 }

@@ -21,17 +21,6 @@ public class ProjectileManager : MonoBehaviour
         objectPool = GetComponent<PlayerAttackObjectPool>();   // 오브젝트 풀 컴포넌트 가져오기
     }
 
-    public class Projectile : MonoBehaviour
-    {
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (collision.CompareTag("Ground"))
-            {
-                gameObject.SetActive(false);
-            }
-        }
-    }
-
     // 투사체 피격 이펙트 생성 메서드
     public void CreateImpactParticlesAtPosition(Vector3 position, RangedAttackData attackData)
     {

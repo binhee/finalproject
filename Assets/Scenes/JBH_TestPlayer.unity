@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb5c94d8bfe70740bff87016f66907a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowPrefab: {fileID: 2684997869078701334, guid: 6f91d75e43e01334a8b626436cbe918f, type: 3}
+  arrowPrefab: {fileID: 2684997869078701334, guid: 830d14a733e10094fab450feff0e36e5, type: 3}
   poolSize: 20
 --- !u!114 &499871378
 MonoBehaviour:

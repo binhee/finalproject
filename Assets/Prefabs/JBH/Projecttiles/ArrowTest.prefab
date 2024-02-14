@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2641742306246718484}
   - component: {fileID: 7603788191390853196}
   - component: {fileID: 4376476404148050906}
+  - component: {fileID: 2748992420357820598}
   m_Layer: 0
   m_Name: ArrowTest
   m_TagString: Untagged
@@ -220,6 +221,18 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 0
+--- !u!114 &2748992420357820598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2684997869078701334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25c4ca410f83744791f3e3d748fb272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5488391851772903865
 GameObject:
   m_ObjectHideFlags: 0
