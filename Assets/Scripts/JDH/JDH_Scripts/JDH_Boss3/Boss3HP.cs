@@ -28,13 +28,13 @@ public class Boss3HP : MonoBehaviour
 
         if (currentHP3 <= 0)
         {
-            boss3Die.Boss2OnDie();
+            boss3Die.Boss3OnDie();
         }
     }
 
     private IEnumerator HitColor()
     {
-        spriterenderer.color = Color.red;
+        spriterenderer.color = Color.magenta;
         yield return new WaitForSeconds(0.05f);
         spriterenderer.color = Color.white;
     }

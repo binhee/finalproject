@@ -28,13 +28,15 @@ public class Boss3 : MonoBehaviour
         boss3State = newstate;
         StartCoroutine(boss3State.ToString());
     }
+   
 
-    private IEnumerator Patteron01()
+    private IEnumerator Pattern01()
     {
+        Debug.Log("aa");
         boss3Weapon.StartAttack(Boss3AttackType.SingleToPlayer);
         while(true)
         {
-            if(boss3hp.CurrentHP3<=boss3hp.MaxHP3)
+            if(boss3hp.CurrentHP3<=boss3hp.MaxHP3*0.7)
             {
                 boss3Weapon.StopAttack(Boss3AttackType.SingleToPlayer);
                 ChangePattern(Boss3State.Pattern02);
@@ -43,12 +45,12 @@ public class Boss3 : MonoBehaviour
         }
     }
 
-    private IEnumerator Patteron02()
+    private IEnumerator Pattern02()
     {
         boss3Weapon.StartAttack(Boss3AttackType.CircleForPlayer);
         while (true)
         {
-            if(boss3hp.CurrentHP3<=boss3hp.MaxHP3)
+            if(boss3hp.CurrentHP3<=boss3hp.MaxHP3*0.4)
             {
                 boss3Weapon.StopAttack(Boss3AttackType.CircleForPlayer);
                 

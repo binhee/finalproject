@@ -18,7 +18,7 @@ public class Boss3Die : MonoBehaviour
     {
         playerController = GetComponent<PlayerController>();
     }
-    public void Boss2OnDie()
+    public void Boss3OnDie()
     {
         Instantiate(explosionDie, transform.position, Quaternion.identity);
         ClearPanel.SetActive(true);

@@ -9,6 +9,7 @@ public class Boss3Spawner : MonoBehaviour
     [SerializeField]
     private GameObject boss3;
 
+   
     [SerializeField]
     private GameObject Boss3PanelHp;
     [SerializeField]
@@ -16,9 +17,7 @@ public class Boss3Spawner : MonoBehaviour
 
     [SerializeField]
     private float SpawnDelay;
-    [SerializeField]
-    private int maxEnemyCounts = 20;
-
+ 
 
     private void Start()
     {

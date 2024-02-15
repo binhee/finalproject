@@ -30,7 +30,7 @@ public class Boss2Weapon : MonoBehaviour
             cloneLine.transform.position = transform.position;
             
             yield return new WaitForSeconds(1f);
-            Debug.Log("¿Ö¾ÈµÅ");
+            
             cloneLine.SetActive(false);
 
             GameObject Center = Enemy2PoolManager.MakeProjectiles("Boss2Projectile1");

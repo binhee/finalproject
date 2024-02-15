@@ -31,12 +31,12 @@ public class Boss2 : MonoBehaviour
 
     private IEnumerator MoveApeear()
     {
-        
+
         while (true)
         {
             movement2D.MoveTo(Vector3.zero);
             ChangePattern(Boss2State.Pattern01);
-           
+
             yield return null;
         }
     }
