@@ -3,12 +3,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5f;
-    public float jumpPower = 10f;
+    public float speed;
+    public float jumpPower;
 
     private Rigidbody2D rb;
     private Vector2 moveInput;
+    
     private bool isGround;
+    bool jump;
 
     void Start()
     {
@@ -19,12 +21,16 @@ public class PlayerMovement : MonoBehaviour
     {
         // 플레이어 이동
         Vector2 movement = moveInput * speed * Time.deltaTime;
-        rb.MovePosition(rb.position + movement);
+        rb.position = rb.position + movement;
+        //rb.MovePosition(rb.position + movement);
 
         // 점프
-        if (isGround && Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (isGround && jump)
         {
+            jump = false;
+            //rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+            //rb.velocity = jumpInput + jumpPower * Time.deltaTime;
 
             Debug.Log("점프");
             Debug.Log(rb.velocity);
@@ -39,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnJump(InputValue value)
     {
-        moveInput = value.Get<Vector2>();
+        jump = value.isPressed;
     }
 
     // 충돌 처리
