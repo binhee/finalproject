@@ -31,12 +31,12 @@ public class Boss2 : MonoBehaviour
 
     private IEnumerator MoveApeear()
     {
-        
+
         while (true)
         {
             movement2D.MoveTo(Vector3.zero);
             ChangePattern(Boss2State.Pattern01);
-           
+
             yield return null;
         }
     }
@@ -87,7 +87,7 @@ public class Boss2 : MonoBehaviour
         boss2Weapon.StartAttack(EnemyAttackType.Boom);
 
 
-        Vector3 direction = Vector3.left;
+        Vector3 direction = Vector3.right;
         movement2D.MoveTo(direction);
 
         while (true)
