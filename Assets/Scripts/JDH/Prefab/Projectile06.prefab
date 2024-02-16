@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 1429368076688221337}
   - component: {fileID: 2226513426071150473}
   - component: {fileID: 8678561695108388461}
+  - component: {fileID: 4583192839813252637}
   m_Layer: 0
   m_Name: Projectile06
-  m_TagString: Untagged
+  m_TagString: Boss3Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,3 +99,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 10
+--- !u!114 &4583192839813252637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3376698491243083427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8612fbd4a34a8234fa594291d3a366a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageData: {fileID: 11400000, guid: 7df0ca5079bd60c4e9419eef70db7da1, type: 2}

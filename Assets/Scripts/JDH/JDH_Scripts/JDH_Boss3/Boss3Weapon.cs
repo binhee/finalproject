@@ -10,7 +10,7 @@ public enum Boss3AttackType { SingleToPlayer, CircleForPlayer, AngleLaser };
 public class Boss3Weapon : MonoBehaviour
 {
     [SerializeField]
-    private float attackRate = 0.5f;
+    private float attackRate = 1f;
     [SerializeField]
     private int PerAngle;
     [SerializeField]
