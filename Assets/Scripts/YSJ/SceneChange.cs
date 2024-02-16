@@ -15,11 +15,11 @@ public class SceneChange : MonoBehaviour
     VolumeSettings volumeSettings;      // VolumeSettings 스크립트에 액세스.
     PlayerRespawn playerRespawn;
 
+
     private void Awake()
     {
         //태그가 Sound인 SoundManager에 접근.
         soundManager = GameObject.FindGameObjectWithTag("Sound").GetComponent<SoundManager>();
-
     }
     //public void InventoryLoad()     // 인벤토리 로드 함수
     //{
@@ -103,31 +103,39 @@ public class SceneChange : MonoBehaviour
         soundManager.PlaySFX(soundManager.BTNSound);    // BTNSound 재생
         Inventory.instance.inventoryPanel.SetActive(true);
     }
-    public void Stage1Load()    // 스테이지1 입장
+
+    public void OpenStage(int levelID)    // 스테이지 입장 버튼
     {
         soundManager.PlaySFX(soundManager.BTNSound);    // BTNSound 재생
+        SceneManager.LoadScene(levelID+1);
         PlayerManager.instance.startPoint = new Vector2(27, -4);
-        SceneManager.LoadScene("JBH_Stage");    // "" 스테이지 씬 삽입
     }
 
-    public void Stage2Load()    // 스테이지2 입장
-    {
-        soundManager.PlaySFX(soundManager.BTNSound);    // BTNSound 재생
-        PlayerManager.instance.startPoint = new Vector2(27, -4);
-        SceneManager.LoadScene("JBH_Stage2");    // "" 스테이지 씬 삽입
-    }
+    //public void Stage1Load()    // 스테이지1 입장
+    //{
+    //    soundManager.PlaySFX(soundManager.BTNSound);    // BTNSound 재생
+    //    PlayerManager.instance.startPoint = new Vector2(27, -4);
+    //    SceneManager.LoadScene("JBH_Stage");    // "" 스테이지 씬 삽입
+    //}
 
-    public void Stage3Load()    // 스테이지3 입장
-    {
-        PlayerManager.instance.startPoint = new Vector2(27, -4);
-        SceneManager.LoadScene("JDH_Boss2");    // "" 스테이지 씬 삽입
-    }
+    //public void Stage2Load()    // 스테이지2 입장
+    //{
+    //    soundManager.PlaySFX(soundManager.BTNSound);    // BTNSound 재생
+    //    PlayerManager.instance.startPoint = new Vector2(27, -4);
+    //    SceneManager.LoadScene("JBH_Stage2");    // "" 스테이지 씬 삽입
+    //}
 
-    public void TestStage2Load()    // 스테이지2 입장
-    {
-        PlayerManager.instance.startPoint = new Vector2(27, -4);
-        SceneManager.LoadScene("JHS_Item_Stage");    // "" 스테이지 씬 삽입
-    }
+    //public void Stage3Load()    // 스테이지3 입장
+    //{
+    //    PlayerManager.instance.startPoint = new Vector2(27, -4);
+    //    SceneManager.LoadScene("JDH_Boss2");    // "" 스테이지 씬 삽입
+    //}
+
+    //public void TestStage2Load()    // 스테이지2 입장
+    //{
+    //    PlayerManager.instance.startPoint = new Vector2(27, -4);
+    //    SceneManager.LoadScene("JHS_Item_Stage");    // "" 스테이지 씬 삽입
+    //}
 }
 
 

@@ -46,3 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OptionPanel: {fileID: 0}
   StagePanel: {fileID: 0}
+  TileOptionclosePanel: {fileID: 0}
+  panel: {fileID: 0}
+  buttons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

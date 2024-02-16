@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum BossState { MoveToAppearPoint =0,Phase01, Phase02, Phase03}
 
@@ -16,6 +17,7 @@ public class Boss : MonoBehaviour
     private Movement2D movement2D;
     private BossWeapon bossweapon;
     private BossHp bossHp;
+
   
 
     [SerializeField]
@@ -116,11 +118,23 @@ public class Boss : MonoBehaviour
     }
     public void OnDie()
     {
+        UnlockStage();
+
         Instantiate(explosionPrefab,transform.position,Quaternion.identity);
         ClearPanel.SetActive(true);
         PlayerManager.instance.playerGold += BossGold;
       
         PlayerPrefs.SetInt("Gold", PlayerManager.instance.playerGold);
         gameObject.SetActive(false);
+    }
+
+    public void UnlockStage()   // 스테이지 버튼 언락 함수.
+    {
+        if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedIndex"))
+        {
+            PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
+            PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel", 1) + 1);
+            PlayerPrefs.Save();
+        }
     }
 }

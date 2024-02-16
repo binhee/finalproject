@@ -20087,13 +20087,37 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 589901223358577539}
     - target: {fileID: 3377181790576030322, guid: 408434142aeb6c045af0e05883115239, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377181790576030322, guid: 408434142aeb6c045af0e05883115239, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 589901223358577539}
+    - target: {fileID: 3377181790576030322, guid: 408434142aeb6c045af0e05883115239, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenStage
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377181790576030322, guid: 408434142aeb6c045af0e05883115239, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082198810025880547, guid: 408434142aeb6c045af0e05883115239, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4082198810025880547, guid: 408434142aeb6c045af0e05883115239, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 589901223358577539}
+    - target: {fileID: 4082198810025880547, guid: 408434142aeb6c045af0e05883115239, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenStage
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082198810025880547, guid: 408434142aeb6c045af0e05883115239, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5396147695248562017, guid: 408434142aeb6c045af0e05883115239, type: 3}
       propertyPath: m_UiScaleMode
       value: 1
@@ -20106,6 +20130,22 @@ PrefabInstance:
       propertyPath: m_ReferenceResolution.y
       value: 1080
       objectReference: {fileID: 0}
+    - target: {fileID: 8045267629304366679, guid: 408434142aeb6c045af0e05883115239, type: 3}
+      propertyPath: buttons.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8045267629304366679, guid: 408434142aeb6c045af0e05883115239, type: 3}
+      propertyPath: buttons.Array.data[0]
+      value: 
+      objectReference: {fileID: 5769599607913765996}
+    - target: {fileID: 8045267629304366679, guid: 408434142aeb6c045af0e05883115239, type: 3}
+      propertyPath: buttons.Array.data[1]
+      value: 
+      objectReference: {fileID: 5769599607913765995}
+    - target: {fileID: 8045267629304366679, guid: 408434142aeb6c045af0e05883115239, type: 3}
+      propertyPath: buttons.Array.data[2]
+      value: 
+      objectReference: {fileID: 5769599607913765994}
     - target: {fileID: 8062070106296830098, guid: 408434142aeb6c045af0e05883115239, type: 3}
       propertyPath: m_Name
       value: StageChoice
@@ -20199,11 +20239,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8966705628813420514, guid: 408434142aeb6c045af0e05883115239, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8966705628813420514, guid: 408434142aeb6c045af0e05883115239, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 589901223358577539}
+    - target: {fileID: 8966705628813420514, guid: 408434142aeb6c045af0e05883115239, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenStage
+      objectReference: {fileID: 0}
+    - target: {fileID: 8966705628813420514, guid: 408434142aeb6c045af0e05883115239, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6882849419161871688, guid: 408434142aeb6c045af0e05883115239, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 408434142aeb6c045af0e05883115239, type: 3}
@@ -20212,6 +20265,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8062070106296830098, guid: 408434142aeb6c045af0e05883115239, type: 3}
   m_PrefabInstance: {fileID: 5769599607913765992}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5769599607913765994 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4082198810025880547, guid: 408434142aeb6c045af0e05883115239, type: 3}
+  m_PrefabInstance: {fileID: 5769599607913765992}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5769599607913765995 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3377181790576030322, guid: 408434142aeb6c045af0e05883115239, type: 3}
+  m_PrefabInstance: {fileID: 5769599607913765992}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5769599607913765996 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8966705628813420514, guid: 408434142aeb6c045af0e05883115239, type: 3}
+  m_PrefabInstance: {fileID: 5769599607913765992}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5857078691254668066
 PrefabInstance:
   m_ObjectHideFlags: 0
