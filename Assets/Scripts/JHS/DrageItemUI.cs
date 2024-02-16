@@ -13,10 +13,13 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public ItemType itemImageType;
     public int itemIDNUM;
+
     public GameObject descriptionPanel;
     public GameObject equipUI;
     public Text descriptionTxt;
     public Text potionCountTxt;
+    public Text itemNameTxt;
+
     public int itemCount = 1;
     public ItemSO itemSO;
 

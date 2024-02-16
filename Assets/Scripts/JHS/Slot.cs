@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using static UnityEditor.Progress;
 
-public enum SlotType { PotionSlot, WeaponSlot, ArmorSlot, HelmetSlot, BootsSlot, ArtifactSlot, AllSlot}
+public enum SlotType { PotionSlot, WeaponSlot, ArmorSlot, HelmetSlot, BootsSlot, ArtifactSlot, AllSlot, EnforceSlot}
 public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerExitHandler
 {
     [Header("ItemInformation")]
@@ -35,7 +35,9 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerE
             DraggableUI existUI = transform.GetChild(0).GetComponent<DraggableUI>(); // 현재 밑에 자식으로 슬롯에 존재하는 아이템
             DraggableUI dragUI = eventData.pointerDrag.GetComponent<DraggableUI>(); // 현재 드래그 중인 아이템
 
-            if (existUI.itemImageType == dragUI.itemImageType)
+            if (existUI.itemImageType == dragUI.itemImageType
+                &&dragUI.itemImageType!=ItemType.Weapon && dragUI.itemImageType != ItemType.Helmet
+                && dragUI.itemImageType != ItemType.Armor && dragUI.itemImageType != ItemType.Boots)
             {
                 existUI.itemCount += dragUI.itemCount;
                 existUI.UpdateText();
@@ -45,7 +47,10 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerE
         if (eventData.pointerDrag != null && gameObject.transform.childCount==0 && CheckType(eventData))
         {
             eventData.pointerDrag.transform.SetParent(transform);
-            eventData.pointerDrag.GetComponent<DraggableUI>().EquipItem();
+            if(slotType != SlotType.EnforceSlot)
+            {
+                eventData.pointerDrag.GetComponent<DraggableUI>().EquipItem();
+            }
             eventData.pointerDrag.GetComponent<RectTransform>().position = rect.position;
         }
     }
@@ -72,6 +77,13 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerE
         if (checkItemType.itemType == ItemType.Boots && slotType == SlotType.BootsSlot)
         {
             return true;
+        }
+        if(checkItemType.itemType == ItemType.Weapon|| checkItemType.itemType == ItemType.Boots || checkItemType.itemType == ItemType.Armor || checkItemType.itemType == ItemType.Helmet)
+        {
+            if (slotType == SlotType.EnforceSlot)
+            {
+                return true;
+            }
         }
         if (checkItemType.itemType == ItemType.HpPotion || checkItemType.itemType == ItemType.JumpPotion ||
             checkItemType.itemType == ItemType.SpeedPotion || checkItemType.itemType == ItemType.EnchantPotion)
