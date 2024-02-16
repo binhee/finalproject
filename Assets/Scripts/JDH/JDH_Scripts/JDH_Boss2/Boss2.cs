@@ -87,7 +87,7 @@ public class Boss2 : MonoBehaviour
         boss2Weapon.StartAttack(EnemyAttackType.Boom);
 
 
-        Vector3 direction = Vector3.left;
+        Vector3 direction = Vector3.right;
         movement2D.MoveTo(direction);
 
         while (true)

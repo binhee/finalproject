@@ -39652,6 +39652,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss3Object
       objectReference: {fileID: 0}
+    - target: {fileID: 5318994277468861461, guid: 073986758004f104abe2707abb2c597d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5461911726398891143, guid: 073986758004f104abe2707abb2c597d, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -39730,11 +39734,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6675004765160798847, guid: 073986758004f104abe2707abb2c597d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6675004765160798847, guid: 073986758004f104abe2707abb2c597d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6875828659951653584, guid: 073986758004f104abe2707abb2c597d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
