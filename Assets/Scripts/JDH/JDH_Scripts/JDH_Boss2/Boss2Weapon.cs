@@ -30,7 +30,7 @@ public class Boss2Weapon : MonoBehaviour
             cloneLine.transform.position = transform.position;
             
             yield return new WaitForSeconds(1f);
-            Debug.Log("¿Ö¾ÈµÅ");
+            
             cloneLine.SetActive(false);
 
             GameObject Center = Enemy2PoolManager.MakeProjectiles("Boss2Projectile1");
@@ -84,21 +84,23 @@ public class Boss2Weapon : MonoBehaviour
 
     private IEnumerator Boom()
     {
-        GameObject boom = null;
-        GameObject Effect = null;
+      
         while (true)
         {
-           
-            boom = Enemy2PoolManager.MakeProjectiles("Boss2ProjectileBoom");
+            GameObject boom = Enemy2PoolManager.MakeProjectiles("Boss2ProjectileBoom");
             boom.transform.position = transform.position;
-           
-            yield return new WaitForSeconds(1f);
+            Vector3 Targetdirection = (PlayerManager.instance.FindPlayer().transform.position - boom.transform.position).normalized;
+            boom.GetComponent<Movement2D>().MoveTo(Targetdirection);
 
-            Effect = Enemy2PoolManager.MakeProjectiles("Boss2Boom");
+            float Time = Random.Range(1.5f, 2f);
+            yield return new WaitForSeconds(Time);
+
+            GameObject Effect = Enemy2PoolManager.MakeProjectiles("Boss2Boom");
             Effect.transform.position = boom.transform.position;
+           
             boom.SetActive(false);
 
-            yield return new WaitForSeconds(attackRate);
+            yield return new WaitForSeconds(0.2f);
             Effect.SetActive(false);
 
 

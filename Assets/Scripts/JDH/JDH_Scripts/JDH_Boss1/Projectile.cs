@@ -25,5 +25,11 @@ public class Projectile : MonoBehaviour
             gameObject.SetActive(false);
             //Destroy(gameObject);
         }
+        else if (collision.CompareTag("Boss3"))
+        {
+            collision.GetComponent<Boss3HP>().TakeDamage(PlayerManager.instance.playerDamage);
+            gameObject.SetActive(false);
+            //Destroy(gameObject);
+        }
     }
 }
