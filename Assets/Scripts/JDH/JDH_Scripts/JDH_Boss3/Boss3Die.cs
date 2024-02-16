@@ -21,8 +21,9 @@ public class Boss3Die : MonoBehaviour
     public void Boss3OnDie()
     {
         Instantiate(explosionDie, transform.position, Quaternion.identity);
+        Destroy(gameObject);
         ClearPanel.SetActive(true);
-        gameObject.SetActive(false);
+       
         PlayerManager.instance.playerGold += Boss3Gold;
 
         PlayerPrefs.SetInt("Gold", PlayerManager.instance.playerGold);

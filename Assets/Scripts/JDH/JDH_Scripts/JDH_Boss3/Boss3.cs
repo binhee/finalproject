@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Boss3State { Pattern01, Pattern02 };
+public enum Boss3State { Pattern01, Pattern02, Pattern03 };
 
 public class Boss3 : MonoBehaviour
 {
@@ -53,9 +53,17 @@ public class Boss3 : MonoBehaviour
             if(boss3hp.CurrentHP3<=boss3hp.MaxHP3*0.4)
             {
                 boss3Weapon.StopAttack(Boss3AttackType.CircleForPlayer);
-                
+                ChangePattern(Boss3State.Pattern03);
             }
             yield return null;
         }
     }
+
+    private IEnumerator Pattern03()
+    {
+        boss3Weapon.StartAttack(Boss3AttackType.AngleLaser);
+       yield return null;
+    }
+
+
 }

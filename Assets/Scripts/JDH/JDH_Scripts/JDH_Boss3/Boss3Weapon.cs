@@ -1,21 +1,32 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public enum Boss3AttackType { SingleToPlayer, CircleForPlayer };
+public enum Boss3AttackType { SingleToPlayer, CircleForPlayer, AngleLaser };
 
 public class Boss3Weapon : MonoBehaviour
 {
     [SerializeField]
     private float attackRate = 0.5f;
-
-
+    [SerializeField]
+    private int PerAngle;
+    [SerializeField]
+    private int speed;
+    [SerializeField]
+    private int rotateTime;
+    [SerializeField]
+    private GameObject LaserGroup;
     //발사될 총알 오브젝트
     public GameObject Bullet;
     public GameObject Bullet1;
 
-
+    private void Awake()
+    {
+        LaserGroup.SetActive(false);
+    }
     public void StartAttack(Boss3AttackType enemyAttackType)
     {
         StartCoroutine(enemyAttackType.ToString());
@@ -40,16 +51,6 @@ public class Boss3Weapon : MonoBehaviour
             yield return new WaitForSeconds(attackRate);
         }
     }
-
-    //private IEnumerator CircleForPlayer()
-    //{
-    //    while (true)
-    //    {
-    //        Circle();
-
-    //        yield return new WaitForSeconds(attackRate);
-    //    }
-    //}
 
     private IEnumerator CircleForPlayer()
     {
@@ -110,5 +111,26 @@ public class Boss3Weapon : MonoBehaviour
         //데이터 해제
         objects.Clear();
     }
-}
+
+    private IEnumerator AngleLaser()
+    {
+        
+        while (true)
+        {
+            LaserGroup.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
+            
+            LaserGroup.transform.Rotate(Vector3.forward * PerAngle *speed* Time.deltaTime);
+
+            
+            yield return new WaitForSeconds(2.5f);
+
+            LaserGroup.SetActive(false);
+
+            yield return new WaitForSeconds(1f);
+            
+            }
+        }
+    }
+
 
