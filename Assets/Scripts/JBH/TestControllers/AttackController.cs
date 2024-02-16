@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AttackController : MonoBehaviour
 {
+    public float fireRate = 0.5f; // 초당 발사 횟수
+    private float nextFireTime = 0f;
     public float arrowSpeed = 10f; // 화살 속도
 
     private PlayerAttackObjectPool objectPoolManager;
@@ -16,9 +18,10 @@ public class AttackController : MonoBehaviour
     private void Update()
     {
         // 마우스 왼쪽 버튼 클릭시 공격
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0) && Time.time >= nextFireTime)
         {
             Attack();
+            nextFireTime = Time.time + fireRate;
         }
     }
 
@@ -26,7 +29,7 @@ public class AttackController : MonoBehaviour
     {
         // 마우스 위치로 화살 발사
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePosition.z = 0f; // 2D 공간에서는 Z 값을 조절해야 합니다.
+        mousePosition.z = 0f;
         Vector3 direction = (mousePosition - transform.position).normalized;
 
         GameObject arrow = objectPoolManager.GetArrowFromPool();

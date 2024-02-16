@@ -4,11 +4,11 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
-    public float jumpForce = 10f;
+    public float jumpPower = 10f;
 
     private Rigidbody2D rb;
     private Vector2 moveInput;
-    private bool isGrounded;
+    private bool isGround;
 
     void Start()
     {
@@ -22,10 +22,12 @@ public class PlayerMovement : MonoBehaviour
         rb.MovePosition(rb.position + movement);
 
         // 점프
-        if (isGrounded && Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (isGround && Keyboard.current.spaceKey.wasPressedThisFrame)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+
             Debug.Log("점프");
+            Debug.Log(rb.velocity);
         }
     }
 
@@ -35,12 +37,17 @@ public class PlayerMovement : MonoBehaviour
         moveInput = value.Get<Vector2>();
     }
 
+    public void OnJump(InputValue value)
+    {
+        moveInput = value.Get<Vector2>();
+    }
+
     // 충돌 처리
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            isGrounded = true;
+            isGround = true;
             Debug.Log("땅");
         }
     }
@@ -49,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            isGrounded = false;
+            isGround = false;
             Debug.Log("공중");
         }
     }
