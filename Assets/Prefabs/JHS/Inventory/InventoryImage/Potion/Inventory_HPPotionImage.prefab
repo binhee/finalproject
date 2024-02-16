@@ -261,6 +261,7 @@ MonoBehaviour:
   equipUI: {fileID: 4890648285820823306}
   descriptionTxt: {fileID: 1386818965821289457}
   potionCountTxt: {fileID: 4431493284699552469}
+  itemNameTxt: {fileID: 3430375235397343329}
   itemCount: 1
   itemSO: {fileID: 11400000, guid: ccb6d65c9ea0bf54fb0515d3ae7d8def, type: 2}
 --- !u!225 &-4727558719790834112
@@ -302,6 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54292a4597d4ba24c9a660284723ed73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grade: 0
 --- !u!1 &2815785337729442278
 GameObject:
   m_ObjectHideFlags: 0

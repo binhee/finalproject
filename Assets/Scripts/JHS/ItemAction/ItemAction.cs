@@ -4,6 +4,8 @@ using UnityEngine;
 
   abstract public class ItemAction : MonoBehaviour
 {
+    public int grade;
+
     public abstract void Use(ItemSO itemNum);
     public abstract void Delete();
     public abstract void Upgrade();

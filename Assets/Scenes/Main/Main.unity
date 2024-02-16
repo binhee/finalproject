@@ -20514,6 +20514,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 3930687950354811438, guid: 25cae05cea8fdb34ea557564057d7a05, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4626841594835509198, guid: 25cae05cea8fdb34ea557564057d7a05, type: 3}
       propertyPath: m_Name
       value: Buttons
