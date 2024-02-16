@@ -18,6 +18,7 @@ TagManager:
   - ItemEffect
   - Boss2Projectile
   - Boss3
+  - Boss3Projectile
   layers:
   - Default
   - TransparentFX
