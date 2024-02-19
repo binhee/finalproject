@@ -19,6 +19,7 @@ TagManager:
   - Boss2Projectile
   - Boss3
   - Boss3Projectile
+  - Laser
   layers:
   - Default
   - TransparentFX

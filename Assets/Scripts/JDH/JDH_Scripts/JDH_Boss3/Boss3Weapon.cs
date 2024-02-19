@@ -5,12 +5,12 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public enum Boss3AttackType { SingleToPlayer, CircleForPlayer, AngleLaser };
+public enum Boss3AttackType { SingleToPlayer, AngleLaser, CircleForPlayer };
 
 public class Boss3Weapon : MonoBehaviour
 {
     [SerializeField]
-    private float attackRate = 1f;
+    private float attackRate = 2f;
     [SerializeField]
     private int PerAngle;
     [SerializeField]
@@ -52,10 +52,32 @@ public class Boss3Weapon : MonoBehaviour
         }
     }
 
+    
+
+    private IEnumerator AngleLaser()
+    {
+        
+        while (true)
+        {
+            LaserGroup.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
+            
+            LaserGroup.transform.Rotate(Vector3.forward * PerAngle *speed* Time.deltaTime);
+
+            
+            yield return new WaitForSeconds(2f);
+
+            LaserGroup.SetActive(false);
+
+            yield return new WaitForSeconds(1f);
+            
+            }
+        }
+
     private IEnumerator CircleForPlayer()
     {
-            //Target방향으로 발사될 오브젝트 수록
-            List<Transform> bullets = new List<Transform>();
+        //Target방향으로 발사될 오브젝트 수록
+        List<Transform> bullets = new List<Transform>();
         while (true)
         {
             for (int i = 0; i < 360; i += 13)
@@ -76,25 +98,25 @@ public class Boss3Weapon : MonoBehaviour
                 //Z에 값이 변해야 회전이 이루어지므로, Z에 i를 대입한다.
                 temp.transform.rotation = Quaternion.Euler(0, 0, i);
 
-              
+
             }
             yield return new WaitForSeconds(attackRate);
             //총알을 Target 방향으로 이동시킨다.
             StartCoroutine(BulletToTarget(bullets));
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
 
         }
 
         ////총알을 Target 방향으로 이동시킨다.
         //StartCoroutine(BulletToTarget(bullets));
         //yield return new WaitForSeconds(0.2f);
-     
+
     }
 
     private IEnumerator BulletToTarget(IList<Transform> objects)
     {
         //0.5초 후에 시작
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.7f);
 
         for (int i = 0; i < objects.Count; i++)
         {
@@ -111,26 +133,6 @@ public class Boss3Weapon : MonoBehaviour
         //데이터 해제
         objects.Clear();
     }
-
-    private IEnumerator AngleLaser()
-    {
-        
-        while (true)
-        {
-            LaserGroup.SetActive(true);
-            yield return new WaitForSeconds(0.5f);
-            
-            LaserGroup.transform.Rotate(Vector3.forward * PerAngle *speed* Time.deltaTime);
-
-            
-            yield return new WaitForSeconds(2.5f);
-
-            LaserGroup.SetActive(false);
-
-            yield return new WaitForSeconds(1f);
-            
-            }
-        }
-    }
+}
 
 

@@ -32,7 +32,7 @@ public class Boss3 : MonoBehaviour
 
     private IEnumerator Pattern01()
     {
-        Debug.Log("aa");
+       
         boss3Weapon.StartAttack(Boss3AttackType.SingleToPlayer);
         while(true)
         {
@@ -47,12 +47,14 @@ public class Boss3 : MonoBehaviour
 
     private IEnumerator Pattern02()
     {
-        boss3Weapon.StartAttack(Boss3AttackType.CircleForPlayer);
+        boss3Weapon.StartAttack(Boss3AttackType.AngleLaser);
+        boss3Weapon.StartAttack(Boss3AttackType.SingleToPlayer);
         while (true)
         {
             if(boss3hp.CurrentHP3<=boss3hp.MaxHP3*0.4)
             {
-                boss3Weapon.StopAttack(Boss3AttackType.CircleForPlayer);
+               
+                boss3Weapon.StopAttack(Boss3AttackType.SingleToPlayer) ;
                 ChangePattern(Boss3State.Pattern03);
             }
             yield return null;
@@ -61,7 +63,7 @@ public class Boss3 : MonoBehaviour
 
     private IEnumerator Pattern03()
     {
-        boss3Weapon.StartAttack(Boss3AttackType.AngleLaser);
+        boss3Weapon.StartAttack(Boss3AttackType.CircleForPlayer);
        yield return null;
     }
 

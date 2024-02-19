@@ -28119,7 +28119,7 @@ GameObject:
   - component: {fileID: 185782454}
   m_Layer: 0
   m_Name: Laser2 (1)
-  m_TagString: Boss3Projectile
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28566,7 +28566,7 @@ GameObject:
   - component: {fileID: 282727727}
   m_Layer: 0
   m_Name: Laser2 (2)
-  m_TagString: Boss3Projectile
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39896,7 +39896,7 @@ GameObject:
   - component: {fileID: 1102550162}
   m_Layer: 0
   m_Name: Laser2
-  m_TagString: Boss3Projectile
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90191,7 +90191,7 @@ GameObject:
   - component: {fileID: 2133125798}
   m_Layer: 0
   m_Name: Laser1
-  m_TagString: Boss3Projectile
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
