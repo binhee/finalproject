@@ -3,22 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.XR;
 
-public class SensorTrap : MonoBehaviour
+public class Sensor : MonoBehaviour
 {
-    Rigidbody2D rb;
+    public GameObject trapObject;
 
-    void Start()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        rb = GetComponent<Rigidbody2D>();        
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.name.Equals("Player"))
-            if (rb != null)
-            {
-                Debug.Log("센서 입력");
-                rb.isKinematic = false;
-            }
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            trapObject.SetActive(false);
+        }
     }
 }

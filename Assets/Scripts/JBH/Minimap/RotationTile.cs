@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class RotationTile : MonoBehaviour
 {
+    public Transform startPos;
+    public Transform endPos;
+    public Transform desPos;
+    public float speed;
+
+    void Start()
+    {
+        transform.position = startPos.position;
+        desPos = endPos;
+    }
+
     public float rotationSpeed = 1.0f; // 로테이션 속도 조절을 위한 변수
 
     void Update()
@@ -16,5 +27,17 @@ public class RotationTile : MonoBehaviour
 
         // 새로운 로테이션 값을 적용
         transform.rotation = Quaternion.Euler(currentRotation);
+    }
+
+    void FixedUpdate()
+    {
+        transform.position = Vector2.MoveTowards(transform.position, desPos.position, Time.deltaTime * speed);
+
+        if (Vector2.Distance(transform.position, desPos.position) <= 0.05f)
+        {
+            // 목적 위치 도달 시 다음 이동 방향을 설정
+            if (desPos == endPos) desPos = startPos;
+            else desPos = endPos;
+        }
     }
 }

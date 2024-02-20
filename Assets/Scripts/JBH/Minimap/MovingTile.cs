@@ -7,10 +7,8 @@ public class MovingTile : MonoBehaviour
     public Transform startPos;
     public Transform endPos;
     public Transform desPos;
-    //public Transform telPos;
     public float speed;
 
-    // Start is called before the first frame update
     void Start()
     {
         transform.position = startPos.position;
@@ -31,19 +29,11 @@ public class MovingTile : MonoBehaviour
         {
             collision.transform.SetParent(null);
         }
-
-       
     }
-    // Update is called once per frame
+
     void FixedUpdate()
     {
         transform.position = Vector2.MoveTowards(transform.position, desPos.position, Time.deltaTime * speed);
-
-        //if (transform.position == telPos.position)
-        //{
-        //    // 순간 이동
-        //    transform.position = startPos.position;
-        //}
 
         if (Vector2.Distance(transform.position, desPos.position) <= 0.05f)
         {
