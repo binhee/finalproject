@@ -13750,6 +13750,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
+      propertyPath: boss1Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e1a9f876d3dafd47bc6b3dde25135fa, type: 3}
+    - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
+      propertyPath: boss2SoundPattern1
+      value: 
+      objectReference: {fileID: 8300000, guid: a58e438b7cfa445498120af0e6169082, type: 3}
+    - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
+      propertyPath: boss2SoundPattern2
+      value: 
+      objectReference: {fileID: 8300000, guid: d9419ba0bfac1e84a95418ac5851caf6, type: 3}
+    - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
+      propertyPath: boss2SoundPattern3
+      value: 
+      objectReference: {fileID: 8300000, guid: a58e438b7cfa445498120af0e6169082, type: 3}
+    - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
+      propertyPath: boss2SoundPattern4
+      value: 
+      objectReference: {fileID: 8300000, guid: 8401456349c492a489ed90469e317e43, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
