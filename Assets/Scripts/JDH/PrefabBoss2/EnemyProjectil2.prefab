@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4396093499456015809}
   - component: {fileID: 263767768887111257}
   - component: {fileID: 2294105875473864793}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemyProjectil2
   m_TagString: Boss2Projectile
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dbd989d49bed174186bd71d093d9efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 8
   moveDIrection: {x: 0, y: -1, z: 0}
 --- !u!58 &263767768887111257
 CircleCollider2D:

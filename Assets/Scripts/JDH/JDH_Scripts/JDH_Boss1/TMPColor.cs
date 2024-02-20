@@ -23,7 +23,7 @@ public class TMPColor : MonoBehaviour
     {
         while (true)
         {
-            yield return StartCoroutine(ColorLerp(Color.white, Color.magenta));
+            yield return StartCoroutine(ColorLerp(Color.white, Color.red));
             yield return StartCoroutine(ColorLerp(Color.red, Color.white));
         }
     }

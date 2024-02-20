@@ -9,7 +9,7 @@ public class EnemyPoolManager : MonoBehaviour
     public GameObject alertLinePrefab;
     public GameObject MeteoriteEnemyPrefab;
 
-    private GameObject[] Enemys;
+   
     private GameObject[] EnemyProjectile;
     private GameObject[] alertLine;
     private GameObject[] MeteoriteEnemy;
@@ -18,8 +18,8 @@ public class EnemyPoolManager : MonoBehaviour
 
     private void Awake()
     {
-        Enemys = new GameObject[10];
-        EnemyProjectile = new GameObject[210];
+       
+        EnemyProjectile = new GameObject[220];
         alertLine = new GameObject[10];
         MeteoriteEnemy = new GameObject[10];
 
@@ -28,11 +28,7 @@ public class EnemyPoolManager : MonoBehaviour
 
     private void EnemyPool()
     {
-        for(int i=0; i< Enemys.Length; i++)
-        {
-            Enemys[i]=Instantiate(EnemysPrefab);
-            Enemys[i].SetActive(false);
-        }
+       
         for (int i = 0; i < EnemyProjectile.Length; i++)
         {
             EnemyProjectile[i] = Instantiate(EnemyProjectilePrefab);
@@ -54,9 +50,7 @@ public class EnemyPoolManager : MonoBehaviour
     {
         switch (type)
         {
-            case "Enemys":
-                targetPool = Enemys;
-                break;
+           
             case "EnemyProjectile":
                 targetPool = EnemyProjectile;
                 break;
