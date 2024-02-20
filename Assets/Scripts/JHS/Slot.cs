@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using static UnityEditor.Progress;
 
-public enum SlotType { PotionSlot, WeaponSlot, ArmorSlot, HelmetSlot, BootsSlot, ArtifactSlot, AllSlot, EnforceSlot}
+public enum SlotType { PotionSlot, WeaponSlot, ArmorSlot, HelmetSlot, BootsSlot, ArtifactSlot, AllSlot, EnforceSlot, CombinationSlot }
 public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerExitHandler
 {
     [Header("ItemInformation")]
@@ -47,11 +47,15 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerE
         if (eventData.pointerDrag != null && gameObject.transform.childCount==0 && CheckType(eventData))
         {
             eventData.pointerDrag.transform.SetParent(transform);
-            if(slotType != SlotType.EnforceSlot)
+            eventData.pointerDrag.GetComponent<RectTransform>().position = rect.position;
+            if (slotType == SlotType.EnforceSlot|| slotType == SlotType.CombinationSlot)
+            {
+                return;
+            }
+            else
             {
                 eventData.pointerDrag.GetComponent<DraggableUI>().EquipItem();
             }
-            eventData.pointerDrag.GetComponent<RectTransform>().position = rect.position;
         }
     }
     bool CheckType(PointerEventData item)
@@ -78,9 +82,17 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerE
         {
             return true;
         }
-        if(checkItemType.itemType == ItemType.Weapon|| checkItemType.itemType == ItemType.Boots || checkItemType.itemType == ItemType.Armor || checkItemType.itemType == ItemType.Helmet)
+        if (checkItemType.itemType == ItemType.Other && slotType == SlotType.CombinationSlot)
+        {
+            return true;
+        }
+        if (checkItemType.itemType == ItemType.Weapon|| checkItemType.itemType == ItemType.Boots || checkItemType.itemType == ItemType.Armor || checkItemType.itemType == ItemType.Helmet)
         {
             if (slotType == SlotType.EnforceSlot)
+            {
+                return true;
+            }
+            if (slotType == SlotType.CombinationSlot)
             {
                 return true;
             }

@@ -89,6 +89,7 @@ public class Inventory : MonoBehaviour
             case ItemType.Boots:
             case ItemType.Armor:
             case ItemType.Weapon:
+            case ItemType.Other:
                 CreateEquipment(itemtype, invenItem);    //장비들이면 여기서 생성
                 break;
 
