@@ -29,7 +29,7 @@ public class Shooting : MonoBehaviour
         _aimDirection = newAimDirection;  // 바라보는 방향 갱신
     }
 
-    // 공격 이벤트에서 호출되는 함수
+    // 공격 이벤트에서 호출되는 함수5
     private void OnShoot(AttackSO attackSO)
     {
         RangedAttackData rangedAttackData = attackSO as RangedAttackData;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingTile : MonoBehaviour
+public class RotationTile : MonoBehaviour
 {
     public Transform startPos;
     public Transform endPos;
@@ -14,21 +14,19 @@ public class MovingTile : MonoBehaviour
         transform.position = startPos.position;
         desPos = endPos;
     }
-    
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.transform.CompareTag("Player"))
-        {
-            collision.transform.SetParent(transform);
-        }
-    }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    public float rotationSpeed = 1.0f; // 로테이션 속도 조절을 위한 변수
+
+    void Update()
     {
-        if (collision.transform.CompareTag("Player"))
-        {
-            collision.transform.SetParent(null);
-        }
+        // 타일의 현재 로테이션 값을 저장
+        Vector3 currentRotation = transform.rotation.eulerAngles;
+
+        // y 축을 기준으로 로테이션 값을 계속 더해줌
+        currentRotation.z += rotationSpeed * Time.deltaTime;
+
+        // 새로운 로테이션 값을 적용
+        transform.rotation = Quaternion.Euler(currentRotation);
     }
 
     void FixedUpdate()
