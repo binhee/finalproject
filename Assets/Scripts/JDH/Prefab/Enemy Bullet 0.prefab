@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6280116852326100862}
   - component: {fileID: -5455983468594655203}
   - component: {fileID: 9172507118487668948}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy Bullet 0
   m_TagString: BossProjectile
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dbd989d49bed174186bd71d093d9efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 9
   moveDIrection: {x: 0, y: 0, z: 0}
 --- !u!58 &-6280116852326100862
 CircleCollider2D:

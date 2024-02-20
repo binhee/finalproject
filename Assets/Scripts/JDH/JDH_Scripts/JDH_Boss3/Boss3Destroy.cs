@@ -7,7 +7,7 @@ public class Boss3Destroy : MonoBehaviour
     [SerializeField]
     StageData stageData;
 
-    private float destroyLine = 7f;
+    private float destroyLine = 12f;
 
     private void LateUpdate()
     {

@@ -34,9 +34,9 @@ public class BossHp2 : MonoBehaviour
 
         private IEnumerator HitColor()
         {
-            spriterenderer.color = Color.red;
-            yield return new WaitForSeconds(0.05f);
             spriterenderer.color = Color.white;
+            yield return new WaitForSeconds(0.05f);
+            spriterenderer.color = Color.blue;
         }
     }
 
