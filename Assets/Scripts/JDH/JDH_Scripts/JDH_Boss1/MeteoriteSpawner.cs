@@ -27,15 +27,15 @@ public class MeteoriteSpawner : MonoBehaviour
             alertLineClone.transform.position = new Vector3(PositionX, 0, 0);
             yield return new WaitForSeconds(1.0f);
 
-            Debug.Log("Meteo");
+          
             alertLineClone.SetActive(false);
            
-            Debug.Log("Meteorite");
+         
             Vector3 meteoritePosition = new Vector3(PositionX, stageData.LimitMax.y + 2.0f, 0);
           
             GameObject MeteoEnemy =enemyPoolManger.MakeObj("MeteoriteEnemy");
             MeteoEnemy.transform.position = meteoritePosition;
-            Debug.Log("Me");
+           
 
 
             float spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
