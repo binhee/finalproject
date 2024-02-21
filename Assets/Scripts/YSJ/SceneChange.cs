@@ -9,6 +9,7 @@ public class SceneChange : MonoBehaviour
 {
     public GameObject OptionPanel;
     public GameObject StagePanel;
+    public GameObject loadPanel;
     public GameObject TileOptionclosePanel;
     public GameObject panel;
     SoundManager soundManager;      // SoundManager 胶农赋飘俊 咀技胶.
@@ -43,6 +44,14 @@ public class SceneChange : MonoBehaviour
         bool IsSetStagePanel = StagePanel.activeSelf;
         StagePanel.SetActive(!IsSetStagePanel);
     }
+
+    public void SetLoadPanel()
+    {
+        soundManager.PlaySFX(soundManager.BTNSound);    // BTNSound 犁积
+        bool IsSetLoadPanel = loadPanel.activeSelf;
+        loadPanel.SetActive(!IsSetLoadPanel);
+    }
+
     public void SetOptionPanel() //可记芒 积己 昏力
     {
         soundManager.PlaySFX(soundManager.BTNSound);    // BTNSound 犁积
