@@ -51886,11 +51886,6 @@ PrefabInstance:
       addedObject: {fileID: 478830022}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 703428e70077fe547a6886e5b4282391, type: 3}
---- !u!1 &1735458058 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5238066284962848302, guid: 703428e70077fe547a6886e5b4282391, type: 3}
-  m_PrefabInstance: {fileID: 1735458057}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1735458059 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8843763609338095469, guid: 703428e70077fe547a6886e5b4282391, type: 3}
@@ -52101,6 +52096,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1782377681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7496820459466881345, guid: faa97a3fd3f91544c9c9aa15974b61bd, type: 3}
+  m_PrefabInstance: {fileID: 1418714174}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1820288679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52188,7 +52188,7 @@ PrefabInstance:
     - target: {fileID: 6713134320508418125, guid: ab36490c35904d44b97b630133a2ee75, type: 3}
       propertyPath: Boss
       value: 
-      objectReference: {fileID: 1735458058}
+      objectReference: {fileID: 1782377681}
     - target: {fileID: 6713134320508418125, guid: ab36490c35904d44b97b630133a2ee75, type: 3}
       propertyPath: toObj
       value: 
