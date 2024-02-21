@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5810333464572812011}
   - component: {fileID: 3960701058208497992}
   - component: {fileID: -7366766676133850501}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Item_JumpPotion
   m_TagString: Item
   m_Icon: {fileID: 0}

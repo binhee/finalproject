@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1099509842013798855}
   - component: {fileID: 3981819167518714790}
   - component: {fileID: 2681314420069464476}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Other_MagicScroll3
   m_TagString: Item
   m_Icon: {fileID: 0}
