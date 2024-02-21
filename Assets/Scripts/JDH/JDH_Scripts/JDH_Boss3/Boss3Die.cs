@@ -8,7 +8,8 @@ public class Boss3Die : MonoBehaviour
     private GameObject explosionDie;
     [SerializeField]
     private GameObject ClearPanel;
-
+    [SerializeField]
+    private GameObject LaserGroup;
     [SerializeField]
     private int Boss3Gold = 3000;
 
@@ -23,6 +24,7 @@ public class Boss3Die : MonoBehaviour
         Instantiate(explosionDie, transform.position, Quaternion.identity);
         Destroy(gameObject);
         ClearPanel.SetActive(true);
+        LaserGroup.SetActive(false);
        
         PlayerManager.instance.playerGold += Boss3Gold;
 

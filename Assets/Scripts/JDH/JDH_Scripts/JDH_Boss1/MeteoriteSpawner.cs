@@ -11,7 +11,7 @@ public class MeteoriteSpawner : MonoBehaviour
     [SerializeField]
     private float minSpawnTime = 1.0f;
     [SerializeField]
-    private float maxSpawnTime = 4.0f;
+    private float maxSpawnTime = 2.5f;
 
     private void Awake()
     {

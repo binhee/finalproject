@@ -103,7 +103,7 @@ public class Boss3Weapon : MonoBehaviour
             yield return new WaitForSeconds(attackRate);
             //총알을 Target 방향으로 이동시킨다.
             StartCoroutine(BulletToTarget(bullets));
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1.2f);
 
         }
 
@@ -116,7 +116,7 @@ public class Boss3Weapon : MonoBehaviour
     private IEnumerator BulletToTarget(IList<Transform> objects)
     {
         //0.5초 후에 시작
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.5f);
 
         for (int i = 0; i < objects.Count; i++)
         {
