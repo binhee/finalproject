@@ -19,6 +19,8 @@ TagManager:
   - Boss2Projectile
   - Boss3
   - Boss3Projectile
+  - Laser
+  - Arrow
   layers:
   - Default
   - TransparentFX
@@ -29,8 +31,8 @@ TagManager:
   - UIPopUP
   - Level
   - Player
-  - 
-  - 
+  - Bullet
+  - bullet2
   - 
   - 
   - 

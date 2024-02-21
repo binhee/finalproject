@@ -7,7 +7,12 @@ public enum AttackType { CircleFire = 0, SingleFireToCenterPosition }
 public class BossWeapon : MonoBehaviour
 {
     public EnemyPoolManager enemyPoolManger;
+    private SoundManager soundManager;
 
+    private void Awake()
+    {
+        soundManager = GetComponent<SoundManager>();
+    }
 
     public void StartFiring(AttackType attackType)
     {
@@ -41,10 +46,12 @@ public class BossWeapon : MonoBehaviour
                 float y = Mathf.Sin(angle * Mathf.PI / 180f);
 
                 clone.GetComponent<Movement2D>().MoveTo(new Vector2(x, y));
+                
             }
             weightAngle += 1;
-     
+            soundManager.PlaySFX(soundManager.boss1Sound);
             yield return new WaitForSeconds(attackRate);
+           
         }
     }
 

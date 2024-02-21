@@ -10,6 +10,13 @@ public class Boss2Weapon : MonoBehaviour
     [SerializeField]
     private float attackRate;
 
+    public AudioSource[] attackSource;
+
+    private void Awake()
+    {
+        attackSource[4] = GetComponent<AudioSource>();
+    }
+
     public void StartAttack(EnemyAttackType enemyAttackType)
     {
         StartCoroutine(enemyAttackType.ToString());
@@ -41,7 +48,8 @@ public class Boss2Weapon : MonoBehaviour
             GameObject RightAttack = Enemy2PoolManager.MakeProjectiles("Boss2Projectile1");
             RightAttack.transform.position = transform.position;
             RightAttack.GetComponent<Movement2D>().MoveTo(new Vector3(1f, -1, 0));
-         
+
+            attackSource[0].Play();
             yield return new WaitForSeconds(attackRate);
            
         }
@@ -76,7 +84,7 @@ public class Boss2Weapon : MonoBehaviour
 
             Debug.Log("Laser1");
 
-
+            attackSource[1].Play();
             yield return new WaitForSeconds(attackRate);
 
         }
@@ -89,6 +97,7 @@ public class Boss2Weapon : MonoBehaviour
         {
             GameObject boom = Enemy2PoolManager.MakeProjectiles("Boss2ProjectileBoom");
             boom.transform.position = transform.position;
+            attackSource[2].Play();
             Vector3 Targetdirection = (PlayerManager.instance.FindPlayer().transform.position - boom.transform.position).normalized;
             boom.GetComponent<Movement2D>().MoveTo(Targetdirection);
 
@@ -101,8 +110,9 @@ public class Boss2Weapon : MonoBehaviour
             boom.SetActive(false);
 
             yield return new WaitForSeconds(0.2f);
+            
             Effect.SetActive(false);
-
+            attackSource[3].Play();
 
         }
     }

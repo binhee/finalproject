@@ -49,6 +49,11 @@ public class PlayerRespawn : MonoBehaviour
         {
             Die();
         }
+        
+        else if(collision.CompareTag("Laser"))
+        {
+            Die();
+        }
     }
 
     public void UpdateCheckPoint(Vector2 pos)

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8874519162297276445}
   - component: {fileID: 8661271598860786774}
   - component: {fileID: 3148125551155722529}
-  - component: {fileID: -1057482310152935667}
+  - component: {fileID: -1648810656977067551}
   m_Layer: 0
   m_Name: Projectile05
   m_TagString: Boss3Projectile
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  moveDIrection: {x: 0, y: -1, z: 0}
---- !u!114 &-1057482310152935667
+  moveDIrection: {x: 0, y: 0, z: 0}
+--- !u!114 &-1648810656977067551
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6425833517764472830}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8612fbd4a34a8234fa594291d3a366a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 73b7162aac3da1f40a9941640913c4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stageData: {fileID: 11400000, guid: 7df0ca5079bd60c4e9419eef70db7da1, type: 2}

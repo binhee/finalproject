@@ -46,7 +46,7 @@ public class Boss2 : MonoBehaviour
 
         while (true)
         {
-            if (bosshp2.CurrentHP2 <= bosshp2.MaxHP2 * 0.7f)
+            if (bosshp2.CurrentHP2 <= bosshp2.MaxHP2 * 0.9f)
             {
                 boss2Weapon.StopAttack(EnemyAttackType.Laser);
                 ChangePattern(Boss2State.Pattern02);
