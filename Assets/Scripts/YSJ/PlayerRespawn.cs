@@ -25,32 +25,36 @@ public class PlayerRespawn : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Trap 닿으면 플레이어는 Die 실행.
-        if(collision.CompareTag("Trap"))
+        if (collision.CompareTag("Trap"))
         {
             Die();
         }
-        else if(collision.CompareTag("Meteorite"))
-            {
-            Die();
-        }
-        else if(collision.CompareTag("BossProjectile"))
+        else if (collision.CompareTag("Meteorite"))
         {
             Die();
         }
-        else if(collision.CompareTag("Boss2Projectile"))
+        else if (collision.CompareTag("BossProjectile"))
         {
             Die();
         }
-        else if(collision.CompareTag("Boss"))
+        else if (collision.CompareTag("Boss2Projectile"))
         {
             Die();
         }
-        else if(collision.CompareTag("Boss2"))
+        else if (collision.CompareTag("Boss"))
         {
             Die();
         }
-        
-        else if(collision.CompareTag("Laser"))
+        else if (collision.CompareTag("Boss2"))
+        {
+            Die();
+        }
+
+        else if (collision.CompareTag("Laser"))
+        {
+            Die();
+        }
+        else if (collision.CompareTag("Boss3Projectile"))
         {
             Die();
         }

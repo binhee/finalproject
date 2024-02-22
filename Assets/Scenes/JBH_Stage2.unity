@@ -29132,12 +29132,10 @@ MonoBehaviour:
   Boss2ProjectileBoomPrefab: {fileID: 6025302057466147185, guid: 853f027912303234dbcbba2039c8b447, type: 3}
   Boss2Projectile1Prefab: {fileID: 1777296099429060459, guid: 0df489d1135b35b43bc94cbb0b5147e1, type: 3}
   Boss2Projectile2Prefab: {fileID: 3016243910504359717, guid: 901a550932768e943b90b5b45ca8317a, type: 3}
-  Boss2LaserPrefab: {fileID: 127120148636249937, guid: 8ff68186796b97349ba95e3aa11489fc, type: 3}
   Boss2Boom: []
   Boss2ProjectileBoom: []
   Boss2Projectile1: []
   Boss2Projectile2: []
-  Boss2Laser: []
   targetPool: []
 --- !u!4 &325482838
 Transform:
@@ -80947,6 +80945,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5620797258982797637, guid: 703428e70077fe547a6886e5b4282391, type: 3}
+      propertyPath: boss2Laser
+      value: 
+      objectReference: {fileID: 127120148636249937, guid: 8ff68186796b97349ba95e3aa11489fc, type: 3}
+    - target: {fileID: 5620797258982797637, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: Projectile1
       value: 
       objectReference: {fileID: 1777296099429060459, guid: 0df489d1135b35b43bc94cbb0b5147e1, type: 3}
@@ -80990,6 +80992,10 @@ PrefabInstance:
       propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7878683445102967792, guid: 703428e70077fe547a6886e5b4282391, type: 3}
+      propertyPath: Laser
+      value: 
+      objectReference: {fileID: 127120148636249937, guid: 8ff68186796b97349ba95e3aa11489fc, type: 3}
     - target: {fileID: 7878683445102967792, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: stageData
       value: 
@@ -87039,11 +87045,15 @@ PrefabInstance:
       objectReference: {fileID: 1619465873}
     - target: {fileID: 3007536875075731891, guid: faa97a3fd3f91544c9c9aa15974b61bd, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3007536875075731891, guid: faa97a3fd3f91544c9c9aa15974b61bd, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273012492753843558, guid: faa97a3fd3f91544c9c9aa15974b61bd, type: 3}
+      propertyPath: attackRate
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 5519116937488146519, guid: faa97a3fd3f91544c9c9aa15974b61bd, type: 3}
       propertyPath: LaserGroup
@@ -87055,7 +87065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7496820459466881345, guid: faa97a3fd3f91544c9c9aa15974b61bd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7887088457633548477, guid: faa97a3fd3f91544c9c9aa15974b61bd, type: 3}
       propertyPath: m_AnchoredPosition.x

@@ -9,13 +9,13 @@ public class Enemy2PoolManager : MonoBehaviour
     public GameObject Boss2ProjectileBoomPrefab;
     public GameObject Boss2Projectile1Prefab;
     public GameObject Boss2Projectile2Prefab;
-    public GameObject Boss2LaserPrefab;
+   
 
     public GameObject[] Boss2Boom;
     public GameObject[] Boss2ProjectileBoom;
     public GameObject[] Boss2Projectile1;
     public GameObject[] Boss2Projectile2;
-    public GameObject[] Boss2Laser;
+   
 
 
     public GameObject[] targetPool;
@@ -27,8 +27,7 @@ public class Enemy2PoolManager : MonoBehaviour
         Boss2ProjectileBoom = new GameObject[5];
         Boss2Projectile1 = new GameObject[20];
         Boss2Projectile2 = new GameObject[70];
-        Boss2Laser = new GameObject[1];
-
+     
         BossProjectiles();
     }
 
@@ -57,11 +56,7 @@ public class Enemy2PoolManager : MonoBehaviour
             Boss2Projectile2[i].SetActive(false);
         }
 
-        for (int i = 0; i < Boss2Laser.Length; ++i)
-        {
-            Boss2Laser[i] = Instantiate(Boss2LaserPrefab);
-            Boss2Laser[i].SetActive(false);
-        }
+        
     }
     public GameObject MakeProjectiles(string type)
     {
@@ -79,9 +74,7 @@ public class Enemy2PoolManager : MonoBehaviour
             case "Boss2Projectile2":
                 targetPool = Boss2Projectile2;
                 break;
-            case "Boss2Laser":
-                targetPool = Boss2Laser;
-                break;
+           
 
         }
         for (int i = 0; i < targetPool.Length; i++)

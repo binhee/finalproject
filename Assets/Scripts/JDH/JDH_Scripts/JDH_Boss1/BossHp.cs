@@ -9,11 +9,13 @@ public class BossHp : MonoBehaviour
     private float currentHP;
     private SpriteRenderer spriterenderer;
     private Boss boss;
+    private SoundManager soundmanager;
 
     public float MaxHP => maxHP;
     public float CurrentHP => currentHP;
     private void Awake()
     {
+        soundmanager = GetComponent<SoundManager>();
         boss = GetComponent<Boss>();
         currentHP = maxHP;
         spriterenderer = GetComponent<SpriteRenderer>();
@@ -29,6 +31,7 @@ public class BossHp : MonoBehaviour
         if(currentHP <=0)
         {
            boss.OnDie();
+          
         }
     }
 

@@ -13,7 +13,7 @@ public class Boss2 : MonoBehaviour
     private BossHp2 bosshp2;
 
     private Boss2Weapon boss2Weapon;
-
+  
     private void Awake()
     {
         movement2D = GetComponent<Movement2D>();
@@ -48,6 +48,7 @@ public class Boss2 : MonoBehaviour
         {
             if (bosshp2.CurrentHP2 <= bosshp2.MaxHP2 * 0.9f)
             {
+              
                 boss2Weapon.StopAttack(EnemyAttackType.Laser);
                 ChangePattern(Boss2State.Pattern02);
             }

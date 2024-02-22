@@ -19,8 +19,6 @@ public class Boss : MonoBehaviour
     private BossHp bossHp;
 
 
-  
-
     [SerializeField]
     private GameObject ClearPanel;
    
@@ -29,7 +27,6 @@ public class Boss : MonoBehaviour
 
     private void Awake()
     {
-        
         movement2D = GetComponent<Movement2D>();
         bossweapon = GetComponent<BossWeapon>();   
         bossHp = GetComponent<BossHp>();
@@ -46,8 +43,8 @@ public class Boss : MonoBehaviour
     private IEnumerator MoveToAppearPoint()
     {
         movement2D.MoveTo(Vector3.up);
-
-        while(true)
+        
+        while (true)
         {
             if(transform.position.y>=bossAppearPoint)
             {
@@ -61,8 +58,8 @@ public class Boss : MonoBehaviour
     private IEnumerator Phase01()
     {
         bossweapon.StartFiring(AttackType.CircleFire);
-
-        while(true)
+        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.AppearSound);
+        while (true)
         {
             if (bossHp.CurrentHP <= bossHp.MaxHP * 0.7f)
             {
@@ -76,7 +73,7 @@ public class Boss : MonoBehaviour
     private IEnumerator Phase02()
     {
         bossweapon.StartFiring(AttackType.SingleFireToCenterPosition);
-
+        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.Pattern2Sound);
         Vector3 direction = Vector3.up;
         movement2D.MoveTo(direction);
 
@@ -102,7 +99,7 @@ public class Boss : MonoBehaviour
     {
         bossweapon.StartFiring(AttackType.CircleFire);
         bossweapon.StartFiring(AttackType.SingleFireToCenterPosition);
-
+        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.Pattern3Sound);
         Vector3 direction = Vector3.up;
         movement2D.MoveTo(direction);
 
@@ -120,7 +117,7 @@ public class Boss : MonoBehaviour
     public void OnDie()
     {
         UnlockStage();
-
+        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.Boss1Die);
         Instantiate(explosionPrefab,transform.position,Quaternion.identity);
         ClearPanel.SetActive(true);
         PlayerManager.instance.playerGold += BossGold;
