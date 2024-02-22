@@ -14,11 +14,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip AttackSound;
     public AudioClip JumpSound;
     public AudioClip DieSound;
-    public AudioClip boss1Sound;
-    public AudioClip boss2SoundPattern1;
-    public AudioClip boss2SoundPattern2;
-    public AudioClip boss2SoundPattern3;
-    public AudioClip boss2SoundPattern4;
+   
 
 
 

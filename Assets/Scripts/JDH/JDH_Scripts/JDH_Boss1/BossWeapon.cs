@@ -13,7 +13,6 @@ public class BossWeapon : MonoBehaviour
     {
         soundManager = GetComponent<SoundManager>();
     }
-
     public void StartFiring(AttackType attackType)
     {
         StartCoroutine(attackType.ToString());
@@ -49,7 +48,7 @@ public class BossWeapon : MonoBehaviour
                 
             }
             weightAngle += 1;
-            //soundManager.PlaySFX(soundManager.boss1Sound);
+            
             yield return new WaitForSeconds(attackRate);
            
         }
