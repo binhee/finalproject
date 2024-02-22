@@ -71901,6 +71901,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: telepo2
       objectReference: {fileID: 0}
+    - target: {fileID: 1962378653434773480, guid: 12eb6db18ba3a504f9aa5f41f2521cb0, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2344791719570189963, guid: 12eb6db18ba3a504f9aa5f41f2521cb0, type: 3}
       propertyPath: m_RootOrder
       value: 8

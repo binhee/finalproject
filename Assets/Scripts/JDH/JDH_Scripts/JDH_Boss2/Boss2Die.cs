@@ -21,6 +21,7 @@ public class Boss2Die : MonoBehaviour
     }
     public void Boss2OnDie()
     {
+        UnlockStage();
         Instantiate(explosionDie,transform.position, Quaternion.identity);
         ClearPanel.SetActive(true);
         gameObject.SetActive(false);
@@ -28,6 +29,16 @@ public class Boss2Die : MonoBehaviour
 
         PlayerPrefs.SetInt("Gold",PlayerManager.instance.playerGold);
 
+    }
+
+    public void UnlockStage()   // 스테이지 버튼 언락 함수.
+    {
+        if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedIndex"))
+        {
+            PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
+            PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel", 1) + 1);
+            PlayerPrefs.Save();
+        }
     }
 
 }

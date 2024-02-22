@@ -87,6 +87,7 @@ public class SceneChange : MonoBehaviour
     public void MainSceneLoad()    // 메인화면 입장
     {
         soundManager.PlaySFX(soundManager.BTNSound);    // BTNSound 재생
+        PlayerManager.instance.startPoint = new Vector2(-24, -9);
         SceneManager.LoadScene("Main");    // "" 스테이지 씬 삽입
         Time.timeScale = 1f;
         Time.fixedDeltaTime = 0.02f * Time.timeScale;        
@@ -102,9 +103,12 @@ public class SceneChange : MonoBehaviour
             soundManager.PlaySFX(soundManager.BTNSound);    // BTNSound 재생
             bool IsSetOptionPanel = OptionPanel.activeSelf;
             OptionPanel.SetActive(!IsSetOptionPanel);
-            SceneManager.LoadScene("Main");    // "" 스테이지 씬 삽입
-            Time.timeScale = 1f;
-            Time.fixedDeltaTime = 0.02f * Time.timeScale;
+            MainSceneLoad();
+            //PlayerManager.instance.startPoint = new Vector2(-24, -9);
+            //SceneManager.LoadScene("Main");    // "" 스테이지 씬 삽입
+            //Time.timeScale = 1f;
+            //Time.fixedDeltaTime = 0.02f * Time.timeScale;
+            
         }
     }
     public void InvenPanel()
@@ -118,6 +122,16 @@ public class SceneChange : MonoBehaviour
         soundManager.PlaySFX(soundManager.BTNSound);    // BTNSound 재생
         SceneManager.LoadScene(levelID+1);
         PlayerManager.instance.startPoint = new Vector2(27, -4);
+    }
+
+    public void UnlockStage()   // 스테이지 버튼 언락 함수.
+    {
+        if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedIndex"))
+        {
+            PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
+            PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel", 1) + 1);
+            PlayerPrefs.Save();
+        }
     }
 
     //public void Stage1Load()    // 스테이지1 입장

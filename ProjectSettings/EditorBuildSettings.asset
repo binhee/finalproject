@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JBH_Stage2.unity
     guid: c3e1c1a58c0bfbd41b0ffabd7b7170a9
+  - enabled: 1
+    path: Assets/Scenes/JBH_Stage3.unity
+    guid: 8cd88d2e8b599b84c86b105b0d141ee9
   m_configObjects: {}
