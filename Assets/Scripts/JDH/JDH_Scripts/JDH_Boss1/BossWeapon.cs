@@ -49,7 +49,7 @@ public class BossWeapon : MonoBehaviour
                 
             }
             weightAngle += 1;
-            soundManager.PlaySFX(soundManager.boss1Sound);
+            //soundManager.PlaySFX(soundManager.boss1Sound);
             yield return new WaitForSeconds(attackRate);
            
         }
