@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.DualShock;
@@ -12,8 +13,8 @@ public class PlayerInputController : PlayerController
     private bool jumpCooldown = false; // 점프 쿨다운 상태
     public bool itemDoubleJumping = false; // 더블 점프 가능한 아이템 장착 여부
 
-    [SerializeField] public float jumpForce;   // 점프 힘
-    [SerializeField] private float jumpCooldownTime = 0.7f; // 점프 쿨다운 시간
+    [SerializeField] public float jumpForce = 14f;   // 점프 힘
+    [SerializeField] private float jumpCooldownTime = 0.65f; // 점프 쿨다운 시간
 
     protected bool IsGrounded { get; set; } = true;   // 땅에 닿아 있는지 여부
 
@@ -23,6 +24,7 @@ public class PlayerInputController : PlayerController
         _camera = Camera.main;   // 메인 카메라 가져오기
         _rigidbody = GetComponent<Rigidbody2D>();   // Rigidbody2D 컴포넌트 가져오기
     }
+
     // 이동 입력 처리
     public void OnMove(InputValue value)
     {
@@ -72,7 +74,29 @@ public class PlayerInputController : PlayerController
         if (collision.gameObject.CompareTag("Ground"))
         {
             IsGrounded = true;   // 땅에 닿아 있음으로 설정
+            
             isJumping = false;   // 점프 중이 아님으로 설정
+        }
+
+        else if (collision.gameObject.CompareTag("wall"))
+        {
+            jumpCooldownTime = 0.15f;
+            IsGrounded = true;   // 땅에 닿아 있음으로 설정
+            isJumping = false;   // 점프 중이 아님으로 설정
+
+            jumpForce = 17f;
+            _rigidbody.gravityScale = 1.5f;
+
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("wall"))
+        {
+            jumpForce = 14f;
+            _rigidbody.gravityScale = 2.5f;
+            jumpCooldownTime = 0.65f;
         }
     }
 
