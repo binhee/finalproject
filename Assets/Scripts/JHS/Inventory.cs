@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Inventory : MonoBehaviour
 {
@@ -43,13 +44,16 @@ public class Inventory : MonoBehaviour
     }
     private void OnOffInventoryPanel()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (SceneManager.GetActiveScene().name != "Title")
         {
-            ExitInventoryPanel();
-        }
-        else if (Input.GetKeyDown(KeyCode.I))
-        {
-            inventoryPanel.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                ExitInventoryPanel();
+            }
+            else if (Input.GetKeyDown(KeyCode.I))
+            {
+                inventoryPanel.SetActive(true);
+            }
         }
     }
     public void ExitInventoryPanel()
