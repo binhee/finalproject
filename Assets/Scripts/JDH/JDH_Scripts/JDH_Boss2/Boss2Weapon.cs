@@ -51,7 +51,7 @@ public class Boss2Weapon : MonoBehaviour
 
     private IEnumerator TriangleLaser()
     {
-      Destroy(boss2Laser);
+      
         while (true)
         {
 
