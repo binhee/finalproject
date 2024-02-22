@@ -13751,9 +13751,25 @@ PrefabInstance:
       value: SoundManager
       objectReference: {fileID: 0}
     - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
+      propertyPath: Boss1Die
+      value: 
+      objectReference: {fileID: 8300000, guid: 3963249b4c9f77946868152b9987b35d, type: 3}
+    - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
       propertyPath: boss1Sound
       value: 
       objectReference: {fileID: 8300000, guid: 5e1a9f876d3dafd47bc6b3dde25135fa, type: 3}
+    - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
+      propertyPath: AppearSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 32996bbc83f5711459f978bcd5681564, type: 3}
+    - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
+      propertyPath: Pattern2Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: 730bf76e1bf08d84c88fd7ab63851f58, type: 3}
+    - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
+      propertyPath: Pattern3Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9c975e7fad9856142852fc9c5ab7670f, type: 3}
     - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
       propertyPath: boss2SoundPattern1
       value: 

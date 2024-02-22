@@ -19,9 +19,11 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private GameObject panelBossHp;
 
+    private SoundManager soundManager;
 
     private void Awake()
     {
+        soundManager = GetComponent<SoundManager>();
         textBoss.SetActive(false);
         panelBossHp.SetActive(false);
         boss.SetActive(false);

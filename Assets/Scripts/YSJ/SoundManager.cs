@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
+    public static SoundManager SoundInstance;
+
     [Header("---------- Audio Source -----------")]
     [SerializeField] AudioSource BGMSource;
     [SerializeField] AudioSource SFXSource;
@@ -14,11 +16,18 @@ public class SoundManager : MonoBehaviour
     public AudioClip AttackSound;
     public AudioClip JumpSound;
     public AudioClip DieSound;
-   
 
 
+    public AudioClip AppearSound;
+    public AudioClip Pattern2Sound;
+    public AudioClip Pattern3Sound;
+    public AudioClip Boss1Die;
 
 
+    private void Awake()
+    {
+        SoundInstance = this;
+    }
 
     private void Start()
     {

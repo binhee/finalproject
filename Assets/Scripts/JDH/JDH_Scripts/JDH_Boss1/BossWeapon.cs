@@ -7,12 +7,7 @@ public enum AttackType { CircleFire = 0, SingleFireToCenterPosition }
 public class BossWeapon : MonoBehaviour
 {
     public EnemyPoolManager enemyPoolManger;
-    private SoundManager soundManager;
-
-    private void Awake()
-    {
-        soundManager = GetComponent<SoundManager>();
-    }
+    
     public void StartFiring(AttackType attackType)
     {
         StartCoroutine(attackType.ToString());
@@ -49,9 +44,9 @@ public class BossWeapon : MonoBehaviour
             }
             weightAngle += 1;
             
-            yield return new WaitForSeconds(attackRate);
-           
+            yield return new WaitForSeconds(attackRate);          
         }
+
     }
 
     private IEnumerator SingleFireToCenterPosition()
@@ -72,7 +67,7 @@ public class BossWeapon : MonoBehaviour
             Vector3 Rightdirection = (targetPosition + Rightclone.transform.position).normalized;
             Rightclone.GetComponent<Movement2D>().MoveTo(Rightdirection);
 
-
+           
             yield return new WaitForSeconds(attackRate);
         }
     }
