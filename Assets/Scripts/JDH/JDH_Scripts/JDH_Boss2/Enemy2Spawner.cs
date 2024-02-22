@@ -26,7 +26,7 @@ public class Enemy2Spawner : MonoBehaviour
     {
         Boss2textWarning.SetActive(false);
         Boss2PanelHp.SetActive(false);
-        boss2.SetActive(false);
+        //boss2.SetActive(false);
         
         StartCoroutine("Boss2Spawn");
     }  
