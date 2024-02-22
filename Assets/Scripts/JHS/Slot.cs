@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -8,6 +9,8 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerE
 {
     [Header("ItemInformation")]
     public SlotType slotType;
+
+    GameObject canvasInven;
 
     private Image image;
     private RectTransform rect;
@@ -30,6 +33,12 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerE
 
     public void OnDrop(PointerEventData eventData)
     {
+        if(eventData.pointerDrag.GetComponent<DrageUI>() != null) // 인벤토리를 드래그할때 예외처리
+        {
+            return;
+        }
+
+
         if (eventData.pointerDrag != null && gameObject.transform.childCount == 1)
         {
             DraggableUI existUI = transform.GetChild(0).GetComponent<DraggableUI>(); // 현재 밑에 자식으로 슬롯에 존재하는 아이템
