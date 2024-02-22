@@ -6,7 +6,7 @@ public enum EnemyAttackType { Laser = 0, TriangleLaser, Boom }
 public class Boss2Weapon : MonoBehaviour
 {
     public Enemy2PoolManager Enemy2PoolManager;
-
+    public GameObject boss2Laser;
     [SerializeField]
     private float attackRate;
 
@@ -27,8 +27,7 @@ public class Boss2Weapon : MonoBehaviour
         while (true)
         {
 
-            GameObject cloneLine = Enemy2PoolManager.MakeProjectiles("Boss2Laser");
-            cloneLine.transform.position = transform.position;
+           GameObject cloneLine = Instantiate(boss2Laser,transform.position,Quaternion.identity);
             
             yield return new WaitForSeconds(1f);
             
@@ -47,11 +46,12 @@ public class Boss2Weapon : MonoBehaviour
             yield return new WaitForSeconds(attackRate);
            
         }
+        
     }
 
     private IEnumerator TriangleLaser()
     {
-       
+      Destroy(boss2Laser);
         while (true)
         {
 

@@ -41355,6 +41355,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5519116937488146519, guid: faa97a3fd3f91544c9c9aa15974b61bd, type: 3}
+      propertyPath: LaserGroup
+      value: 
+      objectReference: {fileID: 1418714175}
     - target: {fileID: 7496820459466881345, guid: faa97a3fd3f91544c9c9aa15974b61bd, type: 3}
       propertyPath: m_Name
       value: realBoss3Object
@@ -41412,6 +41416,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: faa97a3fd3f91544c9c9aa15974b61bd, type: 3}
+--- !u!1 &1418714175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2827808820150241947, guid: faa97a3fd3f91544c9c9aa15974b61bd, type: 3}
+  m_PrefabInstance: {fileID: 1418714174}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1461888713
 GameObject:
   m_ObjectHideFlags: 0
