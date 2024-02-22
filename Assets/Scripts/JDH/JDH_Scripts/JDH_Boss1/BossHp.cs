@@ -31,7 +31,7 @@ public class BossHp : MonoBehaviour
         if(currentHP <=0)
         {
            boss.OnDie();
-            soundmanager.PlaySFX(soundmanager.Boss1Die);
+          
         }
     }
 
