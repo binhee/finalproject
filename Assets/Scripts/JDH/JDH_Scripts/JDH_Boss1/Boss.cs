@@ -58,7 +58,7 @@ public class Boss : MonoBehaviour
     private IEnumerator Phase01()
     {
         bossweapon.StartFiring(AttackType.CircleFire);
-        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.AppearSound);
+        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.Boss1Pattern1Sound);
         while (true)
         {
             if (bossHp.CurrentHP <= bossHp.MaxHP * 0.7f)
@@ -73,7 +73,7 @@ public class Boss : MonoBehaviour
     private IEnumerator Phase02()
     {
         bossweapon.StartFiring(AttackType.SingleFireToCenterPosition);
-        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.Pattern2Sound);
+        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.Boss1Pattern2Sound);
         Vector3 direction = Vector3.up;
         movement2D.MoveTo(direction);
 
@@ -99,7 +99,7 @@ public class Boss : MonoBehaviour
     {
         bossweapon.StartFiring(AttackType.CircleFire);
         bossweapon.StartFiring(AttackType.SingleFireToCenterPosition);
-        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.Pattern3Sound);
+        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.Boss1Pattern3Sound);
         Vector3 direction = Vector3.up;
         movement2D.MoveTo(direction);
 
@@ -119,11 +119,13 @@ public class Boss : MonoBehaviour
         UnlockStage();
         SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.Boss1Die);
         Instantiate(explosionPrefab,transform.position,Quaternion.identity);
+        
         ClearPanel.SetActive(true);
         PlayerManager.instance.playerGold += BossGold;
       
         PlayerPrefs.SetInt("Gold", PlayerManager.instance.playerGold);
         gameObject.SetActive(false);
+        Time.timeScale = 0;
     }
 
     public void UnlockStage()   // 스테이지 버튼 언락 함수.

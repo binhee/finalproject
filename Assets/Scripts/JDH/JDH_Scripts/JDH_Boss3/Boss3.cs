@@ -32,7 +32,7 @@ public class Boss3 : MonoBehaviour
 
     private IEnumerator Pattern01()
     {
-       
+        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.Boss3Pattern1Sound);
         boss3Weapon.StartAttack(Boss3AttackType.SingleToPlayer);
         while(true)
         {
@@ -47,6 +47,7 @@ public class Boss3 : MonoBehaviour
 
     private IEnumerator Pattern02()
     {
+        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.Boss3Pattern2Sound);
         boss3Weapon.StartAttack(Boss3AttackType.AngleLaser);
         boss3Weapon.StartAttack(Boss3AttackType.SingleToPlayer);
         while (true)
@@ -63,6 +64,7 @@ public class Boss3 : MonoBehaviour
 
     private IEnumerator Pattern03()
     {
+        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.Boss3Pattern3Sound);
         boss3Weapon.StartAttack(Boss3AttackType.CircleForPlayer);
        yield return null;
     }
