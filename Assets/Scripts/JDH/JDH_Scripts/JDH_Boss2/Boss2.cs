@@ -42,8 +42,9 @@ public class Boss2 : MonoBehaviour
     }
     private IEnumerator Pattern01()
     {
+        
         boss2Weapon.StartAttack(EnemyAttackType.Laser);
-
+        
         while (true)
         {
             if (bosshp2.CurrentHP2 <= bosshp2.MaxHP2 * 0.9f)
@@ -57,6 +58,7 @@ public class Boss2 : MonoBehaviour
     }
     private IEnumerator Pattern02()
     {
+        
         boss2Weapon.StartAttack(EnemyAttackType.TriangleLaser);
 
         Vector3 direction = Vector3.left;
@@ -64,14 +66,14 @@ public class Boss2 : MonoBehaviour
 
         while (true)
         {
-            Debug.Log("a");
+            
             if (transform.position.x <= stageData.LimitMin.x ||
                 transform.position.x >= stageData.LimitMax.x)
             {
-                Debug.Log("aa");
+                
                 direction *= -1;
                 movement2D.MoveTo(direction);
-                Debug.Log("aaa");
+                
             }
 
             if (bosshp2.CurrentHP2 <= bosshp2.MaxHP2 * 0.4f)
@@ -85,6 +87,7 @@ public class Boss2 : MonoBehaviour
 
     private IEnumerator Pattern03()
     {
+        
         boss2Weapon.StartAttack(EnemyAttackType.Boom);
 
 

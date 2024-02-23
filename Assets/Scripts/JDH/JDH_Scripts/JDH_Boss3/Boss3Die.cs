@@ -23,12 +23,14 @@ public class Boss3Die : MonoBehaviour
     {
         Instantiate(explosionDie, transform.position, Quaternion.identity);
         Destroy(gameObject);
+        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.Boss3Die);
         ClearPanel.SetActive(true);
         LaserGroup.SetActive(false);
        
         PlayerManager.instance.playerGold += Boss3Gold;
 
         PlayerPrefs.SetInt("Gold", PlayerManager.instance.playerGold);
+        Time.timeScale = 0;
 
     }
 

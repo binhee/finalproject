@@ -17,11 +17,27 @@ public class SoundManager : MonoBehaviour
     public AudioClip JumpSound;
     public AudioClip DieSound;
 
-
-    public AudioClip AppearSound;
-    public AudioClip Pattern2Sound;
-    public AudioClip Pattern3Sound;
+    [Header("-----------Boss1Audio------------")]
+    public AudioClip Boss1AppearSound;
+    public AudioClip Boss1Pattern1Sound;
+    public AudioClip Boss1Pattern2Sound;
+    public AudioClip Boss1Pattern3Sound;
     public AudioClip Boss1Die;
+
+    //[Header("-----------Boss2Audio------------")]
+    //public AudioClip AppearSound;
+    //public AudioClip Pattern1Sound;
+    //public AudioClip Pattern2Sound;
+    //public AudioClip Pattern3Sound;
+    //public AudioClip Boss1Die;
+
+    [Header("-----------Boss3Audio------------")]
+   
+    public AudioClip Boss3Pattern1Sound;
+    public AudioClip Boss3Pattern2Sound;
+    public AudioClip Boss3Pattern3Sound;
+    public AudioClip Boss3Die;
+
 
 
     private void Awake()
