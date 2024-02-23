@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Boss2
   m_EditorClassIdentifier: 
   limitMin: {x: 125, y: -6}
-  limitMax: {x: 210, y: 32}
+  limitMax: {x: 210, y: 27}
