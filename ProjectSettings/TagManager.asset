@@ -35,7 +35,7 @@ TagManager:
   - Bullet
   - bullet2
   - wall
-  - Respawn
+  - NonPlayer
   - 
   - 
   - 

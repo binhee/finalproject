@@ -15,6 +15,7 @@ public class Inventory : MonoBehaviour
     public List<Slot> itemSlotList = new List<Slot>();
     public List<Slot> potionEquipSlots = new List<Slot>();
     public bool potionOwn;
+    public bool isDrag;
 
     public int equipWeaponCount;
     public int equipArmorCount;

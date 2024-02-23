@@ -6,6 +6,7 @@ using static PotionControl;
 using UnityEditor.Experimental.GraphView;
 using static UnityEditor.Progress;
 using Unity.VisualScripting;
+using System;
 
 public class PotionControl : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class PotionControl : MonoBehaviour
     }
 
     public List<Potion> potions;
-
+    public GameObject[] potionObject = new GameObject[4];
     void Start()
     {
         // 초기화 시 UI 업데이트
@@ -68,18 +69,23 @@ public class PotionControl : MonoBehaviour
         if (Inventory.instance.potionEquipSlots[num].transform.childCount == 0 && potionNum.onPotionEquip)
         {
             potionNum.onPotionEquip = false;
-            Destroy(gameObject.transform.GetChild(num).GetChild(0).gameObject);
+            Destroy(potionObject[num]);
         }
         if (Inventory.instance.potionEquipSlots[num].transform.childCount == 1 && !potionNum.onPotionEquip)
         {
             potionNum.onPotionEquip = true;
-            GameObject item = Instantiate(Inventory.instance.potionEquipSlots[num].transform.GetChild(0).gameObject, gameObject.transform.GetChild(num));
-            item.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
+            potionObject[num] = Instantiate(Inventory.instance.potionEquipSlots[num].transform.GetChild(0).gameObject, gameObject.transform.GetChild(num));
+            potionObject[num].GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
+            potionNum.potionAction = potionObject[num].GetComponent<PotionAction>();
+            potionNum.ItemSO = potionObject[num].GetComponent<DraggableUI>().itemSO;
+            potionNum.itemIndexNum = potionObject[num].GetComponent<DraggableUI>().itemIDNUM;
+
+            /*GameObject item = Instantiate(Inventory.instance.potionEquipSlots[num].transform.GetChild(0).gameObject, gameObject.transform.GetChild(num));
+           item.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
             potionNum.potionAction = item.GetComponent<PotionAction>();
             potionNum.ItemSO = item.GetComponent<DraggableUI>().itemSO;
-            potionNum.itemIndexNum = item.GetComponent<DraggableUI>().itemIDNUM;
-    //potionNum.itemIndexNum = item.GetComponent<DraggableUI>().itemso.itemIDNum;
-}
+            potionNum.itemIndexNum = item.GetComponent<DraggableUI>().itemIDNUM;*/
+        }
     }
     // 포션 사용 메서드
     void UsePotion(Potion potion)
@@ -88,6 +94,10 @@ public class PotionControl : MonoBehaviour
         {
             // 포션 사용 후 쿨 대기
             potion.potionAction.Use(potion.ItemSO);
+            Inventory.instance.potionEquipSlots[potion.indexNum].transform.GetChild(0).GetComponent<DraggableUI>().itemCount--;
+            Inventory.instance.potionEquipSlots[potion.indexNum].transform.GetChild(0).GetComponent<DraggableUI>().UpdateText();
+            potionObject[potion.indexNum].GetComponent<DraggableUI>().itemCount--;
+            potionObject[potion.indexNum].GetComponent<DraggableUI>().UpdateText();
             StartCoroutine(PotionCooldown(potion));
         }
         else
