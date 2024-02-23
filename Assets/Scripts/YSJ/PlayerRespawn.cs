@@ -89,7 +89,7 @@ public class PlayerRespawn : MonoBehaviour
 
     IEnumerator DontDie()   // 플레이어 무적.
     {
-        gameObject.layer = 12;     // 12번 레이어로 변경.
+        gameObject.layer = 13;     // 12번 레이어로 변경.
         yield return new WaitForSeconds(3.0f);    // 일정 시간동안.
         gameObject.layer = 8;      // 8번 레이어로 변경.
     }
