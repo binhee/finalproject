@@ -30,7 +30,13 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         canvasGroup = GetComponent<CanvasGroup>();
         itemComponent = gameObject.GetComponent<Item>();
     }
-
+    private void Update()
+    {
+        if(itemCount == 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
     public void EquipItem()
     {
         if (transform.parent.GetComponent<Slot>().slotType != SlotType.AllSlot)
@@ -106,6 +112,7 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        Inventory.instance.isDrag = true;
         previousParent = transform.parent;
         transform.SetParent(canvas);
         transform.SetAsLastSibling();
@@ -120,6 +127,7 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        Inventory.instance.isDrag = false;
         if (transform.parent == canvas)
         {
             transform.SetParent(previousParent);
@@ -131,7 +139,10 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        descriptionPanel.SetActive(true);
+        if (Inventory.instance.isDrag == false)
+        {
+            descriptionPanel.SetActive(true);
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
