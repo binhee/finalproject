@@ -78,6 +78,7 @@ public class PlayerRespawn : MonoBehaviour
     IEnumerator Respawn(float duration)
     {
         playerRb.simulated = false;     //플레이어 리지드바디 시뮬레이티드 기능 비활성화.
+        playerRb.velocity = new Vector2(0, 0);      // 플레이어 속도 재설정.
         transform.localScale = new Vector3(0, 0, 0);    // 오브젝트의 크기를 0,0,0으로 만듬(안보임).
         yield return new WaitForSeconds(duration);      // duration 시간동안 잠시 정지.
         transform.position = PlayerManager.instance.startPoint;     // Respawn되면 startPos로 위치 이동.
