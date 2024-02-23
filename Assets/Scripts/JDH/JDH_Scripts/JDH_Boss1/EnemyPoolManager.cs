@@ -19,7 +19,7 @@ public class EnemyPoolManager : MonoBehaviour
     private void Awake()
     {
        
-        EnemyProjectile = new GameObject[220];
+        EnemyProjectile = new GameObject[240];
         alertLine = new GameObject[10];
         MeteoriteEnemy = new GameObject[10];
 

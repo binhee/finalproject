@@ -445,7 +445,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uAC00\uACA9 : 25"
+  m_Text: "\uAC00\uACA9 : 50"
 --- !u!1 &745210780608611921
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +525,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uAC00\uACA9 : 25"
+  m_Text: "\uAC00\uACA9 : 50"
 --- !u!1 &908168517634573943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1676,7 +1676,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uAC00\uACA9 : 25"
+  m_Text: "\uAC00\uACA9 : 50"
 --- !u!1 &3147161204976573456
 GameObject:
   m_ObjectHideFlags: 0
@@ -4210,16 +4210,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopList:
   - shopItemImage: {fileID: 1472158750361724533, guid: e4bff696be19c53408d469cd8e9ea872, type: 3}
-    itemCost: 25
+    itemCost: 50
     type: 0
   - shopItemImage: {fileID: 1472158750361724533, guid: 6810cb46190981a4786f0f0993b52854, type: 3}
-    itemCost: 25
+    itemCost: 50
     type: 5
   - shopItemImage: {fileID: 1472158750361724533, guid: aefd887b9d56837408e7f49cd49414af, type: 3}
-    itemCost: 25
+    itemCost: 50
     type: 6
   - shopItemImage: {fileID: 1472158750361724533, guid: b0b801766784ebc47a085cc0b01295fc, type: 3}
-    itemCost: 25
+    itemCost: 50
     type: 7
   purchasePanel: {fileID: 3377254321699269444}
   waringPanel: {fileID: 1583445476544715166}
@@ -4437,7 +4437,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uAC00\uACA9 : 25"
+  m_Text: "\uAC00\uACA9 : 50"
 --- !u!1 &8827061290449320290
 GameObject:
   m_ObjectHideFlags: 0
