@@ -57,6 +57,7 @@ public class Enemy2Spawner : MonoBehaviour
 
     private IEnumerator Boss2Spawn()
     {
+        yield return new WaitForSeconds(2f);
         Boss2textWarning.SetActive(true);
         yield return new WaitForSeconds(1f);
 

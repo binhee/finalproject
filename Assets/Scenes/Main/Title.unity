@@ -13454,6 +13454,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: eee43241e6d7c5340b66eb542c38d72c, type: 3}
     - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
+      propertyPath: Boss2Die
+      value: 
+      objectReference: {fileID: 8300000, guid: 883b06122498b3644b39ca7d4cd2ff19, type: 3}
+    - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
       propertyPath: Boss3Die
       value: 
       objectReference: {fileID: 8300000, guid: c511cb4bd57b6f444a0fdc717b06d0d4, type: 3}
@@ -13497,6 +13501,18 @@ PrefabInstance:
       propertyPath: Boss1Pattern3Sound
       value: 
       objectReference: {fileID: 8300000, guid: 2b1efd5be3cd18e4594cb39ba2709abf, type: 3}
+    - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
+      propertyPath: Boss2Pattern1Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: e01b0d2167b1b1747a888130e1dec517, type: 3}
+    - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
+      propertyPath: Boss2Pattern2Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: ac2c84d66a1654c4fb9b7cff91c1176e, type: 3}
+    - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
+      propertyPath: Boss2Pattern3Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c0220e1ca2bd944198c62e00afbc38a, type: 3}
     - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
       propertyPath: Boss3Pattern1Sound
       value: 

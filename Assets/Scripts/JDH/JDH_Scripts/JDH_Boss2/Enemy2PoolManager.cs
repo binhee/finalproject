@@ -26,7 +26,7 @@ public class Enemy2PoolManager : MonoBehaviour
         Boss2Boom = new GameObject[5];
         Boss2ProjectileBoom = new GameObject[5];
         Boss2Projectile1 = new GameObject[20];
-        Boss2Projectile2 = new GameObject[90];
+        Boss2Projectile2 = new GameObject[100];
      
         BossProjectiles();
     }

@@ -59,6 +59,7 @@ public class Boss2Weapon : MonoBehaviour
 
             GameObject cloneLaser = Enemy2PoolManager.MakeProjectiles("Boss2Projectile2");
             cloneLaser.transform.position = transform.position;
+            cloneLaser.GetComponent<Movement2D>().MoveTo(new Vector3(0, -1, 0));
 
             GameObject halfLeftClone = Enemy2PoolManager.MakeProjectiles("Boss2Projectile2");
             halfLeftClone.transform.position = transform.position;

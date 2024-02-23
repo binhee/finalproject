@@ -25,7 +25,7 @@ public class Boss2Die : MonoBehaviour
         Instantiate(explosionDie,transform.position, Quaternion.identity);
         ClearPanel.SetActive(true);
         gameObject.SetActive(false);
-       
+        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.Boss2Die);
         PlayerManager.instance.playerGold += Boss2Gold;
 
         PlayerPrefs.SetInt("Gold",PlayerManager.instance.playerGold);

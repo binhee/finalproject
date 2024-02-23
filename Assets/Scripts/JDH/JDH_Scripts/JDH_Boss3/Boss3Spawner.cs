@@ -31,6 +31,7 @@ public class Boss3Spawner : MonoBehaviour
 
     private IEnumerator Boss3Spawn()
     {
+        yield return new WaitForSeconds(4f);
         Boss3textWarning.SetActive(true);
         yield return new WaitForSeconds(1f);
 

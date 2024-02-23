@@ -56,7 +56,7 @@ public class EnemySpawner : MonoBehaviour
         textBoss.SetActive (true);
         yield return new WaitForSeconds(1.0f);
         textBoss.SetActive(false);
-        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.Boss1AppearSound);
+        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.Boss1Pattern1Sound);
         panelBossHp.SetActive (true);
         boss.SetActive (true);
         boss.GetComponent<Boss>().ChangeState(BossState.MoveToAppearPoint);

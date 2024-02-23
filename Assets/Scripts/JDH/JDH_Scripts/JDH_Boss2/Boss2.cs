@@ -42,7 +42,7 @@ public class Boss2 : MonoBehaviour
     }
     private IEnumerator Pattern01()
     {
-        
+        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.Boss2Pattern1Sound);
         boss2Weapon.StartAttack(EnemyAttackType.Laser);
         
         while (true)
@@ -58,7 +58,7 @@ public class Boss2 : MonoBehaviour
     }
     private IEnumerator Pattern02()
     {
-        
+        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.Boss2Pattern2Sound);
         boss2Weapon.StartAttack(EnemyAttackType.TriangleLaser);
 
         Vector3 direction = Vector3.left;
@@ -87,7 +87,7 @@ public class Boss2 : MonoBehaviour
 
     private IEnumerator Pattern03()
     {
-        
+        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.Boss2Pattern3Sound);
         boss2Weapon.StartAttack(EnemyAttackType.Boom);
 
 

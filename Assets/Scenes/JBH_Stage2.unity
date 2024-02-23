@@ -31524,7 +31524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19668922, g: 0.6415094, b: 0.54009753, a: 1}
+  m_Color: {r: 0, g: 0.52797985, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -64403,7 +64403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0.9716981, b: 0.53491277, a: 0.5}
+  m_EffectColor: {r: 0, g: 0.53150964, b: 1, a: 0.5}
   m_EffectDistance: {x: 15, y: -15}
   m_UseGraphicAlpha: 1
 --- !u!114 &1558059332
@@ -66391,6 +66391,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 111063826390291843, guid: 703428e70077fe547a6886e5b4282391, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1894035851086488607, guid: 703428e70077fe547a6886e5b4282391, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

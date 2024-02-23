@@ -18,18 +18,16 @@ public class SoundManager : MonoBehaviour
     public AudioClip DieSound;
 
     [Header("-----------Boss1Audio------------")]
-    public AudioClip Boss1AppearSound;
     public AudioClip Boss1Pattern1Sound;
     public AudioClip Boss1Pattern2Sound;
     public AudioClip Boss1Pattern3Sound;
     public AudioClip Boss1Die;
 
-    //[Header("-----------Boss2Audio------------")]
-    //public AudioClip AppearSound;
-    //public AudioClip Pattern1Sound;
-    //public AudioClip Pattern2Sound;
-    //public AudioClip Pattern3Sound;
-    //public AudioClip Boss1Die;
+    [Header("-----------Boss2Audio------------")]
+    public AudioClip Boss2Pattern1Sound;
+    public AudioClip Boss2Pattern2Sound;
+    public AudioClip Boss2Pattern3Sound;
+    public AudioClip Boss2Die;
 
     [Header("-----------Boss3Audio------------")]
    
