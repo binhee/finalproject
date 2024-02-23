@@ -24921,7 +24921,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 37ae8c2b83d0ae042a196f20c0f39e0c, type: 3}
   m_Color: {r: 0.5882353, g: 0.5882353, b: 0.47058824, a: 0.49019608}
   m_FlipX: 0
@@ -25253,7 +25253,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 37ae8c2b83d0ae042a196f20c0f39e0c, type: 3}
   m_Color: {r: 0.39215687, g: 0.39215687, b: 0.3137255, a: 0.5882353}
   m_FlipX: 0
@@ -25446,7 +25446,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingOrder: -5
   m_Sprite: {fileID: 21300000, guid: 2cdf05302045277449155a32aa4251e1, type: 3}
   m_Color: {r: 0.11764706, g: 0.11764706, b: 0.11764706, a: 0.11764706}
   m_FlipX: 0
@@ -25716,7 +25716,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: b245ca64dea15c848bd9cede270dea61, type: 3}
   m_Color: {r: 0.5882353, g: 0.5882353, b: 0.47058824, a: 0.29411766}
   m_FlipX: 0
@@ -27082,7 +27082,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -64917,7 +64917,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: b245ca64dea15c848bd9cede270dea61, type: 3}
   m_Color: {r: 0.39215687, g: 0.39215687, b: 0.3137255, a: 0.39215687}
   m_FlipX: 0
@@ -65882,7 +65882,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingOrder: -4
   m_Sprite: {fileID: 21300000, guid: 38433417b81ea1d4e81edf75d70d499a, type: 3}
   m_Color: {r: 0.39215687, g: 0.39215687, b: 0.3137255, a: 0.27450982}
   m_FlipX: 0
@@ -65992,6 +65992,11 @@ MonoBehaviour:
     cooldownTimer: 0
     potionAction: {fileID: 0}
     ItemSO: {fileID: 0}
+  potionObject:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1919957332
 GameObject:
   m_ObjectHideFlags: 0
@@ -70935,7 +70940,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingOrder: -5
   m_Sprite: {fileID: 21300000, guid: 2cdf05302045277449155a32aa4251e1, type: 3}
   m_Color: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 0.19607843}
   m_FlipX: 0
@@ -71808,7 +71813,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingOrder: -4
   m_Sprite: {fileID: 21300000, guid: 38433417b81ea1d4e81edf75d70d499a, type: 3}
   m_Color: {r: 0.5882353, g: 0.5882353, b: 0.078431375, a: 0.09803922}
   m_FlipX: 0
