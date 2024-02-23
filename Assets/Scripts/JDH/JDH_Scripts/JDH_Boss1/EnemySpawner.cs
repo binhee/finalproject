@@ -19,11 +19,11 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private GameObject panelBossHp;
 
-    private SoundManager soundManager;
+ 
 
     private void Awake()
     {
-        soundManager = GetComponent<SoundManager>();
+       
         textBoss.SetActive(false);
         panelBossHp.SetActive(false);
         boss.SetActive(false);
@@ -56,6 +56,7 @@ public class EnemySpawner : MonoBehaviour
         textBoss.SetActive (true);
         yield return new WaitForSeconds(1.0f);
         textBoss.SetActive(false);
+        SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.Boss1AppearSound);
         panelBossHp.SetActive (true);
         boss.SetActive (true);
         boss.GetComponent<Boss>().ChangeState(BossState.MoveToAppearPoint);
