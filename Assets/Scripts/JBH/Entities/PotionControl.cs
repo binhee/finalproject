@@ -3,8 +3,6 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using static PotionControl;
-using UnityEditor.Experimental.GraphView;
-using static UnityEditor.Progress;
 using Unity.VisualScripting;
 using System;
 

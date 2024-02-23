@@ -2,7 +2,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
 
 public enum SlotType { PotionSlot, WeaponSlot, ArmorSlot, HelmetSlot, BootsSlot, ArtifactSlot, AllSlot, EnforceSlot, CombinationSlot }
 public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerExitHandler
