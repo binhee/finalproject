@@ -73,6 +73,7 @@ public class PlayerRespawn : MonoBehaviour
         soundManager.PlaySFX(soundManager.DieSound);    // 죽었을 때 소리 실행.
         ProjectileManager.Instance.dieEffect.Play();    // 파티클 이펙트 실행.
         StartCoroutine(Respawn(0.5f));
+        StartCoroutine(DontDie());
     }
 
     IEnumerator Respawn(float duration)
@@ -84,5 +85,12 @@ public class PlayerRespawn : MonoBehaviour
         transform.position = PlayerManager.instance.startPoint;     // Respawn되면 startPos로 위치 이동.
         transform.localScale = new Vector3 (2, 2, 2);       // 오브젝트 크기 원복.
         playerRb.simulated = true;      // 플레이어 리지드바디 시뮬레이티드 기능 활성화.
+    }
+
+    IEnumerator DontDie()   // 플레이어 무적.
+    {
+        gameObject.layer = 12;     // 12번 레이어로 변경.
+        yield return new WaitForSeconds(3.0f);    // 일정 시간동안.
+        gameObject.layer = 8;      // 8번 레이어로 변경.
     }
 }
