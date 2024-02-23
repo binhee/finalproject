@@ -13,7 +13,7 @@ public class PlayerInputController : PlayerController
     private bool jumpCooldown = false; // 점프 쿨다운 상태
     public bool itemDoubleJumping = false; // 더블 점프 가능한 아이템 장착 여부
 
-    [SerializeField] public float jumpForce = 14f;   // 점프 힘
+    [SerializeField] public float jumpForce = 20f;   // 점프 힘
     [SerializeField] private float jumpCooldownTime = 0.65f; // 점프 쿨다운 시간
 
     protected bool IsGrounded { get; set; } = true;   // 땅에 닿아 있는지 여부
