@@ -64354,6 +64354,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6807427401972090647, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
+      propertyPath: m_text
+      value: Boss1 Warning Warning
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807427401972090647, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       propertyPath: m_fontColor.b
       value: 0.72834706
       objectReference: {fileID: 0}
