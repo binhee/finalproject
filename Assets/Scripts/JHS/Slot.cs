@@ -46,7 +46,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerE
 
             if (existUI.itemImageType == dragUI.itemImageType
                 &&dragUI.itemImageType!=ItemType.Weapon && dragUI.itemImageType != ItemType.Helmet
-                && dragUI.itemImageType != ItemType.Armor && dragUI.itemImageType != ItemType.Boots)
+                && dragUI.itemImageType != ItemType.Armor && dragUI.itemImageType != ItemType.Boots &&dragUI.itemImageType != ItemType.Other)
             {
                 existUI.itemCount += dragUI.itemCount;
                 existUI.UpdateText();

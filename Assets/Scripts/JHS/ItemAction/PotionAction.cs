@@ -42,10 +42,12 @@ public class PotionAction : ItemAction
         Debug.Log(" 쉴드 포션 ");
         GameObject effect = Instantiate(Inventory.instance.itemEffect[0], Inventory.instance.effectController.transform);
         player.tag = "NonPlayer";
+        player.layer = 12;
         yield return new WaitForSeconds(itemSO.shieldTime);
         Destroy(effect);
         Debug.Log(" 효과 끝");
         player.tag = "Player";
+        player.layer = 8;
     }
     IEnumerator Jump(ItemSO itemSO)
     {
