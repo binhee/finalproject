@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingTile : MonoBehaviour
+public class MovingTrap : MonoBehaviour
 {
     public Transform startPos;
     public Transform endPos;
@@ -13,22 +13,6 @@ public class MovingTile : MonoBehaviour
     {
         transform.position = startPos.position;
         desPos = endPos;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.transform.CompareTag("Player"))
-        {
-            collision.transform.SetParent(transform);
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.transform.CompareTag("Player"))
-        {
-            collision.transform.SetParent(null);
-        }
     }
 
     void FixedUpdate()
