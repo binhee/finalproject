@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
 public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
@@ -16,9 +17,9 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public GameObject descriptionPanel;
     public GameObject equipUI;
-    public Text descriptionTxt;
+    public TextMeshProUGUI descriptionTxt;
     public Text potionCountTxt;
-    public Text itemNameTxt;
+    public TextMeshProUGUI itemNameTxt;
 
     public int itemCount = 1;
     public ItemSO itemSO;
@@ -113,6 +114,7 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public void OnBeginDrag(PointerEventData eventData)
     {
         Inventory.instance.isDrag = true;
+        gameObject.GetComponent<ItemAction>().Delete();
         previousParent = transform.parent;
         transform.SetParent(canvas);
         transform.SetAsLastSibling();

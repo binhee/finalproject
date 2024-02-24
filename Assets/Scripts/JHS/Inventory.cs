@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Inventory : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class Inventory : MonoBehaviour
     public int equipBootsCount;
 
 
-    public Text[] infoTexts;
+    public TextMeshProUGUI[] infoTexts;
     public GameObject[] itemEffect;
     private void Awake()
     {
