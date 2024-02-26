@@ -31003,6 +31003,7 @@ GameObject:
   - component: {fileID: 8708980584370522316}
   - component: {fileID: 26015527083467234}
   - component: {fileID: 7492716234150493914}
+  - component: {fileID: 8708980584370522317}
   m_Layer: 0
   m_Name: CircleAround (1)
   m_TagString: ItemEffect
@@ -31022,6 +31023,7 @@ GameObject:
   - component: {fileID: 8708980585463215518}
   - component: {fileID: 26015525919743152}
   - component: {fileID: 7492716235372921736}
+  - component: {fileID: 8708980585463215519}
   m_Layer: 0
   m_Name: CircleAround (3)
   m_TagString: ItemEffect
@@ -31041,6 +31043,7 @@ GameObject:
   - component: {fileID: 8708980585458681570}
   - component: {fileID: 26015525923483596}
   - component: {fileID: 7492716235377062132}
+  - component: {fileID: 8708980585458681571}
   m_Layer: 0
   m_Name: CircleAround
   m_TagString: ItemEffect
@@ -31060,6 +31063,7 @@ GameObject:
   - component: {fileID: 8708980586004100468}
   - component: {fileID: 26015525395340378}
   - component: {fileID: 7492716235922490210}
+  - component: {fileID: 8708980586004100469}
   m_Layer: 0
   m_Name: CircleAround (2)
   m_TagString: ItemEffect
@@ -31370,6 +31374,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8708980584370522317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5572101720173975123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2addf1cd6bea9964aa6b3d9a44a30099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &8708980585458681570
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31422,6 +31438,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8708980585458681571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5572101721401071741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2addf1cd6bea9964aa6b3d9a44a30099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &8708980585463215518
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31474,6 +31502,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8708980585463215519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5572101721396816641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2addf1cd6bea9964aa6b3d9a44a30099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &8708980586004100468
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31526,6 +31566,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8708980586004100469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5572101721946188779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2addf1cd6bea9964aa6b3d9a44a30099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8802375252694203282
 MonoBehaviour:
   m_ObjectHideFlags: 0
