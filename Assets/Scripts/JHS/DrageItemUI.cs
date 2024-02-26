@@ -114,7 +114,10 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public void OnBeginDrag(PointerEventData eventData)
     {
         Inventory.instance.isDrag = true;
-        gameObject.GetComponent<ItemAction>().Delete();
+        if(gameObject.GetComponent<ItemAction>() != null)
+        {
+            gameObject.GetComponent<ItemAction>().Delete();
+        }
         previousParent = transform.parent;
         transform.SetParent(canvas);
         transform.SetAsLastSibling();
