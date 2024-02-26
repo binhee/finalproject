@@ -13700,6 +13700,10 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
+      propertyPath: BTNSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b43d102aac6b145468dcaa94a5cccae1, type: 3}
+    - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
       propertyPath: Boss1Die
       value: 
       objectReference: {fileID: 8300000, guid: eee43241e6d7c5340b66eb542c38d72c, type: 3}
