@@ -67,31 +67,34 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         }
         else
         {
-            switch (itemComponent.itemType)
-            {
-                case ItemType.Weapon:
-                    UnequipWithType(0, ref Inventory.instance.equipWeaponCount);
-                    gameObject.GetComponent<WeaponAction>().Delete();
-                    break;
-                case ItemType.Armor:
-                    UnequipWithType(1, ref Inventory.instance.equipArmorCount);
-                    gameObject.GetComponent<ArmorAction>().ResetArmor();
-                    // 방어구 해제 할때의 동작
-                    break;
-                case ItemType.Helmet:
-                    UnequipWithType(2, ref Inventory.instance.equipHelmetCount);
-                    gameObject.GetComponent<ArmorAction>().Delete();
-                    // 헬멧 해제 할때의 동작
-                    break;
-                case ItemType.Boots:
-                    UnequipWithType(3, ref Inventory.instance.equipBootsCount);
-                    gameObject.GetComponent<ArmorAction>().ResetBoots();
-                    // 부츠 해제 할때의 동작
-                    break;
-            }
+          
         }
     }
-
+    public void UnEquipItem()
+    {
+        switch (itemComponent.itemType)
+        {
+            case ItemType.Weapon:
+                UnequipWithType(0, ref Inventory.instance.equipWeaponCount);
+                gameObject.GetComponent<WeaponAction>().Delete();
+                break;
+            case ItemType.Armor:
+                UnequipWithType(1, ref Inventory.instance.equipArmorCount);
+                gameObject.GetComponent<ArmorAction>().ResetArmor();
+                // 방어구 해제 할때의 동작
+                break;
+            case ItemType.Helmet:
+                UnequipWithType(2, ref Inventory.instance.equipHelmetCount);
+                gameObject.GetComponent<ArmorAction>().Delete();
+                // 헬멧 해제 할때의 동작
+                break;
+            case ItemType.Boots:
+                UnequipWithType(3, ref Inventory.instance.equipBootsCount);
+                gameObject.GetComponent<ArmorAction>().ResetBoots();
+                // 부츠 해제 할때의 동작
+                break;
+        }
+    }
     private void EquipWithType(int index, string description, ref int equipCount)
     {
         equipUI.SetActive(true);
@@ -118,6 +121,7 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         {
             gameObject.GetComponent<ItemAction>().Delete();
         }
+        UnEquipItem();
         previousParent = transform.parent;
         transform.SetParent(canvas);
         transform.SetAsLastSibling();
