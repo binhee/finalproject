@@ -64111,7 +64111,7 @@ PrefabInstance:
       objectReference: {fileID: 127120148636249937, guid: 8ff68186796b97349ba95e3aa11489fc, type: 3}
     - target: {fileID: 1120145695514784748, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       propertyPath: maxSpawnTime
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1120145695514784748, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       propertyPath: enemyPoolManger
@@ -64251,7 +64251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3865830149008297219, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       propertyPath: speed
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3908117889851906448, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -71756,7 +71756,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.025691032, y: -0.23122787}
+  m_Offset: {x: 0.0024850368, y: -0.19641829}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -71767,7 +71767,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.6403103, y: 4.0375443}
+  m_Size: {x: 4.5010734, y: 3.7358646}
   m_EdgeRadius: 0
 --- !u!1001 &2074849441
 PrefabInstance:

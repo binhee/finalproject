@@ -13706,7 +13706,7 @@ PrefabInstance:
     - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
       propertyPath: Boss2Die
       value: 
-      objectReference: {fileID: 8300000, guid: 883b06122498b3644b39ca7d4cd2ff19, type: 3}
+      objectReference: {fileID: 8300000, guid: 0d8b7d1bad49e5d409a39223a61e0a18, type: 3}
     - target: {fileID: 5710631049308876287, guid: 0752955bba51ff34bb890e76db6a1ddf, type: 3}
       propertyPath: Boss3Die
       value: 
