@@ -4019,19 +4019,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 204471137572737968, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
       propertyPath: shopList.Array.data[0].itemCost
-      value: 25
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 204471137572737968, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
       propertyPath: shopList.Array.data[1].itemCost
-      value: 25
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 204471137572737968, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
       propertyPath: shopList.Array.data[2].itemCost
-      value: 25
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 204471137572737968, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
       propertyPath: shopList.Array.data[3].itemCost
-      value: 25
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1192213155780443187, guid: c895e406d522b084d8fac08261b48fd0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
