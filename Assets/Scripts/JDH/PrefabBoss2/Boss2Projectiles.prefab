@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8876025249791667356}
   - component: {fileID: 749136074042974608}
   - component: {fileID: 2871098272611845618}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Boss2Projectiles
   m_TagString: Boss2Projectile
   m_Icon: {fileID: 0}
