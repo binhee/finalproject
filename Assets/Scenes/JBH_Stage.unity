@@ -64110,6 +64110,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 127120148636249937, guid: 8ff68186796b97349ba95e3aa11489fc, type: 3}
     - target: {fileID: 1120145695514784748, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
+      propertyPath: maxSpawnTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120145695514784748, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       propertyPath: enemyPoolManger
       value: 
       objectReference: {fileID: 1760281086}
@@ -64354,6 +64358,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6807427401972090647, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
+      propertyPath: m_text
+      value: Boss1 Warning Warning
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807427401972090647, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       propertyPath: m_fontColor.b
       value: 0.72834706
       objectReference: {fileID: 0}
@@ -64384,6 +64392,10 @@ PrefabInstance:
     - target: {fileID: 7126741565474046761, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       propertyPath: m_FontData.m_FontStyle
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7462283142147035204, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7608710198655287338, guid: 303762ec06bf8c44889cf8f4bc5a04f7, type: 3}
       propertyPath: m_SizeDelta.x
