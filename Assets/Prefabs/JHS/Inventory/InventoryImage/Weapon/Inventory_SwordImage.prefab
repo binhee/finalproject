@@ -599,7 +599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceedb733ac90cad45a7dd6c1d8f1738d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemImageType: 0
+  itemImageType: 1
   itemIDNUM: 0
   descriptionPanel: {fileID: 2268712210228695827}
   equipUI: {fileID: 916848981499017254}
