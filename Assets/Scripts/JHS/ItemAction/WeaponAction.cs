@@ -9,21 +9,23 @@ public class WeaponAction : ItemAction
     public override void Use(ItemSO itemNum)
     {
         GameObject player = PlayerManager.instance.FindPlayer();
-        for(int i=0; i<=grade; i++)
+        Inventory.instance.itemEffect[1].GetComponent<AroundCircle>().grade = grade+1;
+     /*   for(int i=0; i<=grade; i++)
         {
             effect = Instantiate(Inventory.instance.itemEffect[1], Inventory.instance.effectController.transform);
             effects.Add(effect);
             effect.GetComponent<AroundCircle>().moveSpeed = 100;
-            effect.GetComponent<AroundCircle>().PosbyGrade(i);
-        }
+            effect.GetComponent<AroundCircle>().ActivebyGrade(i);
+        }*/
     }
     public override void Delete()
     {
-        for(int i=0; i<effects.Count;i++)
+        Inventory.instance.itemEffect[1].GetComponent<AroundCircle>().grade = 0;
+        /*for (int i=0; i<effects.Count;i++)
         {
             Destroy(effects[i]);
         }
-        effects.Clear();
+        effects.Clear();*/
     }
     public override void Upgrade()
     {
