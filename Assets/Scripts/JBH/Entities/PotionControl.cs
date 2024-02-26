@@ -88,7 +88,7 @@ public class PotionControl : MonoBehaviour
     // 포션 사용 메서드
     void UsePotion(Potion potion)
     {
-        if (!potion.isOnCooldown)
+        if (!potion.isOnCooldown && potion.potionAction != null)
         {
             // 포션 사용 후 쿨 대기
             potion.potionAction.Use(potion.ItemSO);
