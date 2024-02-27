@@ -56,7 +56,7 @@ public class PlayerInputController : PlayerController
         if (IsGrounded && !isJumping && !jumpCooldown)   // 땅에 닿아 있고 점프 중이 아니며 점프 쿨다운 중이 아닌 경우
         {
             _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);   // 점프 힘을 가해줌
-            SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.JumpSound);
+            SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.JumpSound);   // 점프 사운드 재생.
             IsGrounded = false;   // 땅에 닿아 있지 않음으로 설정
             isJumping = true;   // 점프 중으로 설정
             StartCoroutine(JumpCooldown());   // 점프 쿨다운 코루틴 시작

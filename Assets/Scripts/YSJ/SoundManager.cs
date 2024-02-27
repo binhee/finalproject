@@ -16,6 +16,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip AttackSound;
     public AudioClip JumpSound;
     public AudioClip DieSound;
+    public AudioClip CheckPoint;
 
     [Header("-----------Boss1Audio------------")]
     public AudioClip Boss1Pattern1Sound;
