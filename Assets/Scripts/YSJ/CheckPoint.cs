@@ -19,6 +19,7 @@ public class CheckPoint : MonoBehaviour
         // player가 CheckPoint를 터치하면, Respawn 위치 업데이트
         if (collision.CompareTag("Player"))
         {
+            SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.CheckPoint);  // 체크 사운드 재생.
             playerRespawn.UpdateCheckPoint(transform.position);
             spriteRenderer.sprite = active;
         }

@@ -40,6 +40,7 @@ public class Shooting : MonoBehaviour
         // 여러 탄환을 발사하는 반복문
         for (int i = 0; i < numberOfProjectilesPerShot; i++)
         {
+            SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.AttackSound);     // 공격 사운드 재생.
             float angle = minAngle + projectilesAngleSpace * i;
             float randomSpread = Random.Range(-rangedAttackData.spread, rangedAttackData.spread);
             angle += randomSpread;
