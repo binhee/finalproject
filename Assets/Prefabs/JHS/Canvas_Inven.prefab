@@ -2541,6 +2541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   window: {fileID: 1138347752973662835}
+  a: {x: 0, y: 0, z: 0}
 --- !u!1 &3645976571494833644
 GameObject:
   m_ObjectHideFlags: 0
@@ -6031,7 +6032,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!114 &1573852853655842611
 MonoBehaviour:
