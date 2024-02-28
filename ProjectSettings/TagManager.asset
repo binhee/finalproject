@@ -22,6 +22,8 @@ TagManager:
   - Boss3Projectile
   - Arrow
   - wall
+  - NoJumping
+  - floor
   layers:
   - Default
   - TransparentFX
