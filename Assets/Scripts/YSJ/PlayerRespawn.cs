@@ -106,7 +106,7 @@ public class PlayerRespawn : MonoBehaviour
         StartCoroutine(DontDie());
 
         Diescore++;
-        DiescoreText.text = Diescore.ToString();
+        DiescoreText.text = "Die : " + Diescore.ToString();
         DiescoreText2.text = Diescore.ToString();
     }
 
