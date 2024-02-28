@@ -44744,6 +44744,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 2827808820150241947, guid: faa97a3fd3f91544c9c9aa15974b61bd, type: 3}
+      propertyPath: m_TagString
+      value: Laser
+      objectReference: {fileID: 0}
     - target: {fileID: 3007536875075731891, guid: faa97a3fd3f91544c9c9aa15974b61bd, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1

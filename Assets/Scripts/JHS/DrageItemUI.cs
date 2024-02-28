@@ -6,7 +6,7 @@ using TMPro;
 
 public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    private Transform canvas;
+    public Transform canvas;
     private Transform previousParent;
     private RectTransform rect;
     private CanvasGroup canvasGroup;
@@ -26,7 +26,7 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     private void Awake()
     {
-        canvas = FindObjectOfType<Canvas>().transform;
+        canvas = Inventory.instance.transform;
         rect = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         itemComponent = gameObject.GetComponent<Item>();

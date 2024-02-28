@@ -7361,7 +7361,6 @@ GameObject:
   - component: {fileID: 798564374}
   - component: {fileID: 798564373}
   - component: {fileID: 798564372}
-  - component: {fileID: 798564376}
   m_Layer: 8
   m_Name: TitleBackPlayer (2)
   m_TagString: Player
@@ -7465,19 +7464,6 @@ Transform:
   m_Father: {fileID: 286833072}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &798564376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798564371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeb6778be0df1194ba68e4e47e19788f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  window: {fileID: 0}
 --- !u!1 &822542886
 GameObject:
   m_ObjectHideFlags: 0
@@ -13860,7 +13846,6 @@ GameObject:
   - component: {fileID: 1454337191}
   - component: {fileID: 1454337190}
   - component: {fileID: 1454337189}
-  - component: {fileID: 1454337193}
   m_Layer: 8
   m_Name: TitleBackPlayer (1)
   m_TagString: Player
@@ -13964,19 +13949,6 @@ Transform:
   m_Father: {fileID: 286833072}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1454337193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1454337188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeb6778be0df1194ba68e4e47e19788f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  window: {fileID: 0}
 --- !u!1 &1693198147 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9127838786239284845, guid: b0c568c045e70da49b6a6287a91ae00a, type: 3}
@@ -14116,7 +14088,6 @@ GameObject:
   - component: {fileID: 1744916175}
   - component: {fileID: 1744916174}
   - component: {fileID: 1744916178}
-  - component: {fileID: 1744916179}
   m_Layer: 8
   m_Name: TitleBackPlayer
   m_TagString: Player
@@ -14220,19 +14191,6 @@ MonoBehaviour:
   moveDirection: 0
   speed: 5
   speedChangeTime: 3
---- !u!114 &1744916179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744916168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeb6778be0df1194ba68e4e47e19788f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  window: {fileID: 0}
 --- !u!1 &1752616900
 GameObject:
   m_ObjectHideFlags: 0
@@ -14245,7 +14203,6 @@ GameObject:
   - component: {fileID: 1752616903}
   - component: {fileID: 1752616902}
   - component: {fileID: 1752616901}
-  - component: {fileID: 1752616905}
   m_Layer: 8
   m_Name: TitleBackPlayer (3)
   m_TagString: Player
@@ -14349,19 +14306,6 @@ Transform:
   m_Father: {fileID: 286833072}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1752616905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752616900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeb6778be0df1194ba68e4e47e19788f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  window: {fileID: 0}
 --- !u!1 &1758730935
 GameObject:
   m_ObjectHideFlags: 0
@@ -14573,7 +14517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
