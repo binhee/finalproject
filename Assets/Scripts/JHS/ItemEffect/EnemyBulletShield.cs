@@ -10,5 +10,13 @@ public class EnemyBulletShield : MonoBehaviour
         {
             collision.gameObject.SetActive(false);
         }
+        if (collision.CompareTag("Boss2Projectile"))//적 총알 태그 넣기
+        {
+            collision.gameObject.SetActive(false);
+        }
+        if (collision.CompareTag("Boss3Projectile"))//적 총알 태그 넣기
+        {
+            collision.gameObject.SetActive(false);
+        }
     }
 }
