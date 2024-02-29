@@ -44866,7 +44866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8342606600230185445, guid: faa97a3fd3f91544c9c9aa15974b61bd, type: 3}
       propertyPath: maxHP3
-      value: 1200
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 8422259069784859122, guid: faa97a3fd3f91544c9c9aa15974b61bd, type: 3}
       propertyPath: m_Layer

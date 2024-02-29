@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EnemyAttackType { Laser = 0, TriangleLaser, Boom }
+public enum EnemyAttackType { Laser = 0, TriangleLaser, Boom,TripleBoom }
 public class Boss2Weapon : MonoBehaviour
 {
     public Enemy2PoolManager Enemy2PoolManager;
@@ -106,6 +106,37 @@ public class Boss2Weapon : MonoBehaviour
             
             Effect.SetActive(false);
            
+        }
+    }
+    private IEnumerator TripleBoom()
+    {
+
+        while(true)
+        {
+            GameObject boom = Enemy2PoolManager.MakeProjectiles("Boss2ProjectileBoom");
+            boom.transform.position = transform.position;
+            boom.GetComponent<Movement2D>().MoveTo(new Vector3(0.5f, -1, 0));
+
+            GameObject boom2 = Enemy2PoolManager.MakeProjectiles("Boss2ProjectileBoom");
+            boom2.transform.position = transform.position;
+            boom2.GetComponent<Movement2D>().MoveTo(new Vector3(-0.5f, -1, 0));
+
+            float Time = Random.Range(0.5f,1f);
+            yield return new WaitForSeconds(Time);
+
+            GameObject Effect = Enemy2PoolManager.MakeProjectiles("Boss2Boom");
+            Effect.transform.position = boom.transform.position; 
+            GameObject Effect2 = Enemy2PoolManager.MakeProjectiles("Boss2Boom");
+            Effect2.transform.position = boom2.transform.position;
+
+            boom.SetActive(false);
+            boom2.SetActive(false);
+
+            yield return new WaitForSeconds(0.2f);
+
+            Effect.SetActive(false);
+            Effect2.SetActive(false);
+
         }
     }
 }
