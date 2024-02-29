@@ -33,6 +33,14 @@ public class ArmorAction : ItemAction
             Destroy(effects[i]);
         }
         effects.Clear();
+        if (gameObject.GetComponent<Item>().itemType == ItemType.Armor)
+        {
+            ResetArmor();
+        }
+        else if(gameObject.GetComponent<Item>().itemType == ItemType.Boots)
+        {
+            ResetBoots();
+        }
     }
     public void ResetArmor()
     {

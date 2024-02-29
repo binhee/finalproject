@@ -18,10 +18,12 @@ TagManager:
   - ItemEffect
   - Boss2Projectile
   - Boss3
-  - Boss3Projectile
   - Laser
+  - Boss3Projectile
   - Arrow
   - wall
+  - NoJumping
+  - floor
   layers:
   - Default
   - TransparentFX
@@ -33,11 +35,11 @@ TagManager:
   - Level
   - Player
   - Bullet
-  - bullet2
-  - wall
+  - Boss
+  - Wall
   - NonPlayer
-  - Respwan
-  - Bullet3
+  - ReSpawn
+  - 
   - 
   - 
   - 

@@ -2,6 +2,8 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.DualShock;
+using UnityEngine.SocialPlatforms;
+using UnityEngine.UIElements;
 
 public class PlayerInputController : PlayerController
 {
@@ -56,6 +58,7 @@ public class PlayerInputController : PlayerController
         if (IsGrounded && !isJumping && !jumpCooldown)   // 땅에 닿아 있고 점프 중이 아니며 점프 쿨다운 중이 아닌 경우
         {
             _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);   // 점프 힘을 가해줌
+            SoundManager.SoundInstance.PlaySFX(SoundManager.SoundInstance.JumpSound);   // 점프 사운드 재생.
             IsGrounded = false;   // 땅에 닿아 있지 않음으로 설정
             isJumping = true;   // 점프 중으로 설정
             StartCoroutine(JumpCooldown());   // 점프 쿨다운 코루틴 시작
@@ -73,7 +76,7 @@ public class PlayerInputController : PlayerController
         if (collision.gameObject.CompareTag("Ground"))
         {
             IsGrounded = true;   // 땅에 닿아 있음으로 설정
-            
+
             isJumping = false;   // 점프 중이 아님으로 설정
         }
 
@@ -85,7 +88,6 @@ public class PlayerInputController : PlayerController
 
             jumpForce = 17f;
             _rigidbody.gravityScale = 1.5f;
-
         }
     }
 
@@ -93,8 +95,8 @@ public class PlayerInputController : PlayerController
     {
         if (collision.gameObject.CompareTag("wall"))
         {
-            jumpForce = 14f;
-            _rigidbody.gravityScale = 2.5f;
+            jumpForce = 20f;
+            _rigidbody.gravityScale = 3.5f;
             jumpCooldownTime = 0.65f;
         }
     }
