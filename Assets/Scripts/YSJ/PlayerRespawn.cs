@@ -12,6 +12,7 @@ public class PlayerRespawn : MonoBehaviour
     ProjectileManager projectileManager;
     SoundManager soundManager;
     VolumeSettings volumeSettings;
+    BossHp bossHp;
 
     public Text DiescoreText;
     public Text DiescoreText2;
@@ -23,6 +24,7 @@ public class PlayerRespawn : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody2D>();
         soundManager = GameObject.FindGameObjectWithTag("Sound").GetComponent<SoundManager>();    //태그가 Sound인 SoundManager에 접근.
+        bossHp = GetComponent<BossHp>();
     }
 
     private void Start()
@@ -61,10 +63,14 @@ public class PlayerRespawn : MonoBehaviour
         }
         else if (collision.CompareTag("Meteorite"))
         {
+            Debug.Log("0");
+            bossHp.BossHpHeal(50f);
             Die();
         }
         else if (collision.CompareTag("BossProjectile"))
         {
+            Debug.Log("0");
+            bossHp.BossHpHeal(50f);
             Die();
         }
         else if (collision.CompareTag("Boss2Projectile"))
