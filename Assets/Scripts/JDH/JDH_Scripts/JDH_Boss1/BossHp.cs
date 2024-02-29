@@ -5,8 +5,8 @@ using UnityEngine;
 public class BossHp : MonoBehaviour
 {
     [SerializeField]
-    private float maxHP = 1000;
-    private float currentHP;
+    private float maxHP = 500;
+    public float currentHP;
     private SpriteRenderer spriterenderer;
     private Boss boss;
     private SoundManager soundmanager;
@@ -40,5 +40,12 @@ public class BossHp : MonoBehaviour
         spriterenderer.color = Color.red;
         yield return new WaitForSeconds(0.05f);
         spriterenderer.color = Color.white;
+    }
+
+    public void BossHpHeal(float heal)
+    {
+        currentHP += heal;
+        //currentHP = Mathf.Min(currentHP, maxHP);
+        Debug.Log(heal);
     }
 }
